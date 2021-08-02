@@ -9,8 +9,15 @@
   max-width: 350px;
   margin: 0 auto 40px auto;
   border-radius: $btn-border-radius;
+  transition: all .3s ease;
 
+  &:hover{
+    z-index: 100;
+    background-color: white;
+    cursor: pointer;
 
+    box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.2);
+  }
 
   @media (min-width: $break-md) {
     width: 25%;
