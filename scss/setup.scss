@@ -404,4 +404,10 @@ $margin-top: /* name : margen bottom*/ (
   background-color: $c-primary;
 }
 
-
+.bg-img{
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.ov-hidden{
+  overflow: hidden;
+}
