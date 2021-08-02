@@ -1,0 +1,238 @@
+/*+------------------------------------------------------------+
+ |       -DEBUG       
+ +------------------------------------------------------------+*/
+ 
+ 
+/**
+ * Activa esta hoja de estilos para detectar visualmente cualquier
+ * anidación impropia o marcado potencialmente inválido.
+ *
+ * Rojo           ==      Definitivamente un error
+ * Amarillo       ==      a revisar
+ * Ninguno        ==      debería estar bien
+ *
+ * Este método de validación no es más que una guía, no te bases en el
+ * para validar tu marcado
+ *
+ */
+ /*+------------------------------------------------------------+
+ |       - PASO 1 : COLORES POR DIV        
+ +------------------------------------------------------------+*/
+ 
+ 
+@mixin random-bgr(){
+    background: rgb(random(255), random(255), random(255));
+  }
+    @for $i from 1 through 500{
+      div:nth-child(#{$i}){  	    @include random-bgr();
+     }
+    }
+/*+------------------------------------------------------------+
+ |       -ELEMENTOS VACIOS ?         
+ +------------------------------------------------------------+*/
+ 
+ 
+:empty{
+    outline:5px solid yellow;
+}  
+.container-2{
+border: 1px solid green;
+}
+ /*+------------------------------------------------------------+
+ |       -ALT OBLIGATORIO -- PENALIZAMOS SIN NO HAY ALT
+ +------------------------------------------------------------+*/
+ 
+ 
+img{
+    outline:5px solid red;
+}
+img[alt]{
+    outline:none;
+}
+img[alt=""]{
+    outline:5px solid yellow;
+}
+ /*+------------------------------------------------------------+
+ |       -LINKS CON TITLE OBLIGATORIO  
+ +------------------------------------------------------------+*/
+ 
+ 
+a{
+    outline:5px solid yellow;
+}
+a[title]{
+    outline:none;
+}
+/*+------------------------------------------------------------+
+ |       -HREF CON CONTENIDO DUDOSO    
+ +------------------------------------------------------------+*/
+ 
+ 
+a[href="#"],
+a[href*="javascript"]{
+    outline:5px solid yellow;
+}
+/*+------------------------------------------------------------+
+ |       -TARGET, MEJOR CON CONTENIDO      
+ +------------------------------------------------------------+*/
+ 
+a[target]{
+    outline:5px solid yellow;
+}
+/*+------------------------------------------------------------+
+ |       -UL SOLO ANIDA LISTAS      
+ +------------------------------------------------------------+*/
+ 
+ 
+ul,
+ol{
+    > *:not(li){
+        outline:5px solid red;
+    }
+}
+/*+------------------------------------------------------------+
+ |       -TABLAS BIEN TABULADAS        
+ +------------------------------------------------------------+*/
+ 
+ 
+/**
+ * Deberíamos asignar un atributo 'scope' a los th
+ * http://bit.ly/1aHBDgW
+ */
+th{
+    outline:5px solid yellow;
+}
+th[scope]{
+    outline:none;
+}
+/**
+ * los tr hijos de 'table' no son buenos, ¿necesitabas un 'thead' / 'tbody'?
+ */
+table > tr{
+    outline:5px solid yellow;
+}
+/**
+ * `tfoot` debe estar *antes* de `tbody`.
+ */
+tbody + tfoot{
+    outline:5px solid yellow;
+}
+/**
+ * Forms necesitan del atributo `action`
+ */
+form{
+    outline:5px solid red;
+}
+form[action]{
+    outline:none;
+}
+/**
+ * Varios elementos de formularios requieren atributos. 'input' necsita de 'type'
+ * 'textarea' necesita `rows' y 'cols' y 'submit' necesita del atributo 'value'.
+ */
+ /*+------------------------------------------------------------+
+ |       -FORMULARIOS : REQUIEREN , -INPUT ,-TYPE  
+ |       -TEXTAREA    : REQUIEREN , -ROWS ,-COLS ,
+ |       -SUBMIT      : REQUIERE  , VALUE  
+ +------------------------------------------------------------+*/
+ 
+ 
+textarea,
+input{
+    outline:5px solid red;
+}
+input[type]{
+    outline:none;
+}
+textarea[rows][cols]{
+    outline:none;
+}
+input[type=submit]{
+    outline:5px solid red;
+}
+input[type=submit][value]{
+    outline:none;
+}
+/*+------------------------------------------------------------+
+ |       -ESTILOS EN LINEA, EVITAR EN LA MEDIDA DE LO POSIBLE
+ +------------------------------------------------------------+*/
+ 
+ 
+[style]{
+        outline:5px solid yellow;
+}
+/*+------------------------------------------------------------+
+ |       -IDS SOLO PARA PROGRAMAR JS
+ +------------------------------------------------------------+*/
+ 
+ 
+[id]{
+        outline:5px solid yellow;
+}
+/*+------------------------------------------------------------+
+ |       -ELEMENTOS VACIOS     
+ +------------------------------------------------------------+*/
+ 
+ 
+div:empty, span:empty, li:empty, p:empty, td:empty, th:empty
+{ margin: 5px; border: 5px dotted yellow !important; }
+/*+------------------------------------------------------------+
+ |       -ATRIBUTOS VACIOS        
+ +------------------------------------------------------------+*/
+ 
+ 
+*[alt=""], *[title=""], *[class=""], *[id=""], a[href=""], a[href="#"]
+{ border: 5px solid yellow !important; }
+/*+------------------------------------------------------------+
+ |       -ATRIBUTOS DEPRECADOS        
+ +------------------------------------------------------------+*/
+ 
+ 
+applet, basefont, center, dir, font, isindex, menu, s, strike, u
+{ border: 5px dotted red !important; }
+*[background], *[bgcolor], *[clear], *[color], *[compact], *[noshade], *[nowrap], *[size], *[start],
+*[bottommargin], *[leftmargin], *[rightmargin], *[topmargin], *[marginheight], *[marginwidth], *[alink], *[link], *[text], *[vlink],
+*[align], *[valign],
+*[hspace], *[vspace],
+*[height], *[width],
+ul[type], ol[type], li[type]
+{ border: 5px solid red !important; }
+/*+------------------------------------------------------------+
+ |       -PROPUESTA A LOS ELEMENTOS DEPRECADOS      
+ +------------------------------------------------------------+*/
+ 
+ 
+input[type="button"], big, tt
+{ border: 5px dotted #33FF00 !important; }
+/*+------------------------------------------------------------+
+ |       -PROPUESTA A LOS ATRIBUTOS DEPRECADOS      
+ +------------------------------------------------------------+*/
+ 
+ 
+*[border], a[target], table[cellpadding], table[cellspacing], *[name]
+{ border: 5px solid #33FF00 !important; }
+
+
+
+/*+------------------------------------------------------------+
+ |       -Coloreamos los headers
+ +------------------------------------------------------------+*/
+@for $i from 1 through 8 {
+	.h#{$i} {
+		position: relative;
+		@include random-bgr();
+		&:after {
+			content:"h#{$i}";
+			position: absolute;
+			@include random-bgr();
+			opacity: .7;
+			color: #fff;
+			border-radius: 50%;
+			padding: 3px;
+			left: 0;
+			top: -10px;
+			font-size: 10px;
+			font-weight: bold;
+		}
+	}
+}
