@@ -71,8 +71,9 @@ $font-family-primary: "Source Sans Pro", sans-serif;
 
 $font-family-light: "Source Sans Pro", sans-serif;
 $font-family-regular: "Source Sans Pro", sans-serif;
-$font-family-medium: "Source Sans Pro", sans-serif;
+$font-family-medium: 'Gilda Display', serif  ;
 $font-family-bold: "Eksell", sans-serif;
+
 
 /** font-family: 'Playfair Display', serif; **/
 
@@ -81,7 +82,7 @@ $font-weight-regular: 400;
 $font-weight-medium: 600;
 $font-weight-bold: 900;
 
-$font-family-secondary: "Eksell", sans-serif;
+$font-family-secondary: 'Gilda Display', serif  ; 
 
 $font-weight-secondary-light: 200;
 $font-weight-secondary-regular: 400;
@@ -149,11 +150,19 @@ $headers: /* name:mobile,768,992,1280,line-height,font */ (
     "medium"
   ),
   h6: (
-    14px,
-    14px,
-    14px,
-    14px,
+    48px,
+    48px,
+    48px,
+    48px,
     1.2,
+    "medium"
+  ),
+  h26: (
+    48px,
+    48px,
+    58px,
+    64px,
+    1,
     "medium"
   ),
   h7: (
@@ -356,6 +365,12 @@ $margin-bottom: /* name : margen bottom*/ (
 );
 $mt: "margin-top";
 $margin-top: /* name : margen bottom*/ (
+  mt-10: (
+    10px,
+    10px,
+    10px,
+    10px
+  ),
   mt-20: (
     20px,
     20px,
@@ -410,4 +425,27 @@ $margin-top: /* name : margen bottom*/ (
 }
 .ov-hidden{
   overflow: hidden;
+}
+
+
+.h26{
+  font-weight: 100 !important;
+}
+em{
+  color: $c-primary;
+  font-style: normal;
+}
+
+
+.swiper-container2 {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
