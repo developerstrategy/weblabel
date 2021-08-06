@@ -300,6 +300,37 @@ $headersFluids: (
   0: (30px, 64px, 1)
 );
 
+
+$pt: "padding-top";
+$padding-top: /* name : padding  top*/
+(pt-8: (8px, 8px, 8px, 8px),
+ pt-10: (10px, 10px, 10px, 10px),
+ pt-16: (16px, 16px, 16px, 16px),
+ pt-20: (10px, 20px, 20px, 20px),
+ pt-30: (30px, 30px, 30px, 30px),
+ pt-40: (40px, 40px, 40px, 40px),
+ pt-50: (50px, 50px, 50px, 50px),
+ pt-64: (64px, 64px, 64px, 64px),
+ pt-md:(64px, 80px, 128px, 128px),
+ pt-lg:(100px, 120px, 150px, 150px),
+ );
+
+
+ $pt: "padding-bottom";
+$padding-bottom: /* name : padding  top*/
+(pb-8: (8px, 8px, 8px, 8px),
+ pb-10: (10px, 10px, 10px, 10px),
+ pb-16: (16px, 16px, 16px, 16px),
+ pb-20: (10px, 20px, 20px, 20px),
+ pb-30: (30px, 30px, 30px, 30px),
+ pb-40: (40px, 40px, 40px, 40px),
+ pb-50: (50px, 50px, 50px, 50px),
+ pb-big: (64px, 64px, 64px, 64px),
+ pb-md:(64px, 80px, 128px, 128px),
+ pb-lg:(100px, 120px, 150px, 150px),
+ );
+
+
 $mb: "margin-bottom";
 $margin-bottom: /* name : margen bottom*/ (
   mb-4: (
