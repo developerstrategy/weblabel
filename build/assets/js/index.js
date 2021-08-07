@@ -7,10 +7,13 @@ function initSwiper() {
         slidesPerView: 5,
         spaceBetween: 4,
 		loop: true,
+		centeredSlides: true,
 
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+		  nextButton: ".swiper-button-next",
+		  prevButton: ".swiper-button-prev",
         },
         breakpoints: {
           640: {
