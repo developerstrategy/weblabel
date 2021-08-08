@@ -135,7 +135,7 @@ hr {
 .swiper-button-prev,
  .swiper-container-rtl .swiper-button-next {
   left: 10px;
-  bottom: 10px;
+  bottom: 20px;
 }
 
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
@@ -213,5 +213,9 @@ hr {
   }
 
 }
+}
+
+.btn{
+  font-family:"Source Sans Pro", sans-serif ;
 }
 

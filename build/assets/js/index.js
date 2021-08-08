@@ -12,8 +12,8 @@ function initSwiper() {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-		  nextButton: ".swiper-button-next",
-		  prevButton: ".swiper-button-prev",
+		  nextButton: ".swiper-button-next1",
+		  prevButton: ".swiper-button-prev1",
         },
         breakpoints: {
           640: {
