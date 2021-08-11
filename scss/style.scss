@@ -117,7 +117,8 @@ hr {
 
 
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev, .swiper-button-next ,
+.swiper-button-prev1, .swiper-button-next1{
   position: absolute;
   top: 50%;
   width: 27px;
@@ -138,7 +139,8 @@ hr {
   bottom: 20px;
 }
 
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+.swiper-button-next, 
+.swiper-container-rtl .swiper-button-prev {
   left: 10px;
   bottom: 56px;
   svg{
@@ -153,6 +155,13 @@ hr {
 
 
 }
+
+
+
+
+
+
+
 
  .swiper-button-next,
    .swiper-button-prev ,
