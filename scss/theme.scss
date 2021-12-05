@@ -1454,3 +1454,17 @@ section {
   background-color: $c-primary;
 }
 
+
+.barmini{
+
+  background-color: $c-primary;;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  margin-bottom: 12px;
+  position: relative;
+  top: 0;
+  width: 20px;
+}
+

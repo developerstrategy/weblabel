@@ -1,55 +1,46 @@
 
-function initSwiper() {
+
+const swiper5 = new Swiper('.swiper-container', {
+  // Default parameters
+  slidesPerView: 4,
+  spaceBetween: 16,
+  loop: true,
+  cssMode:true,
 
 
-
-	var mySwiper = new Swiper(".swiper-container", {
-        slidesPerView: 5,
-        spaceBetween: 4,
-		loop: true,
-		centeredSlides: true,
-
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-		  nextButton: ".swiper-button-next1",
-		  prevButton: ".swiper-button-prev1",
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 2,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 4,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 8,
-          },
-        },
-      });
-    
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
 
 
+  },
+  navigation: {
+    nextEl: ".swiper-button-next1",
+    prevEl: ".swiper-button-prev1",
+  },
+
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 4,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+  },
+})
 
 
-
-	var mySwiper2 = new Swiper(".swiper-container2", {
-		// esto es opcional
-		direction: "horizontal",
-		slidesPerView: 1,
-
-		loop: true,
-		spaceBetween: 0,
-		//visibilityFullFit: true,
-		pagination: ".swiper-pagination",
-		paginationClickable: true,
-		nextButton: ".swiper-button-next",
-		prevButton: ".swiper-button-prev",
-	});
-}
 
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -62,9 +53,5 @@ $(window).scroll(function() {
         $("body").removeClass("has-stick");
     }
 });
-
-//coloresSections();
-initSwiper();
-
 
 

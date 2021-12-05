@@ -115,15 +115,19 @@ hr {
   max-width: 400px;
 }
 
-
+.swiper-buttons{
+  position: relative;
+  float: left;
+  margin-bottom: 20px;
+}
 
 .swiper-button-prev, .swiper-button-next ,
 .swiper-button-prev1, .swiper-button-next1{
-  position: absolute;
+
   top: 50%;
   width: 27px;
   height: 44px;
-  margin-top: -22px;
+
   z-index: 10;
   cursor: pointer;
   -moz-background-size: 27px 44px;
@@ -131,29 +135,19 @@ hr {
   background-size: 27px 44px;
   background-position: center;
   background-repeat: no-repeat;
+  float: left;
+  background-color: $c-primary;;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
-.swiper-button-prev,
- .swiper-container-rtl .swiper-button-next {
-  left: 10px;
-  bottom: 20px;
-}
 
-.swiper-button-next, 
-.swiper-container-rtl .swiper-button-prev {
-  left: 10px;
-  bottom: 56px;
+
+.swiper-button-next1{
   svg{
     transform: rotate(180deg);
   }
-
-  @media (min-width: $break-sm) {
-    left: 10px;
-    bottom: 80px;
-  
-  }
-
-
 }
 
 
@@ -163,17 +157,14 @@ hr {
 
 
 
- .swiper-button-next,
-   .swiper-button-prev ,
-   .swiper-button-next1,
-   .swiper-button-prev1 {
+ .swiper-button-next, .swiper-button-prev , 
+ .swiper-button-next1, .swiper-button-prev1 {
   top: auto;
   width: 35px;
   height: 35px;
-  background-color: white;
+  background-color: $c-primary;;
   background-image: none;
   /* padding: 20px; */
-  border-radius: 50%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -228,3 +219,12 @@ hr {
   font-family:"Source Sans Pro", sans-serif ;
 }
 
+.full-line{
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+}
+
+.invert{
+  filter: invert(1);
+}
