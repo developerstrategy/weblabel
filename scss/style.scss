@@ -228,3 +228,7 @@ hr {
 .invert{
   filter: invert(1);
 }
+
+.img-container{
+  object-fit: cover;
+}
