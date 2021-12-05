@@ -5,7 +5,7 @@ const swiper5 = new Swiper('.swiper-container', {
   slidesPerView: 4,
   spaceBetween: 16,
   loop: true,
-
+  cssMode:true,
 
 
   pagination: {
