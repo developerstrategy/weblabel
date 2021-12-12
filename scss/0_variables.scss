@@ -64,7 +64,7 @@ $error-primary: #fd675e;
 $link: rgb(207, 236, 240);
 $linkHover: #999;
 $black: #111111;
-$font-primary: #2c2c2c;
+
 $green-ultralight: #94cca8;
 $blue: #70b7d9;
 $c-gris: #878686;
@@ -83,9 +83,9 @@ $c-gris: #878686;
 
 $bg-box: #ffffff;
 $bg-claro: #fafafa;
-$bg-oscuro: #202125;
 
-$c-primary: #FB263B;  //C93F4F  ;
+
+
 $c-secundario: purple;
 
 $c-error: #fd675e;
@@ -93,6 +93,13 @@ $c-error: #fd675e;
 $t-claro: #a4a9ab;
 $t-oscuro: #2d2e38;
 
-$borde-claro: #eaeaea;
+$hr-light: #eaeaea;
 
-$btn-border-radius: 0px;
+$btn-radius: 0px;
+
+
+
+$c-primary: #fb263b;  //C93F4F FB263B  ;
+$font-primary: #2c2c2c;
+$bg-light: #f7f7f7;
+$bg-dark: #131313;

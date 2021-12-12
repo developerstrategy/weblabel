@@ -112,7 +112,7 @@ b {
   text-align: center;
 }
 hr {
-  border-top: 1px solid $borde-claro;
+  border-top: 1px solid $hr-light;
   border-bottom: 1px solid transparent;
 }
 .boxcontact {
@@ -168,7 +168,7 @@ h5 {
   color: $t-oscuro;
 }
 .bg-dark {
-  background-color: $bg-oscuro;
+  background-color: $bg-dark;
 }
 .em {
   color: $c-primary;
@@ -353,18 +353,18 @@ h2:empty {
   color: #b1b7c6;
 }
 .btn {
-  border-radius: $btn-border-radius;
+  border-radius: $btn-radius;
 }
 .btn-primary {
   background-color: $c-primary;
   border: 1px solid $c-primary;
-  border-radius: 27px;
+  border-radius: $btn-radius;
 }
 .btn-secondary {
   background-color: white;
   color: $c-primary;
   border: 1px solid $c-primary;
-  border-radius: $btn-border-radius;
+  border-radius: $btn-radius;
 }
 .btn-secondary.selected {
   background-color: $c-primary;
@@ -375,7 +375,7 @@ h2:empty {
   background-color: white;
   color: $c-primary;
   border: 1px solid $c-primary;
-  border-radius: $btn-border-radius;
+  border-radius: $btn-radius;
 }
 .btn-underline {
   padding: 0;
@@ -1099,7 +1099,7 @@ body {
   @media (min-width: $break-sm) {
     position: absolute;
   }
-  img{
+  img {
     //max-width: 400px;
   }
 }
@@ -1218,7 +1218,7 @@ body {
   border: none;
 }
 .accordion__button:hover {
- opacity: .6;
+  opacity: 0.6;
 }
 .accordion__button:before {
   display: inline-block;
@@ -1284,30 +1284,6 @@ section {
 .posa {
   position: absolute;
 }
-.mini-video {
-  width: 250px;
-  height: 150px;
-  position: relative;
-  color: #fff;
-  font-size: 14px;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  background-position: center center;
-  background-size: cover;
-  background-image: url("../images/minivideo.webp");
-  &:hover {
-    opacity: 0.6;
-    cursor: pointer;
-  }
-}
-.payment-wrap {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 600px;
-}
 .xdir {
   unicode-bidi: bidi-override;
   direction: rtl;
@@ -1335,7 +1311,7 @@ section {
   font-size: 20px;
   border-radius: 50px;
 }
-.block-price  .btn--full {
+.block-price .btn--full {
   width: calc(100% - 8px);
   padding-right: 0px;
   padding-left: 0px;
@@ -1351,6 +1327,10 @@ section {
   width: 100%;
   max-width: 1000px;
 }
+.btn {
+  cursor: pointer;
+  padding: 12px 16px 13px;
+}
 .btn--small {
   font-size: 20px;
 }
@@ -1363,7 +1343,6 @@ section {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 16px;
-  border-radius: 50px;
 }
 .btn-heading {
   margin-top: -8px;
@@ -1373,7 +1352,7 @@ section {
     margin-top: 0px;
   }
 }
-.bar-container{
+.bar-container {
   width: calc(100% - 20px);
   padding: 30px;
   position: absolute;
@@ -1383,8 +1362,7 @@ section {
     width: calc(85% - 52px);
   }
 }
-
-.of{
+.of {
   height: 100%;
   object-fit: cover;
 }
@@ -1393,7 +1371,8 @@ section {
   height: 100%;
   background: #212121;
 }
-.cover__video img, .cover__video video {
+.cover__video img,
+.cover__video video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1406,58 +1385,19 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .6;
+  opacity: 0.6;
 }
-.header-2{
+
+
+
+.barx {
   width: 100%;
-  height: 70px;
-  border-bottom :1px solid #fff;
-  position: fixed;
-  z-index: 10;
-  @media (min-width: $break-sm) {
-    height: 100px;
-  }
-}
-.header-2:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-  height: calc(100% );
-  background-color: #fff;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform .4s ease,background-color .4s ease;
-  top :0;
-  left: 0;
-}
-.logo{
-  position: relative;
-  z-index: 100;
-  color: #fff;
-  transition: all .4s ease;
-}
-.has-stick .header-2:after {
-  transform: scaleY(1);
-  -ms-transform: scaleY (1);
-  -webkit-transform:scaleY(1);
-  -moz-transform: scaleY(1);
-  -o-transform: scaleY(1);
-}
-.has-stick .logo {
-  color: #000;
-}
-.barx{
-  width:100%;
   max-width: 100px;
   height: 4px;
   background-color: $c-primary;
 }
-
-
-.barmini{
-
-  background-color: $c-primary;;
+.barmini {
+  background-color: $c-primary;
   content: "";
   display: block;
   height: 2px;
@@ -1467,4 +1407,3 @@ section {
   top: 0;
   width: 20px;
 }
-

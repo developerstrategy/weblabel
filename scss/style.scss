@@ -33,13 +33,18 @@ a {
 @import "./components/block-price";
 @import "./components/hero3";
 @import "./components/hero4";
-@import "./components/header";
+@import "./components/header2";
 @import "./components/block-a-1";
 @import "./components/block-a-2";
 @import "./menu1";
 @import "./animations";
+
+
+
+
 body {
 	overflow-x: hidden;
+  color:$font-primary;
 }
 .container-3 {
 	padding-right: 24px;
@@ -50,14 +55,7 @@ body {
 	width: 100%;
 	max-width: 1100px;
 }
-.bg-deg {
-	background: rgb(233, 58, 132);
-	background: linear-gradient(
-		90deg,
-		rgba(233, 58, 132, 1) 0%,
-		rgba(162, 113, 170, 1) 100%
-	);
-}
+
 .half-white-bg {
   position: relative;
 	@media (min-width: $break-sm) {
@@ -104,12 +102,11 @@ hr {
 @media (max-width: $break-sm) {
   .small-bg-white {
     background-color: #fff;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
-.img-sm img{
-  width: 100%;
-  max-width: 400px;
-}
+
 .swiper-buttons{
   position: relative;
   float: left;
@@ -216,6 +213,7 @@ hr {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+
   &:after{
     content: "";
     width: 42%;
@@ -233,6 +231,11 @@ hr {
     right:20px;
     transition: all .3s ease;
     z-index: 10;
+
+
+    width: 10%;
+    height: 10%;
+
   }
   &:hover{
     svg{
@@ -281,5 +284,18 @@ hr {
   a{
     color: #fff;
     opacity: .9;
+  }
+}
+.bg-cream{
+  background-color: #f8f7f5;
+}
+
+.p-content{
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto 20px;
+
+  @media (min-width: $break-sm) {
+    margin: 0 auto 50px;
   }
 }
