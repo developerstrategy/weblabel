@@ -2,18 +2,11 @@
 
 const swiper5 = new Swiper('.swiper-container', {
   // Default parameters
-  slidesPerView: 4,
+  slidesPerView: 2.5,
   spaceBetween: 16,
   loop: true,
-  cssMode:true,
 
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-
-
-  },
   navigation: {
     nextEl: ".swiper-button-next1",
     prevEl: ".swiper-button-prev1",
@@ -25,16 +18,16 @@ const swiper5 = new Swiper('.swiper-container', {
       spaceBetween: 4,
     },
     768: {
-      slidesPerView: 4,
-      spaceBetween: 16,
+      slidesPerView: 6,
+      spaceBetween: 8,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 6,
       spaceBetween: 16,
     },
 
     1200: {
-      slidesPerView: 4,
+      slidesPerView: 5,
       spaceBetween: 16,
     },
   },
