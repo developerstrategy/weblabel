@@ -173,7 +173,7 @@ h5 {
 .em {
   color: $c-primary;
 }
-a {
+a.link1 {
   color: $c-primary;
   &:hover {
     color: $c-primary;
@@ -382,10 +382,10 @@ h2:empty {
   height: 20px;
   font-size: 14px !important;
 }
-.link1 {
+.link1 ,.link5{
   color: $c-primary;
 }
-.link1:after {
+.link1:after, .link5:after{
   background-color: $c-primary;
 }
 /****  PÁGINAS   ***/

@@ -29,7 +29,6 @@ a {
 |       -FASE 3 : OVERRIDE Tu HOLYGRAIL
 +------------------------------------------------------------+*/
 @import "./theme";
-@import "./components/module12";
 @import "./components/block-price";
 @import "./components/hero3";
 @import "./components/hero4";
@@ -38,10 +37,6 @@ a {
 @import "./components/block-a-2";
 @import "./menu1";
 @import "./animations";
-
-
-
-
 body {
 	overflow-x: hidden;
   color:$font-primary;
@@ -55,7 +50,6 @@ body {
 	width: 100%;
 	max-width: 1100px;
 }
-
 .half-white-bg {
   position: relative;
 	@media (min-width: $break-sm) {
@@ -106,7 +100,6 @@ hr {
     margin-right: -16px;
   }
 }
-
 .swiper-buttons{
   position: relative;
   float: left;
@@ -213,7 +206,6 @@ hr {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-
   &:after{
     content: "";
     width: 42%;
@@ -231,11 +223,8 @@ hr {
     right:20px;
     transition: all .3s ease;
     z-index: 10;
-
-
     width: 10%;
     height: 10%;
-
   }
   &:hover{
     svg{
@@ -287,15 +276,52 @@ hr {
   }
 }
 .bg-cream{
-  background-color: #f8f7f5;
+  background-color: $bg-light;
 }
-
 .p-content{
   width: 100%;
   max-width: 650px;
   margin: 0 auto 20px;
-
   @media (min-width: $break-sm) {
     margin: 0 auto 50px;
+  }
+}
+.toc{
+  background-color: $bg-light;
+  padding: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.turn{
+  transform: rotate(90deg);
+}
+.boxservice{
+  img{
+    object-fit: cover;
+    object-position: center;
+    max-width: initial;
+    width: 101%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+    transition: all .2s ease;
+    pointer-events: none;
+  }
+  .boxservice-title{
+    position: relative;
+    z-index: 10;
+  }
+
+  &:hover{
+    cursor:pointer;
+
+    img{
+      mix-blend-mode: lighten;
+      transition: all .2s ease;
+
+    }
+
   }
 }
