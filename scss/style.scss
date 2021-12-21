@@ -362,6 +362,9 @@ hr {
 }
 .bg-cream{
   background-color: $bg-light;
+  .input{
+    background-color: #fff;
+  }
 }
 .p-content{
   width: 100%;
@@ -414,7 +417,7 @@ hr {
 }
 
 .fulltext{
-  z-index: 1000;
+  z-index: 100;
 }
 
 nav[role="navigation"] {
