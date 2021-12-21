@@ -47,4 +47,19 @@ $(window).scroll(function() {
     }
 });
 
+$(document).ready(function () {
+
+
+  $(".menu-mobile").click(function () {
+    $(".menu-mobile").toggleClass("open ");
+
+    $("body").toggleClass("open ");
+
+  });
+
+  ("use strict");
+
+
+});
+
 
