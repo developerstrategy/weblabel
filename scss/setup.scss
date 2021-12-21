@@ -63,6 +63,50 @@
   font-display: swap;
 }
 
+
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: "neu-light";
+
+  src:
+    url(../assets/fonts/neu-light.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "neu-regular";
+
+  src:
+    url(../assets/fonts/neu-regular.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "suise-regular";
+
+  src:
+    url(../assets/fonts/suise-regular.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+
+
 $colorsGuide: (
   black: #000000,
   secondary-color: #f5f5f5,
@@ -101,12 +145,12 @@ $colorsGuide: (
 );
 
 $font-primary: #2c2c2c;
-$font-family-primary: "Source Sans Pro", sans-serif;
+$font-family-primary: "neu-regular", sans-serif;
 
-$font-family-light: "Source Sans Pro", sans-serif;
-$font-family-regular: "Source Sans Pro", sans-serif;
-$font-family-medium: "realm", sans-serif  ;
-$font-family-bold: "realb", sans-serif ;
+$font-family-light: "neu-light", sans-serif;
+$font-family-regular: "neu-regular", sans-serif;
+$font-family-medium: "neu-regular", sans-serif  ;
+$font-family-bold: "neu-light", sans-serif ;
 
 
 /** font-family: 'Playfair Display', serif; **/
@@ -147,12 +191,12 @@ $headers: /* name:mobile,768,992,1280,line-height,font */ (
   h1: ( 32px, 32px, 32px, 40px, 1.2, "bold" ),
   h2: ( 24px, 24px, 24px, 32px, 1.2, "bold" ),
   h3: ( 18px, 18px, 18px, 24px, 1.4, "bold" ),
-  h4: ( 16px, 16px, 16px, 18px, 1.2, "medium" ),
-  h5: ( 14px, 14px, 14px, 16px, 1.2, "medium" ),
+  h4: ( 16px, 16px, 16px, 18px, 1.2, "light" ),
+  h5: ( 14px, 14px, 14px, 16px, 1.2, "light" ),
   h6: ( 48px, 48px, 48px, 48px, 1.2, "bold" ),
   h26: ( 48px, 48px, 58px, 64px, 1, "bold" ),
-  h7: ( 10px, 10px, 10px, 12px, 1.2, "medium" ),
-  h8: ( 8px, 8px, 8px, 8px, 1.2, "medium" ),
+  h7: ( 10px, 10px, 10px, 12px, 1.2, "light" ),
+  h8: ( 8px, 8px, 8px, 8px, 1.2, "light" ),
   second-h1: ( 32px, 32px, 32px, 40px, 1.2, "2-regular" ),
   second-h2: ( 24px, 24px, 24px, 32px, 1.2, "2-regular" ),
   second-h3: ( 18px, 18px, 18px, 24px, 1.2, "2-regular" ),
