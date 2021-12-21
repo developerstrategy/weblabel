@@ -338,6 +338,19 @@ hr {
       }
   }
 }
+
+@media (max-width: $break-sm ) {
+  .scroll-nat-2{
+
+      [class*="col-"] {
+        flex: 0 0 60vw;
+        max-width: 60vw;
+      }
+  }
+}
+
+
+
 .ratio-3-2{
   aspect-ratio: 2 / 1;
 }
