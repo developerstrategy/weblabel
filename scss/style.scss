@@ -187,7 +187,6 @@ hr {
   }
 }
 }
-
 .full-line{
   height: 2px;
   width: 100%;
@@ -205,7 +204,6 @@ hr {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-
   &:after{
     content: "";
     width: 42%;
@@ -227,11 +225,7 @@ hr {
     width: 10%;
     height: 10%;
   }
-
-
-
   .boxservice-img{
-      
     width: 100%;
     height: 100%;
     position: absolute;
@@ -240,9 +234,6 @@ hr {
     background-color: $c-primary;
     background-position: center;
     background-size: cover;
-
-
-
     &:after{
       background-color: $c-primary;
       content:'';
@@ -255,10 +246,7 @@ hr {
       opacity: .8;
       transition: all .3s ease;
     }
-
   }
-
-
   .boxservice-title{
     padding:20px;
     position: absolute;
@@ -268,11 +256,8 @@ hr {
     bottom: 0;
     z-index: 13;
   }
-
-
   &:hover{
     cursor:pointer;
-
     svg{
       bottom: 4px;
       right: 4px;
@@ -281,33 +266,13 @@ hr {
       bottom: -25%;
       right: -25%;
     }
-
     .boxservice-img{
-    
-  
       &:after{
-
         opacity: .4;
       }
-  
     }
-
-
-
-
-
-
   }
-
-
-
 }
-
-
-
-
-
-
 .rat-32-11 {
   @include ratio(3, 2);
   @media (min-width: $break-sm) {
@@ -337,19 +302,14 @@ hr {
       }
   }
 }
-
 @media (max-width: $break-sm ) {
   .scroll-nat-2{
-
       [class*="col-"] {
         flex: 0 0 60vw;
         max-width: 60vw;
       }
   }
 }
-
-
-
 .ratio-3-2{
   aspect-ratio: 2 / 1;
 }
@@ -382,17 +342,13 @@ hr {
 .turn{
   transform: rotate(90deg);
 }
-
-
 .header-img img{
   position: absolute;
   z-index: 10;
   width: 100%;
   left: 0;
   top: 0;
-
 }
-
 .fullimg{
   position: absolute;
   width: 100%;
@@ -400,7 +356,6 @@ hr {
   left: 0;
   right: 0;
   bottom: 0;
-
   &:after{
     width: 100%;
     position: absolute;
@@ -414,30 +369,22 @@ hr {
     z-index: 12;
   }
 }
-
 .fulltext{
   z-index: 100;
 }
-
 nav[role="navigation"] {
   float: right;
-
   font-family: 'Roboto', sans-serif;
-
   top: 0;
   right: 0;
   font-size: 12px!important;
   width: 30px;
   z-index: 1010;
 }
-
 .menutext {
   font-size: 10px;
   transition: all .2s ease;
-
 }
-
-
  .menu-mobile {
   display: block;
   position: relative;
@@ -446,9 +393,6 @@ nav[role="navigation"] {
   width: 30px;
   height: 30px;
 }
-
-
-
 .toggle > div > div {
   width: 100%;
   height: 3px;
@@ -458,43 +402,32 @@ nav[role="navigation"] {
   transition-delay: 0s, 0s, 0s, 0s;
   border-radius: 2px;
 }
-
 .toggle > div {
   height: 20px;
   /* width: 20px; */
 }
-
 .toggle:hover > div > div:nth-child(3) {
   width: 100%;
 }
-
 .toggle > div > div:nth-child(3) {
   width: 50%;
   float: right;
 }
-
 .toggle.open > div > div:nth-child(1) {
   -webkit-transform: translateY(9px) rotate(45deg);
   -ms-transform: translateY(9px) rotate(45deg);
   transform: translateY(9px) rotate(45deg);
 }
-
 .toggle.open > div > div:nth-child(2) {
   opacity: 0;
 }
-
-
 .toggle.open > div > div:nth-child(3) {
   width: 100%;
   -webkit-transform: translateY(-9px) rotate(-45deg);
   -ms-transform: translateY(-9px) rotate(-45deg);
   transform: translateY(-9px) rotate(-45deg);
 }
-
-
-
 .menu-content {
-
   position: fixed;
   top: 0;
   left: 0;
@@ -508,50 +441,74 @@ nav[role="navigation"] {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  /* align-content: center; */
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  padding: 50px;
+    padding-top: 100px;
   text-align: left;
+  transition: all .2s ease;
 
-
-
+  .container{
+    width: 100%;
+  }
 }
 .menu-list{
-
   line-height: 1.1;
   left: 5%;
   font-family: 'neu-light';
+li {
+    display: block;
+    float: none;
+    margin: 0;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(10px);
 }
-
-.menu-minilist{
-  font-size: 14px;
-  line-height: 1.1;
-  left: 5%;
-  font-family: 'neu-regular';
-}
-
-
-.open .menu-content{
-  opacity: 1;
 }
 
 .open{
+
+
+  .menu-list li:first-child {
+    transition: 1s all 400ms;
+  }
+  .menu-list li:nth-child(2) {
+    transition: 1s all 600ms;
+  }
+  .menu-list li:nth-child(3) {
+    transition: 1s all 800ms;
+  }
+  .menu-list li:nth-child(4) {
+    transition: 1s all 1000ms;
+  }
+  .menu-list li:nth-child(5) {
+    transition: 1s all 1200ms;
+  }
+  .menu-list li:nth-child(6) ,
+  .menu-list li:nth-child(7) ,
+  .menu-list li:nth-child(8) {
+    transition: 1s all 1400ms;
+  }
+
   .menutext{
     color: #fff;
+  }
+  .menu-content{
+    opacity: 1;
   }
   .header-2{
     border-bottom: transparent;
   }
-
   .logo{
     filter: invert(1);
-
   }
-
   .menu-content{
     pointer-events: all;
   }
-
-
+  .menu-list li {
+    opacity: 1;
+    transform: translateY(0);
+}
+.toggle>div>div {
+  background-color: #fff;
+}
 }
