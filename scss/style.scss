@@ -446,7 +446,6 @@ nav[role="navigation"] {
     padding-top: 100px;
   text-align: left;
   transition: all .2s ease;
-
   .container{
     width: 100%;
   }
@@ -464,10 +463,7 @@ li {
     transform: translateY(10px);
 }
 }
-
 .open{
-
-
   .menu-list li:first-child {
     transition: 1s all 400ms;
   }
@@ -488,7 +484,6 @@ li {
   .menu-list li:nth-child(8) {
     transition: 1s all 1400ms;
   }
-
   .menutext{
     color: #fff;
   }
@@ -499,7 +494,7 @@ li {
     border-bottom: transparent;
   }
   .logo{
-    filter: invert(1);
+    color:white!important;
   }
   .menu-content{
     pointer-events: all;

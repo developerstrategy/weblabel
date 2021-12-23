@@ -1,15 +1,10 @@
 @import "../0_variables.scss";
-
-
-
 .header-2 {
   width: 100%;
   height: 70px;
   border-bottom: 1px solid #fff;
   position: fixed;
   z-index: 1000;
-
-
   @media (min-width: $break-sm) {
     height: 100px;
   }
@@ -27,22 +22,14 @@
     left: 0;
   }
   .logo {
-  
     position: relative;
-
     transition: all 0.4s ease;
+    color: #fff;;
   }
   .header-2-right{
-
     position: relative;
-
   }
-
-
-
-
 }
-
 .has-stick ,.has-menu{
   .header-2 {
     .logo {
@@ -53,7 +40,6 @@
       background-color: transparent;
       border: 1px solid $font-primary;
     }
-
       &:after {
         transform: scaleY(1);
         -ms-transform: scaleY (1);
@@ -61,12 +47,8 @@
         -moz-transform: scaleY(1);
         -o-transform: scaleY(1);
       }
-
-
   }
-
 }
-
 .header2-inner{
   z-index: 1100;
   width: 100%;
