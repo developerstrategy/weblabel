@@ -204,22 +204,8 @@ $headers: /* name:mobile,768,992,1280,line-height,font */ (
   second-h5: ( 14px, 14px, 14px, 16px, 1.2, "2-regular" ),
   second-h6: ( 12px, 12px, 12px, 14px, 1.2, "2-regular" ),
   second-h7: ( 10px, 10px, 10px, 12px, 1.2, "2-regular" ),
-  second-h8: (
-    8px,
-    8px,
-    8px,
-    10px,
-    1.2,
-    "2-regular"
-  ),
-  p1: (
-    18px,
-    18px,
-    18px,
-    18px,
-    1.5,
-    "regular"
-  ),
+  second-h8: ( 8px, 8px, 8px, 10px, 1.2, "2-regular" ),
+  p1: ( 18px, 18px, 18px, 18px, 1.5, "regular" ),
   p2: ( 18px, 16px, 16px, 18px, 1.3, "regular" ),
   p3: ( 18px, 18px, 20px, 24px, 1.3, "regular" ),
   p4: ( 14px, 14px, 16px, 18px, 1.4, "medium" )
@@ -278,7 +264,7 @@ $padding-bottom: /* name : padding  top*/
 (pb-8: (8px, 8px, 8px, 8px),
  pb-10: (10px, 10px, 10px, 10px),
  pb-16: (16px, 16px, 16px, 16px),
- pb-20: (10px, 20px, 20px, 20px),
+ pb-20: (20px, 20px, 20px, 20px),
  pb-30: (30px, 30px, 30px, 30px),
  pb-40: (40px, 40px, 40px, 40px),
  pb-50: (50px, 50px, 50px, 50px),
@@ -290,93 +276,23 @@ $padding-bottom: /* name : padding  top*/
 
 $mb: "margin-bottom";
 $margin-bottom: /* name : margen bottom*/ (
-  mb-4: (
-    4px,
-    4px,
-    4px,
-    4px
-  ),
-  mb-10: (
-    10px,
-    10px,
-    10px,
-    10px
-  ),
-  mb-16: (
-    10px,
-    10px,
-    16px,
-    16px
-  ),
-  mb-20: (
-    20px,
-    20px,
-    20px,
-    20px
-  ),
-  mb-24: (
-    20px,
-    20px,
-    24px,
-    24px
-  ),
-  mb-30: (
-    30px,
-    30px,
-    30px,
-    30px
-  ),
-  mb-40: (
-    20px,
-    40px,
-    40px,
-    40px
-  ),
-  mb-50: (
-    50px,
-    50px,
-    50px,
-    50px
-  ),
-  mb-big: (
-    30px,
-    50px,
-    50px,
-    50px
-  ),
-  mb-mini: (
-    30px,
-    0px,
-    0px,
-    0px
-  )
+  mb-4: ( 4px, 4px, 4px, 4px ),
+  mb-10: ( 10px, 10px, 10px, 10px ),
+  mb-16: ( 10px, 10px, 16px, 16px ),
+  mb-20: ( 20px, 20px, 20px, 20px ),
+  mb-24: ( 20px, 20px, 24px, 24px ),
+  mb-30: ( 30px, 30px, 30px, 30px ),
+  mb-40: ( 20px, 40px, 40px, 40px ),
+  mb-50: ( 50px, 50px, 50px, 50px ),
+  mb-big: ( 30px, 50px, 50px, 50px ),
+  mb-mini: ( 30px, 0px, 0px, 0px )
 );
 $mt: "margin-top";
 $margin-top: /* name : margen bottom*/ (
-  mt-10: (
-    10px,
-    10px,
-    10px,
-    10px
-  ),
-  mt-20: (
-    20px,
-    20px,
-    20px,
-    20px
-  ),
-  mt-50: (
-    20px,
-    50px,
-    50px,
-    50px
-  ),
-  mt-big: (
-    100px,
-    100px,
-    100px,
-    100px
-  )
+  mt-10: ( 10px, 10px, 10px, 10px ),
+  mt-20: ( 20px, 20px, 20px, 20px ),
+  mt-50: ( 20px, 50px, 50px, 50px ),
+  mt-big: ( 100px, 100px, 100px, 100px )
 );
 .bar-left {
   position: relative;
