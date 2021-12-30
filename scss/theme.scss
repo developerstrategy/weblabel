@@ -433,6 +433,7 @@ h2:empty {
   }
 }
 .is-error {
+  color:  $c-error;
   .ico {
     border: 1px solid $c-error;
   }
@@ -1421,4 +1422,12 @@ textarea::-webkit-input-placeholder {
 .inf{
   font-size: 14px;
   color: blue;
+}
+
+.variable{
+  position: relative;
+
+  background: linear-gradient(#69d4ce,#76d6d0) bottom 2px center/100% 8px no-repeat;
+
+
 }
