@@ -1,38 +1,3 @@
-/*** Fuente primaria  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet"> **/
-
-/*** Fuente secundaria  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">  **/
-
-/** font-family: 'Source Sans Pro', sans-serif ;  **/
-
-//1-Copiar las fuentes en la carpeta assets/fonts
-
-//2-copiar font-face
-//3-Llenar fuentes
-
-// @font-face {
-//   font-family: "CeraPRO-Bold";
-//   src: url("../assets/fonts/3447DA_0_0.eot");
-//   src: url("../assets/fonts/3447DA_0_0.eot?#iefix") format("embedded-opentype"),
-//     url("../assets/fonts/3447DA_0_0.woff2") format("woff2"),
-//     url("../assets/fonts/3447DA_0_0.woff") format("woff"),
-//     url("../assets/fonts/3447DA_0_0.ttf") format("truetype");
-// }
-
-// @font-face {
-//     font-family: Anko;
-//     font-weight: 400;
-//     font-style: normal;
-//     font-display:swap;src: url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-medium.eot);
-//     src: url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-medium.eot?#iefix) format("embedded-opentype"),url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-medium.woff2) format("woff"),url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-medium.woff) format("woff"),url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-medium.ttf) format("truetype"),url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-medium.svg#eko_bimantara_-_anko-medium) format("svg")
-// }
-
-// @font-face {
-//     font-family: Anko;
-//     font-weight: 700;
-//     font-style: normal;
-//     font-display:swap;src: url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-bold.eot);
-//     src: url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-bold.eot?#iefix) format("embedded-opentype"),url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-bold.woff2) format("woff"),url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-bold.woff) format("woff"),url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-bold.ttf) format("truetype"),url(/wp-content/themes/isi/dist/fonts/eko_bimantara_-_anko-bold.svg#eko_bimantara_-_anko-bold) format("svg")
-// }
 
 $font-family-primary: "Source Sans Pro", sans-serif;
 
@@ -53,7 +18,7 @@ $font-weight-bold: 900;
 $font-family-secondary: "Playfair Display", serif;
 
 $font-weight-secondary-light: 200;
-$font-weight-secondary-regular: 400;
+$font-weight-secondary-regular:400;
 $font-weight-secondary-medium: 700;
 $font-weight-secondary-bold: 900;
 
@@ -85,18 +50,12 @@ $bg-box: #ffffff;
 $bg-claro: #fafafa;
 
 
-
 $c-secundario: purple;
-
 $c-error: #fd675e;
-
 $t-claro: #a4a9ab;
 $t-oscuro: #2d2e38;
-
 $hr-light: #eaeaea;
-
 $btn-radius: 0px;
-
 
 
 $c-primary: #fb263b;  //C93F4F FB263B  ;
