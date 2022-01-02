@@ -139,13 +139,13 @@ assets/images/tema2/home.jpg  400w" sizes="
                 </div>
             </div>
         </section>
-        <section class=" pt-big pb-md">
-            <div class="container  ">
+        <section  data-scroll-container class=" pt-md pb-md">
+            <div data-scroll-section  class="container  ">
                 <div class="row   ">
                     <div class="col-xs-12 col-sm-7 pb-md">
                         <div class="row">
-                            <div class="col-xs-12 mb-50">
-                                <div class="fluid-1-b"> Human <br> <em>Marketing</em></div>
+                            <div class="col-xs-12 mb-50 ">
+                                <div data-scroll data-scroll-speed="3"  class="fluid-1-b"> Human <br> <em>Marketing</em></div>
                             </div>
                         </div>
                         <div class="row">
@@ -164,13 +164,13 @@ assets/images/tema2/home.jpg  400w" sizes="
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-5">
+                    <div  data-scroll="" data-scroll-delay="0.1" data-scroll-speed="6" class="col-xs-12 col-sm-5">
                         <img src="assets/images/tema2/start.jpg" alt="">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="bg-cream pt-big pb-md">
+        <section class="bg-cream pt-md pb-md">
             <div class="container mb-16  ">
                 <div class="row ">
                     <div class=" col-xs-12 col-sm-6 is-flex flex-column content-center  ">
@@ -878,6 +878,12 @@ assets/images/tema2/home.jpg  400w" sizes="
     <!-- zona scripts -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/index.js"></script>
+
+    <script>
+        (function () {
+            var scroll = new LocomotiveScroll();
+        })();
+    </script>
 </body>
 
 </html>

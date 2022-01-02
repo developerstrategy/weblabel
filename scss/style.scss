@@ -1,12 +1,18 @@
 /*+------------------------------------------------------------+
- |       - FASE 1: IMPORTAR FUENTES
+ |       - FASE 1: RESET
  +------------------------------------------------------------+*/
 html,
 body,
 div,
 span,
 select,
-object {
+object ,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -20,27 +26,41 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+/*+------------------------------------------------------------+
+ |       - FASE 2: CUSTOM
+ +------------------------------------------------------------+*/
+
 @import "./0_variables.scss";
 @import "./setup.scss";
 /*+------------------------------------------------------------+
-|       -FASE 2 : IMPORTA TU HOLYGRAIL
+|       -FASE 3 : IMPORT  HOLYGRAIL
 +------------------------------------------------------------+*/
 @import "../node_modules/holygrailcss/scss/partials";
 /*+------------------------------------------------------------+
-|       -FASE 3 : OVERRIDE Tu HOLYGRAIL
+|       -FASE 4 : OVERRIDE YOUR HOLYGRAIL
 +------------------------------------------------------------+*/
-@import "./theme";
-@import "./components/block-price";
-@import "./components/hero3";
-@import "./components/hero4";
-@import "./components/header2";
-@import "./components/block-a-1";
-@import "./components/block-a-2";
-@import "./menu1";
-@import "./animations";
+ @import "./theme";
+ @import "./components/header2";
+
+
+
 body {
 	overflow-x: hidden;
   color:$font-primary;
+}
+
+h1, h2, h3, h4, h5,h6 {
+  color: $t-oscuro;
+}
+strong {
+  color: $c-primary;
+}
+.bold {
+  @include font-bold;
+}
+b {
+  color: $c-primary;
 }
 
 .bg-cream{
@@ -561,3 +581,81 @@ li {
 
 /*******Menu-mobile******/
 
+.of {
+  height: 100%;
+  object-fit: cover;
+}
+
+.bar-container {
+  width: calc(100% - 20px);
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  @media (min-width: $break-sm) {
+    width: calc(85% - 52px);
+  }
+}
+
+
+.cover__bg-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.barx {
+  width: 100%;
+  max-width: 100px;
+  height: 4px;
+  background-color: $c-primary;
+}
+.barmini {
+  background-color: $c-primary;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  margin-bottom: 12px;
+  position: relative;
+  top: 0;
+  width: 20px;
+}
+.textarea {
+  min-height: 150px;
+}
+textarea::-webkit-input-placeholder {
+  color: #aaa;
+  transform: translateZ(0);
+  font-family: 'neu-regular';
+}
+.inf{
+  font-size: 14px;
+  color: blue;
+}
+.variable{
+  position: relative;
+  background: linear-gradient(#69d4ce,#76d6d0) bottom 2px center/100% 8px no-repeat;
+}
+
+.text-date{
+  font-size: 12px;
+  font-family: "suise-regular";
+}
+
+.cover__video {
+  position: relative;
+  height: 100%;
+  background: #212121;
+}
+
+.cover__video img, .cover__video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  font-family: "object-fit:cover";
+  object-fit: cover;
+}

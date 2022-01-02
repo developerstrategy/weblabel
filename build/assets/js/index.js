@@ -1,8 +1,9 @@
 
 
+
 const swiper5 = new Swiper('.swiper-container', {
   // Default parameters
-  slidesPerView: 2.5,
+  slidesPerView: 1.6,
   spaceBetween: 16,
   loop: true,
 
@@ -58,6 +59,10 @@ $(document).ready(function () {
   });
 
   ("use strict");
+
+
+
+
 
 
 });
