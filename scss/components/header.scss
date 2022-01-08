@@ -1,7 +1,6 @@
 @import "../0_variables.scss";
 
 .header {
-  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -15,21 +14,20 @@
 }
 
 .header:before {
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
-
 .has-stick .header:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 156px;
-    pointer-events: none;
-    left: 0;
-    top: 0;
-    background: linear-gradient( 180deg ,#fff -.4%,rgba(255, 255, 255, 0) 99.6%);
-    mix-blend-mode: normal;
-    opacity: .3;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 156px;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #fff -0.4%, rgba(255, 255, 255, 0) 99.6%);
+  mix-blend-mode: normal;
+  opacity: 0.3;
 }
 @media only screen and (min-width: 961px) {
   .header {
@@ -62,16 +60,3 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

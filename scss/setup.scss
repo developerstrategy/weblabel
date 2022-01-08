@@ -1,10 +1,7 @@
-
 @font-face {
   font-family: "realm";
-  src: url(../assets/fonts/real-medium.eot);
-  src: url(../assets/fonts/real-medium.eot?#iefix) format("embedded-opentype"),
-    url(../assets/fonts/real-medium.woff2) format("woff2"),
-    url(../assets/fonts/real-medium.woff) format("woff");
+  src: url(../src/assets/fonts/real-medium.woff2) format("woff2"),
+    url(../src/assets/fonts/real-medium.woff2) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -12,10 +9,9 @@
 
 @font-face {
   font-family: "realm";
-  src: url(../assets/fonts/real-demi.eot);
-  src: url(../assets/fonts/real-demi.eot?#iefix) format("embedded-opentype"),
-    url(../assets/fonts/real-demi.woff2) format("woff2"),
-    url(../assets/fonts/real-demi.woff) format("woff");
+
+  src: url(../src/assets/fonts/real-demi.woff2) format("woff2"),
+    url(../src/assets/fonts/real-demi.woff2) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -23,58 +19,40 @@
 
 @font-face {
   font-family: "realb";
-  src: url(../assets/fonts/real-bold.eot);
-  src: url(../assets/fonts/real-bold.eot?#iefix) format("embedded-opentype"),
-    url(../assets/fonts/real-bold.woff2) format("woff2"),
-    url(../assets/fonts/real-bold.woff) format("woff");
+
+  src: url(../src/assets/fonts/real-bold.woff2) format("woff2"),
+    url(../src/assets/fonts/real-bold.woff2) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
-
-
-
-
-
-
-
-
-
-
 
 @font-face {
   font-family: "neu-light";
 
-  src:
-    url(../assets/fonts/neu-light.woff) format("woff");
+  src: url(../src/assets/fonts/neu-light.woff) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
-
 
 @font-face {
   font-family: "neu-regular";
 
-  src:
-    url(../assets/fonts/neu-regular.woff) format("woff");
+  src: url(../src/assets/fonts/neu-regular.woff) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
-
 
 @font-face {
   font-family: "suise-regular";
 
-  src:
-    url(../assets/fonts/suise-regular.woff) format("woff");
+  src: url(../src/assets/fonts/suise-regular.woff) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
-
-
 
 $colorsGuide: (
   black: #000000,
@@ -93,24 +71,19 @@ $colorsGuide: (
   White: #ffffff,
   link: #c7c7c7,
   linkHover: #999,
-
-
   primary: #000,
   color-1: #e6f5ff,
   color-2: #b5e6c8,
   color-3: #fef7c1,
   color-4: #fadfc1,
   color-5: #fcd8cd,
-
-   error: #fd675e,
-   sales: #fa3b2c,
-   Sales-Variant: #e43628,
-   error-primary:#D0021B ,
-
-
-   primary-guide:#121F2A,
-   secondary-guide:#6759bb,
-   ternary-guide:#6759bb,
+  error: #fd675e,
+  sales: #fa3b2c,
+  Sales-Variant: #e43628,
+  error-primary: #d0021b,
+  primary-guide: #121f2a,
+  secondary-guide: #6759bb,
+  ternary-guide: #6759bb,
 );
 
 $font-primary: #2c2c2c;
@@ -118,9 +91,8 @@ $font-family-primary: "neu-regular", sans-serif;
 
 $font-family-light: "neu-light", sans-serif;
 $font-family-regular: "neu-regular", sans-serif;
-$font-family-medium: "neu-regular", sans-serif  ;
-$font-family-bold: "realb", sans-serif ;
-
+$font-family-medium: "neu-regular", sans-serif;
+$font-family-bold: "realb", sans-serif;
 
 /** font-family: 'Playfair Display', serif; **/
 
@@ -129,7 +101,7 @@ $font-weight-regular: 400;
 $font-weight-medium: 600;
 $font-weight-bold: 900;
 
-$font-family-secondary: 'Gilda Display', serif  ; 
+$font-family-secondary: "Gilda Display", serif;
 
 $font-weight-secondary-light: 200;
 $font-weight-secondary-regular: 400;
@@ -143,7 +115,7 @@ $error-primary: #fd675e;
 $link: rgb(207, 236, 240);
 $linkHover: #999;
 $black: #111111;
-$padding-global:8px;
+$padding-global: 8px;
 
 $container-3: 1100px;
 
@@ -157,39 +129,209 @@ $container-3: 1100px;
 }
 
 $headers: /* name:mobile,768,992,1280,line-height,font */ (
-  h1: ( 32px, 32px, 32px, 40px, 1.2, "bold" ),
-  h2: ( 24px, 24px, 24px, 32px, 1.2, "bold" ),
-  h3: ( 18px, 18px, 18px, 24px, 1.4, "bold" ),
-  h4: ( 16px, 16px, 16px, 18px, 1.2, "bold" ),
-  h5: ( 14px, 14px, 14px, 16px, 1.2, "light" ),
-  h6: ( 48px, 48px, 48px, 48px, 1.2, "bold" ),
-  h26: ( 48px, 48px, 58px, 64px, 1, "bold" ),
-  h7: ( 10px, 10px, 10px, 12px, 1.2, "light" ),
-  h8: ( 8px, 8px, 8px, 8px, 1.2, "light" ),
-  second-h1: ( 32px, 32px, 32px, 40px, 1.2, "2-regular" ),
-  second-h2: ( 24px, 24px, 24px, 32px, 1.2, "2-regular" ),
-  second-h3: ( 18px, 18px, 18px, 24px, 1.2, "2-regular" ),
-  second-h4: ( 16px, 16px, 16px, 18px, 1.2, "2-regular" ),
-  second-h5: ( 14px, 14px, 14px, 16px, 1.2, "2-regular" ),
-  second-h6: ( 12px, 12px, 12px, 14px, 1.2, "2-regular" ),
-  second-h7: ( 10px, 10px, 10px, 12px, 1.2, "2-regular" ),
-  second-h8: ( 8px, 8px, 8px, 10px, 1.2, "2-regular" ),
-  p1: ( 14px, 14px, 16px, 16px, 1.5, "regular" ),
-  p2: ( 18px, 16px, 16px, 18px, 1.3, "regular" ),
-  p3: ( 18px, 18px, 20px, 24px, 1.3, "regular" ),
-  p4: ( 14px, 14px, 16px, 18px, 1.4, "medium" )
+  h1: (
+    32px,
+    32px,
+    32px,
+    40px,
+    1.2,
+    "bold",
+  ),
+  h2: (
+    24px,
+    24px,
+    24px,
+    32px,
+    1.2,
+    "bold",
+  ),
+  h3: (
+    18px,
+    18px,
+    18px,
+    24px,
+    1.4,
+    "bold",
+  ),
+  h4: (
+    16px,
+    16px,
+    16px,
+    18px,
+    1.2,
+    "bold",
+  ),
+  h5: (
+    14px,
+    14px,
+    14px,
+    16px,
+    1.2,
+    "light",
+  ),
+  h6: (
+    48px,
+    48px,
+    48px,
+    48px,
+    1.2,
+    "bold",
+  ),
+  h26: (
+    48px,
+    48px,
+    58px,
+    64px,
+    1,
+    "bold",
+  ),
+  h7: (
+    10px,
+    10px,
+    10px,
+    12px,
+    1.2,
+    "light",
+  ),
+  h8: (
+    8px,
+    8px,
+    8px,
+    8px,
+    1.2,
+    "light",
+  ),
+  second-h1: (
+    32px,
+    32px,
+    32px,
+    40px,
+    1.2,
+    "2-regular",
+  ),
+  second-h2: (
+    24px,
+    24px,
+    24px,
+    32px,
+    1.2,
+    "2-regular",
+  ),
+  second-h3: (
+    18px,
+    18px,
+    18px,
+    24px,
+    1.2,
+    "2-regular",
+  ),
+  second-h4: (
+    16px,
+    16px,
+    16px,
+    18px,
+    1.2,
+    "2-regular",
+  ),
+  second-h5: (
+    14px,
+    14px,
+    14px,
+    16px,
+    1.2,
+    "2-regular",
+  ),
+  second-h6: (
+    12px,
+    12px,
+    12px,
+    14px,
+    1.2,
+    "2-regular",
+  ),
+  second-h7: (
+    10px,
+    10px,
+    10px,
+    12px,
+    1.2,
+    "2-regular",
+  ),
+  second-h8: (
+    8px,
+    8px,
+    8px,
+    10px,
+    1.2,
+    "2-regular",
+  ),
+  p1: (
+    14px,
+    14px,
+    16px,
+    16px,
+    1.5,
+    "regular",
+  ),
+  p2: (
+    18px,
+    16px,
+    16px,
+    18px,
+    1.3,
+    "regular",
+  ),
+  p3: (
+    18px,
+    18px,
+    20px,
+    24px,
+    1.3,
+    "regular",
+  ),
+  p4: (
+    14px,
+    14px,
+    16px,
+    18px,
+    1.4,
+    "medium",
+  ),
 );
 
-
 $py: "padding";
-$padding-y: /* name : padding  arriba y abajo*/
-  
-   (py-16: (10px 0, 16px 0, 16px 0, 16px 0),
-    py-20: (10px 0, 20px 0, 20px 0, 20px 0),
-    py-30: (10px 0, 30px 0, 30px 0, 30px 0),
-    py-50: (20px 0, 30px 0, 40px 0, 50px 0),
-    py-60: (24px 16px, 24px 16px, 24px 16px, 60px 60px)) !default;
-
+$padding-y: /* name : padding  arriba y abajo*/ (
+  py-16: (
+    10px 0,
+    16px 0,
+    16px 0,
+    16px 0,
+  ),
+  py-20: (
+    10px 0,
+    20px 0,
+    20px 0,
+    20px 0,
+  ),
+  py-30: (
+    10px 0,
+    30px 0,
+    30px 0,
+    30px 0,
+  ),
+  py-50: (
+    20px 0,
+    30px 0,
+    40px 0,
+    50px 0,
+  ),
+  py-60: (
+    24px 16px,
+    24px 16px,
+    24px 16px,
+    60px 60px,
+  ),
+) !default;
 
 /* TYPES FIJOS */
 $headersFixers: (
@@ -208,60 +350,227 @@ $headersFluids: (
   4: (16px, 26px, 1.2),
   3: (22px, 28px, 1.2),
   2: (26px, 60px, 1.1),
-  1: (30px, 90px,  .9),
+  1: (30px, 90px, 0.9),
   0: (30px, 64px, 1)
 );
 
-
 $pt: "padding-top";
-$padding-top: /* name : padding  top*/
-(pt-8: (8px, 8px, 8px, 8px),
- pt-10: (10px, 10px, 10px, 10px),
- pt-16: (16px, 16px, 16px, 16px),
- pt-20: (10px, 20px, 20px, 20px),
- pt-30: (30px, 30px, 30px, 30px),
- pt-40: (40px, 40px, 40px, 40px),
- pt-50: (50px, 50px, 50px, 50px),
- pt-64: (64px, 64px, 64px, 64px),
- pt-md:(64px, 80px, 128px, 128px),
- pt-lg:(100px, 120px, 150px, 150px),
- );
+$padding-top: /* name : padding  top*/ (
+  pt-8: (
+    8px,
+    8px,
+    8px,
+    8px,
+  ),
+  pt-10: (
+    10px,
+    10px,
+    10px,
+    10px,
+  ),
+  pt-16: (
+    16px,
+    16px,
+    16px,
+    16px,
+  ),
+  pt-20: (
+    10px,
+    20px,
+    20px,
+    20px,
+  ),
+  pt-30: (
+    30px,
+    30px,
+    30px,
+    30px,
+  ),
+  pt-40: (
+    40px,
+    40px,
+    40px,
+    40px,
+  ),
+  pt-50: (
+    50px,
+    50px,
+    50px,
+    50px,
+  ),
+  pt-64: (
+    64px,
+    64px,
+    64px,
+    64px,
+  ),
+  pt-md: (
+    64px,
+    80px,
+    128px,
+    128px,
+  ),
+  pt-lg: (
+    100px,
+    120px,
+    150px,
+    150px,
+  ),
+);
 
-
- $pt: "padding-bottom";
-$padding-bottom: /* name : padding  top*/
-(pb-8: (8px, 8px, 8px, 8px),
- pb-10: (10px, 10px, 10px, 10px),
- pb-16: (16px, 16px, 16px, 16px),
- pb-20: (20px, 20px, 20px, 20px),
- pb-30: (30px, 30px, 30px, 30px),
- pb-40: (40px, 40px, 40px, 40px),
- pb-50: (50px, 50px, 50px, 50px),
- pb-big: (64px, 64px, 64px, 64px),
- pb-md:(40px, 80px, 128px, 128px),
- pb-lg:(100px, 120px, 150px, 150px),
- );
-
+$pt: "padding-bottom";
+$padding-bottom: /* name : padding  top*/ (
+  pb-8: (
+    8px,
+    8px,
+    8px,
+    8px,
+  ),
+  pb-10: (
+    10px,
+    10px,
+    10px,
+    10px,
+  ),
+  pb-16: (
+    16px,
+    16px,
+    16px,
+    16px,
+  ),
+  pb-20: (
+    20px,
+    20px,
+    20px,
+    20px,
+  ),
+  pb-30: (
+    30px,
+    30px,
+    30px,
+    30px,
+  ),
+  pb-40: (
+    40px,
+    40px,
+    40px,
+    40px,
+  ),
+  pb-50: (
+    50px,
+    50px,
+    50px,
+    50px,
+  ),
+  pb-big: (
+    64px,
+    64px,
+    64px,
+    64px,
+  ),
+  pb-md: (
+    40px,
+    80px,
+    128px,
+    128px,
+  ),
+  pb-lg: (
+    100px,
+    120px,
+    150px,
+    150px,
+  ),
+);
 
 $mb: "margin-bottom";
 $margin-bottom: /* name : margen bottom*/ (
-  mb-4: ( 4px, 4px, 4px, 4px ),
-  mb-10: ( 10px, 10px, 10px, 10px ),
-  mb-16: ( 10px, 10px, 16px, 16px ),
-  mb-20: ( 20px, 20px, 20px, 20px ),
-  mb-24: ( 20px, 20px, 24px, 24px ),
-  mb-30: ( 30px, 30px, 30px, 30px ),
-  mb-40: ( 20px, 40px, 40px, 40px ),
-  mb-50: ( 50px, 50px, 50px, 50px ),
-  mb-big: ( 30px, 50px, 50px, 50px ),
-  mb-mini: ( 30px, 0px, 0px, 0px )
+  mb-4: (
+    4px,
+    4px,
+    4px,
+    4px,
+  ),
+  mb-10: (
+    10px,
+    10px,
+    10px,
+    10px,
+  ),
+  mb-16: (
+    10px,
+    10px,
+    16px,
+    16px,
+  ),
+  mb-20: (
+    20px,
+    20px,
+    20px,
+    20px,
+  ),
+  mb-24: (
+    20px,
+    20px,
+    24px,
+    24px,
+  ),
+  mb-30: (
+    30px,
+    30px,
+    30px,
+    30px,
+  ),
+  mb-40: (
+    20px,
+    40px,
+    40px,
+    40px,
+  ),
+  mb-50: (
+    50px,
+    50px,
+    50px,
+    50px,
+  ),
+  mb-big: (
+    30px,
+    50px,
+    50px,
+    50px,
+  ),
+  mb-mini: (
+    30px,
+    0px,
+    0px,
+    0px,
+  ),
 );
 $mt: "margin-top";
 $margin-top: /* name : margen bottom*/ (
-  mt-10: ( 10px, 10px, 10px, 10px ),
-  mt-20: ( 20px, 20px, 20px, 20px ),
-  mt-50: ( 20px, 50px, 50px, 50px ),
-  mt-big: ( 100px, 100px, 100px, 100px )
+  mt-10: (
+    10px,
+    10px,
+    10px,
+    10px,
+  ),
+  mt-20: (
+    20px,
+    20px,
+    20px,
+    20px,
+  ),
+  mt-50: (
+    20px,
+    50px,
+    50px,
+    50px,
+  ),
+  mt-big: (
+    100px,
+    100px,
+    100px,
+    100px,
+  ),
 );
 .bar-left {
   position: relative;
@@ -274,7 +583,6 @@ $margin-top: /* name : margen bottom*/ (
   height: 2px;
   width: 100px;
   background-color: $c-primary;
-
 }
 
 .bar-right {
@@ -292,29 +600,26 @@ $margin-top: /* name : margen bottom*/ (
   background-color: $c-primary;
 }
 
-.bg-img{
+.bg-img {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.ov-hidden{
+.ov-hidden {
   overflow: hidden;
 }
 
-
-.h26{
+.h26 {
   font-weight: 100 !important;
 }
-em{
+em {
   color: $c-primary;
   font-style: normal;
 }
-
 
 .swiper-container2 {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-
 }
 
 .swiper-slide img {
