@@ -8,9 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import "bootstrap/dist/css/bootstrap.min.css"
-
-import Header from "./header/header.component"
+// import "bootstrap/dist/css/bootstrap.min.css"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -26,7 +24,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <div
         style={{
           margin: `0 auto`,

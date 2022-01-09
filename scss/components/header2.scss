@@ -5,7 +5,7 @@
   border-bottom: 1px solid #fff;
   position: fixed;
   z-index: 1000;
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     height: 100px;
   }
   &:after {
@@ -14,7 +14,7 @@
     width: 100%;
     z-index: 1;
     height: calc(100%);
-    background-color: #fff;
+    background-color: #fff !important;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.4s ease, background-color 0.4s ease;
@@ -24,13 +24,21 @@
   .logo {
     position: relative;
     transition: all 0.4s ease;
-    color: #fff;;
+    color: #fff;
   }
-  .header-2-right{
+  .header-2-right {
     position: relative;
   }
 }
-.has-stick ,.has-menu{
+.btn-phantom {
+  color: $font-primary;
+  background-color: transparent;
+  border: 1px solid white !important;
+  text-transform: none;
+  color: #fff !important;
+}
+.has-stick,
+.has-menu {
   .header-2 {
     .logo {
       color: $font-primary;
@@ -38,18 +46,18 @@
     .btn-phantom {
       color: $font-primary;
       background-color: transparent;
-      border: 1px solid $font-primary;
+      border: 1px solid $font-primary !important;
     }
-      &:after {
-        transform: scaleY(1);
-        -ms-transform: scaleY (1);
-        -webkit-transform: scaleY(1);
-        -moz-transform: scaleY(1);
-        -o-transform: scaleY(1);
-      }
+    &:after {
+      transform: scaleY(1);
+      -ms-transform: scaleY (1);
+      -webkit-transform: scaleY(1);
+      -moz-transform: scaleY(1);
+      -o-transform: scaleY(1);
+    }
   }
 }
-.header2-inner{
+.header2-inner {
   z-index: 1100;
   width: 100%;
 }

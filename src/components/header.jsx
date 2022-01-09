@@ -1,10 +1,24 @@
-import React from "react"
-import "../../scss/components/header.scss"
+import React, { useState, useEffect } from "react"
+import "../../scss/components/header2.scss"
 
 const Header = () => {
+  const [open, setOpen] = useState(false)
+  const [headerClassName, setHeaderClassName] = useState("")
+
+  const handleScroll = headerClassName => {
+    if (headerClassName !== "menuscroll" && window.pageYOffset >= 100) {
+      setHeaderClassName("menuscroll")
+    } else if (headerClassName === "menuscroll" && window.pageYOffset < 100) {
+      setHeaderClassName("")
+    }
+  }
+
+  React.useEffect(() => {
+    window.onscroll = () => handleScroll(headerClassName)
+  }, [headerClassName])
   return (
     <>
-      <section>
+      <section className={open ? " open" : headerClassName ? "has-stick" : ""}>
         <div className="header-2 align-vertical">
           <div className="container header2-inner">
             <div className="row">
@@ -16,7 +30,15 @@ const Header = () => {
               <div className="col-xs-6 text-right  ">
                 <nav role="navigation">
                   <div className="menutext">MENU</div>
-                  <div id="menu-mobile" className="toggle menu-mobile ">
+                  <div
+                    id="menu-mobile"
+                    className={
+                      open ? "toggle menu-mobile open" : "toggle menu-mobile"
+                    }
+                    onClick={() => {
+                      setOpen(!open)
+                    }}
+                  >
                     <div>
                       <div></div>
                       <div></div>
@@ -27,7 +49,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="menu-content">
+          <div className={open ? "menu-content open" : "menu-content"}>
             <div className="container ">
               <div className="row">
                 <div className="col-xs-12">

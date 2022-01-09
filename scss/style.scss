@@ -1,6 +1,7 @@
 /*+------------------------------------------------------------+
  |       - FASE 1: RESET
  +------------------------------------------------------------+*/
+// @import "./components/header2.scss";
 html,
 body,
 div,
@@ -23,8 +24,8 @@ h6 {
   text-rendering: geometricPrecision;
 }
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 /*+------------------------------------------------------------+
@@ -79,7 +80,7 @@ b {
 
 .half-white-bg {
   position: relative;
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     * {
       position: relative;
       z-index: 1;
@@ -99,7 +100,7 @@ b {
 }
 .half-white-bg-r {
   position: relative;
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     * {
       position: relative;
       z-index: 1;
@@ -120,7 +121,7 @@ b {
 hr {
   margin: 0;
 }
-@media (max-width: $break-sm) {
+@media (max-width: 768px) {
   .small-bg-white {
     background-color: #fff;
     margin-left: -16px;
@@ -174,7 +175,7 @@ hr {
   align-content: center;
   justify-content: center;
   align-items: center;
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     width: 55px;
     height: 55px;
   }
@@ -186,13 +187,13 @@ hr {
 .bg-dark hr {
   border-top: 1px solid #373737;
 }
-.swiper-container {
-  padding-bottom: 20px;
+.swiper {
+  padding-bottom: 10px !important;
   width: calc(100vw - 16px);
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     width: calc(100vw - ((100vw - (768px - 64px)) / 2));
   }
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     width: calc(100vw - ((100vw - (952px - 64px)) / 2));
   }
   @media (min-width: $break-lg) {
@@ -302,7 +303,7 @@ hr {
 }
 .rat-32-11 {
   @include ratio(3, 2);
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     @include ratio(1, 1);
   }
 
@@ -318,7 +319,7 @@ hr {
 
 .rat-11-21 {
   @include ratio(1, 1);
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     @include ratio(2, 1);
   }
 
@@ -330,7 +331,7 @@ hr {
 
 .contact-map {
   @include ratio(2, 1);
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     @include ratio(6, 1);
   }
   iframe {
@@ -345,7 +346,7 @@ hr {
 
 .rat-32-34 {
   @include ratio(3, 2);
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     @include ratio(3, 4);
   }
   .rat-content {
@@ -357,7 +358,7 @@ hr {
     }
   }
 }
-@media (max-width: $break-sm) {
+@media (max-width: 768px) {
   .scroll-nat {
     display: flex;
     flex-direction: row;
@@ -372,7 +373,7 @@ hr {
     }
   }
 }
-@media (max-width: $break-sm) {
+@media (max-width: 768px) {
   .scroll-nat-2 {
     [class*="col-"] {
       flex: 0 0 60vw;
@@ -384,7 +385,7 @@ hr {
   aspect-ratio: 2 / 1;
 }
 .mini-box {
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     aspect-ratio: 2 / 1;
   }
 }
@@ -413,7 +414,7 @@ hr {
   width: 100%;
   max-width: 650px;
   margin: 0 auto 20px;
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     margin: 0 auto 50px;
   }
 }
@@ -607,7 +608,7 @@ nav[role="navigation"] {
   position: absolute;
   right: 0;
   bottom: -50px;
-  @media (min-width: $break-sm) {
+  @media (min-width: 768px) {
     width: calc(85% - 52px);
   }
 }
