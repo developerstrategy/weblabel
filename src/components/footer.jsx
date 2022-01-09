@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
@@ -19,7 +20,7 @@ const Footer = () => {
                     <div className="p mb-16"> The company </div>
                     <ul className="list-clear">
                       <li>
-                        <a href=" "> About us</a>
+                        <Link to="/about"> About us</Link>
                       </li>
                       <li>
                         <a href=" "> Contacta</a>
@@ -75,26 +76,23 @@ const Footer = () => {
               <ul className="list-inline text-12-r  social">
                 <li>© 2021 The Digital Strategy</li>
                 <li>
-                  {" "}
                   <a href="">youtube</a>
                 </li>
                 <li>
-                  {" "}
-                  <a href=""> instagram</a>{" "}
+                  <a href=""> instagram</a>
                 </li>
                 <li>
-                  {" "}
-                  <a href=""> linkedin</a>{" "}
+                  <a href=""> linkedin</a>
                 </li>
               </ul>
             </div>
             <div className="col-xs-12 col-sm-6 sm:min-text-right">
-              <ul className="list-inline text-12-r social justify-content-end">
+              <ul className="list-inline text-12-r social content-end">
                 <li>
                   <a href="legal_aviso.html"> Aviso legal</a>
                 </li>
                 <li>
-                  <a href="legal_cookies.html"> Política de cookies</a>{" "}
+                  <a href="legal_cookies.html"> Política de cookies</a>
                 </li>
                 <li>
                   <a href="legal_privacidad.html">Política de Privacidad</a>

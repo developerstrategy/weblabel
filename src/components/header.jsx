@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import "../../scss/components/header2.scss"
 
 const Header = () => {
@@ -23,9 +24,9 @@ const Header = () => {
           <div className="container header2-inner">
             <div className="row">
               <div className="col-xs-6  text-left align-middle">
-                <a href="index.html">
+                <Link className="fluid-2-l" to="/">
                   <h2 className="h2 logo">Logotipo</h2>
-                </a>
+                </Link>
               </div>
               <div className="col-xs-6 text-right  ">
                 <nav role="navigation">
@@ -55,26 +56,24 @@ const Header = () => {
                 <div className="col-xs-12">
                   <ul className="menu-list list-clear mb-20">
                     <li>
-                      <a className="fluid-2-l" href="index.html">
-                        index
-                      </a>
+                      <Link className="fluid-2-l" to="/">
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <a className="fluid-2-l" href="about.html">
+                      <Link className="fluid-2-l" to="/about">
                         About us
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      {" "}
                       <a className="fluid-2-l" href="servicios.html">
                         Services
-                      </a>{" "}
+                      </a>
                     </li>
                     <li>
-                      {" "}
                       <a className="fluid-2-l" href="servicio.html">
                         Servicio
-                      </a>{" "}
+                      </a>
                     </li>
                     <li>
                       <a className="fluid-2-l" href="blog.html">
@@ -82,27 +81,22 @@ const Header = () => {
                       </a>
                     </li>
                     <li>
-                      {" "}
                       <a className="fluid-2-l" href="blog2.html">
                         blog interior
-                      </a>{" "}
+                      </a>
                     </li>
                     <li className="pb-50">
-                      {" "}
                       <a className="fluid-2-l" href="contacta.html">
                         Contacta
-                      </a>{" "}
+                      </a>
                     </li>
                     <li className="text-14-r">
-                      {" "}
                       <a href="legal_aviso.html">aviso legal</a>{" "}
                     </li>
                     <li className="text-14-r">
-                      {" "}
                       <a href="legal_cookies.html">política cookies</a>{" "}
                     </li>
                     <li className="text-14-r">
-                      {" "}
                       <a href="legal_privacidad.html">privacidad</a>{" "}
                     </li>
                   </ul>

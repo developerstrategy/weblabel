@@ -2,10 +2,10 @@ import React, { useEffect } from "react"
 import Swiper from "swiper/bundle"
 // import Swiper styles
 import "swiper/css"
-import project1 from "../../static/assets/images/tema2/project1.jpg"
-import project2 from "../../static/assets/images/tema2/project2.jpg"
-import project3 from "../../static/assets/images/tema2/project3.jpg"
-import project4 from "../../static/assets/images/tema2/project4.jpg"
+import project1 from "../../../static/assets/images/tema2/project1.jpg"
+import project2 from "../../../static/assets/images/tema2/project2.jpg"
+import project3 from "../../../static/assets/images/tema2/project3.jpg"
+import project4 from "../../../static/assets/images/tema2/project4.jpg"
 
 const Portfolio = () => {
   useEffect(() => {

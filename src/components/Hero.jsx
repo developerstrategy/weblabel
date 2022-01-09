@@ -3,24 +3,20 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import Header from "./header"
 import bg from "../assets/images/home.jpg"
 
-const Hero = () => {
+const Hero = ({ heading, text, button }) => {
   const image = getImage("../assets/images/home.jpg")
 
   return (
     <>
       <section>
         <Header />
-        {/* <!-- <div className="container-fluid bg-dark" style="background-image: url( 'assets/images/tema2/3.jpg' );  background-size: cover; background-position: bottom;  "  > --> */}
-        <div className=" bg-dark">
+        <div className="bg-dark">
           <div className="cover__bg-item">
             <div className="cover__video">
-              {/* <!-- <video src="assets/video/cover.mp4" autoplay="" muted="" loop="" data-video=""
-                            poster="assets/video/cover.mp4"></video> --> */}
-
               <img
                 src={bg}
                 alt="Mars Curiosity Rover takes an excellent selfie."
-                srcset="
+                srcSet="
                 ../assets/images/tema2/home.jpg  1120w,
                 ../assets/images/tema2/home.jpg 768w,
                 ../assets/images/tema2/home.jpg  400w"
@@ -35,18 +31,15 @@ const Hero = () => {
               <div className="container is-flex">
                 <div className="row ">
                   <div className=" col-xs-8 col-md-6 is-flex flex-column content-center  ">
-                    <div className="fluid-1-b   ">
-                      Cree Fantasticos sitios web{" "}
-                    </div>
+                    <div className="fluid-1-b   ">{heading}</div>
                     <br />
-                    <p className="p1">
-                      Ayudamos a las marcas a generar conciencia y aumentar las
-                      ventas.{" "}
-                    </p>
+                    <p className="p1">{text}</p>
                     <br />
-                    <div className="btn btn-phantom btn--small">
-                      Aprende más
-                    </div>
+                    {button && (
+                      <div className="btn btn-phantom btn--small">
+                        Aprende más
+                      </div>
+                    )}
                   </div>
                   <div className="col-xs-4  col-md-6 "></div>
                 </div>

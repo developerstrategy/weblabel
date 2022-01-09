@@ -1,44 +1,28 @@
 import React from "react"
-import "../../scss/style.scss"
-import "../../scss/components/header2.scss"
+import Hero from "../components/Hero"
+import MainSection from "../components/MainSection"
+import TextImage from "../components/TextImage"
 import image from "../../static/assets/images/tema2/benefit1.jpg"
 import image1 from "../../static/assets/images/tema2/benefit2.jpg"
 import image2 from "../../static/assets/images/tema2/benefit3.jpg"
-
-import Footer from "../components/footer"
-import Hero from "../components/Hero"
-import MainSection from "../components/MainSection"
-import Portfolio from "../components/homepage/Portfolio"
-import TextSection from "../components/TextSection"
-import TextImage from "../components/TextImage"
 import Partners from "../components/Partners"
-import LatestNews from "../components/LatestNews"
-import OurServices from "../components/OurServices"
 import ContactSection from "../components/ContactSection"
-
-const Index = () => {
+import Footer from "../components/footer"
+const About = () => {
   return (
     <>
       <Hero
-        heading="Cree Fantasticos sitios web"
+        heading="About Us"
         text="Ayudamos a las marcas a generar conciencia y aumentar las ventas."
-        button={true}
+        button={false}
       />
       <MainSection
-        firstHeading="Human"
-        secondHeading="Marketing"
-        subHeading="UN ENFOQUE DEL MARKETING DIGITAL CENTRADO EN EL SER HUMANO."
-        firstText="Somos socios de marketing digital liderados por marcas con sede en
-            Tāmaki Makaurau, Auckland. Brindamos un enfoque centrado en el ser
-            humano para el marketing digital, creando e implementando
-            estrategias digitales a medida que amplifican la visión de una marca
-            al tiempo que alcanzan los objetivos comerciales."
-        secondText="Nos apasiona hacer crecer marcas con propósito de una manera
-        considerada y nos encanta conectarnos con cualquiera que comparta
-        esta visión."
+        firstHeading="About"
+        secondHeading="US"
+        subHeading="Un enfoque del marketing digital centrado en el ser humano."
+        firstText="Somos socios de marketing digital liderados por marcas con sede en Tāmaki Makaurau, Auckland. Brindamos un enfoque centrado en el ser humano para el marketing digital, creando e implementando estrategias digitales a medida que amplifican la visión de una marca al tiempo que alcanzan los objetivos comerciales"
+        secondText="Nos apasiona hacer crecer marcas con propósito de una manera considerada y nos encanta conectarnos con cualquiera que comparta esta visión."
       />
-      <Portfolio />
-      <TextSection />
       <TextImage
         sub="Los Beneficios"
         heading="Beneficios producto"
@@ -63,6 +47,7 @@ const Index = () => {
             las agitadas condiciones del mar.
           </>
         }
+        link={true}
         image={image}
         reverse={true}
       />
@@ -107,12 +92,10 @@ const Index = () => {
         reverse={true}
       />
       <Partners />
-      <LatestNews />
-      <OurServices />
       <ContactSection />
       <Footer />
     </>
   )
 }
 
-export default Index
+export default About
