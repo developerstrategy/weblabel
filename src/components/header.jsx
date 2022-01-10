@@ -99,9 +99,9 @@ const Header = ({ offset }) => {
                       </a>
                     </li>
                     <li className="pb-50">
-                      <a className="fluid-2-l" href="contacta.html">
+                      <Link className="fluid-2-l" to="/contacta">
                         Contacta
-                      </a>
+                      </Link>
                     </li>
                     <li className="text-14-r">
                       <a href="legal_aviso.html">aviso legal</a>{" "}
