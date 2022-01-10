@@ -2,21 +2,34 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import "../../scss/components/header2.scss"
 
-const Header = () => {
+const Header = ({ offset }) => {
   const [open, setOpen] = useState(false)
   const [headerClassName, setHeaderClassName] = useState("")
+  const [pageOffset, setPageOffset] = useState(offset)
 
   const handleScroll = headerClassName => {
-    if (headerClassName !== "menuscroll" && window.pageYOffset >= 100) {
+    console.log(100, window.pageYOffset)
+
+    if (headerClassName !== "menuscroll" && window.pageYOffset >= pageOffset) {
       setHeaderClassName("menuscroll")
-    } else if (headerClassName === "menuscroll" && window.pageYOffset < 100) {
+      console.log(100, window.pageYOffset)
+    } else if (
+      headerClassName === "menuscroll" &&
+      window.pageYOffset < pageOffset
+    ) {
       setHeaderClassName("")
     }
   }
 
   React.useEffect(() => {
     window.onscroll = () => handleScroll(headerClassName)
+    console.log(offset)
   }, [headerClassName])
+
+  React.useEffect(() => {
+    handleScroll(headerClassName)
+  }, [])
+
   return (
     <>
       <section className={open ? " open" : headerClassName ? "has-stick" : ""}>

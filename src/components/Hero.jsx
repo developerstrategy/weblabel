@@ -9,7 +9,7 @@ const Hero = ({ heading, text, button }) => {
   return (
     <>
       <section>
-        <Header />
+        <Header offset="100" />
         <div className="bg-dark">
           <div className="cover__bg-item">
             <div className="cover__video">
