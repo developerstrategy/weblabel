@@ -79,9 +79,9 @@ const Header = ({ offset }) => {
                       </Link>
                     </li>
                     <li>
-                      <a className="fluid-2-l" href="servicios.html">
-                        Services
-                      </a>
+                      <Link className="fluid-2-l" to="/servicios">
+                        Servicios
+                      </Link>
                     </li>
                     <li>
                       <a className="fluid-2-l" href="servicio.html">

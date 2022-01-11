@@ -28,7 +28,9 @@ const Footer = () => {
                     </ul>
                   </div>
                   <div className="col-xs-12 col-sm-2 mb-20">
-                    <div className="p mb-16"> Servicios </div>
+                    <div className="p mb-16">
+                      <Link to="/servicios"> Servicios </Link>
+                    </div>
                     <ul className="list-clear">
                       <li>
                         <a href=" "> Service 1</a>
