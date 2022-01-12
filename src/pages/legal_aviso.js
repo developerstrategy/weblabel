@@ -3,7 +3,7 @@ import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
 
-const LeaglAviso = () => {
+const LegalAviso = () => {
   return (
     <>
       <Header offset="0" />
@@ -23,9 +23,7 @@ const LeaglAviso = () => {
           </div>
           <div className="row">
             <div className="col-xs-12">
-              <span className="variable">
-                <div className="p1  p-content"></div>
-              </span>
+              <div className="p1  p-content">
               <h5 className="h3 mb-20">Datos Identificativos</h5> Este sitio web{" "}
               <span className="variable">** https://www.rubenmanez.com</span>{" "}
               está gestionado por{" "}
@@ -80,7 +78,7 @@ const LeaglAviso = () => {
               <h5 className="h3 mb-20">
                 Propiedad Intelectual y uso de los contenidos
               </h5>{" "}
-              El sitio web de ** Rubén Máñez, incluyendo a título enunciativo,
+              El sitio web de <span className="variable">** Rubén Máñez</span>, incluyendo a título enunciativo,
               pero no limitativo su programación, edición, compilación y demás
               elementos necesarios para su funcionamiento, los diseños,
               logotipos, texto y/o gráficos son propiedad del prestador o en su
@@ -161,6 +159,7 @@ const LeaglAviso = () => {
               portal o del uso de los servicios que en él se puedan ofertar,
               <span className="variable"> ** Rubén Máñez </span>y el usuario
               acuerdan someterse a los Jueces y Tribunales de Valencia.
+              </div>
             </div>
           </div>
         </div>
@@ -257,4 +256,4 @@ const LeaglAviso = () => {
   )
 }
 
-export default LeaglAviso
+export default LegalAviso
