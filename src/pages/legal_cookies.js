@@ -18,7 +18,7 @@ const LegalCookies = () => {
         <div className="container-3">
           <div className="row pb-20">
             <div className="col-xs-12 align-center">
-              <div className="fluid-1-b mb-50  "> Aviso Legal </div>
+              <div className="fluid-1-b mb-50  "> Política de cookies </div>
               <div className="text-16-r pb-16   ">
                 {" "}
                 <i>

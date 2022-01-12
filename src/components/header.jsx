@@ -104,13 +104,13 @@ const Header = ({ offset }) => {
                       </Link>
                     </li>
                     <li className="text-14-r">
-                      <a href="legal_aviso.html">aviso legal</a>{" "}
+                      <a href="legal_aviso">aviso legal</a>{" "}
                     </li>
                     <li className="text-14-r">
-                      <a href="legal_cookies.html">política cookies</a>{" "}
+                      <a href="legal_cookies">política cookies</a>{" "}
                     </li>
                     <li className="text-14-r">
-                      <a href="legal_privacidad.html">privacidad</a>{" "}
+                      <a href="legal_privacidad">privacidad</a>{" "}
                     </li>
                   </ul>
                 </div>

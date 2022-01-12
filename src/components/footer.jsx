@@ -91,13 +91,13 @@ const Footer = () => {
             <div className="col-xs-12 col-sm-6 sm:min-text-right">
               <ul className="list-inline text-12-r social content-end">
                 <li>
-                  <a href="legal_aviso.html"> Aviso legal</a>
+                  <a href="legal_aviso"> Aviso legal</a>
                 </li>
                 <li>
-                  <a href="legal_cookies.html"> Política de cookies</a>
+                  <a href="legal_cookies"> Política de cookies</a>
                 </li>
                 <li>
-                  <a href="legal_privacidad.html">Política de Privacidad</a>
+                  <a href="legal_privacidad">Política de Privacidad</a>
                 </li>
               </ul>
             </div>
