@@ -30,6 +30,8 @@ const Index = () => {
   `)
 
   const content = data.markdownRemark.frontmatter
+
+  console.log(content)
   return (
     <>
       <Hero
