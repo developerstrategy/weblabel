@@ -16,8 +16,7 @@ const Hero = ({ heading, text, button, bgImage }) => {
           <div className="cover__bg-item">
             <div className="cover__video">
               <img
-                src={image}
-                alt={bgImage}
+                src={bgImage}
                 sizes="
                  (min-width: 40em) calc(66.6vw - 4em),
                  100vw"
