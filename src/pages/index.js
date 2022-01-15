@@ -19,7 +19,7 @@ import ContactSection from "../components/ContactSection"
 const Index = () => {
   const data = useStaticQuery(graphql`
     query IndexQuery {
-      markdownRemark(fileAbsolutePath: { regex: "/index.md/" }) {
+      markdownRemark(fileAbsolutePath: { regex: "/homepage.md/" }) {
         frontmatter {
           title
           subtitle
