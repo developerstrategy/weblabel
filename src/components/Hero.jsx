@@ -3,8 +3,10 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import Header from "./header"
 import bg from "../assets/images/home.jpg"
 
-const Hero = ({ heading, text, button }) => {
-  const image = getImage("../assets/images/home.jpg")
+const Hero = ({ heading, text, button, bgImage }) => {
+  const image = getImage(bgImage)
+
+  console.log(bgImage, image, "image")
 
   return (
     <>
@@ -14,15 +16,11 @@ const Hero = ({ heading, text, button }) => {
           <div className="cover__bg-item">
             <div className="cover__video">
               <img
-                src={bg}
-                alt="Mars Curiosity Rover takes an excellent selfie."
-                srcSet="
-                ../assets/images/tema2/home.jpg  1120w,
-                ../assets/images/tema2/home.jpg 768w,
-                ../assets/images/tema2/home.jpg  400w"
+                src={image}
+                alt={bgImage}
                 sizes="
-     (min-width: 40em) calc(66.6vw - 4em),
-     100vw"
+                 (min-width: 40em) calc(66.6vw - 4em),
+                 100vw"
               />
             </div>
           </div>

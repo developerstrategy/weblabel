@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import "../../scss/style.scss"
 import "../../scss/components/header2.scss"
 import image from "../../static/assets/images/tema2/benefit1.jpg"
@@ -28,11 +28,14 @@ const Index = () => {
       }
     }
   `)
+
+  const content = data.markdownRemark.frontmatter
   return (
     <>
       <Hero
-        heading="Cree Fantasticos sitios web"
-        text="Ayudamos a las marcas a generar conciencia y aumentar las ventas."
+        heading={content.title}
+        text={content.subtitle}
+        bgImage={content.thumbnail}
         button={true}
       />
       <MainSection
