@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Homepage"
         name: "Homepage"
-        file: "src/markdown-pages/homepage.md"
+        file: "src/markdownPages/homepage.md"
         fields:
           - { label: Slider Titulo, name: title, widget: string }
           - { label: Slider SubTitulo, name: subtitle, widget: string }
