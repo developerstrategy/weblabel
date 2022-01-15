@@ -1,10 +1,10 @@
 import React from "react"
+import { useStaticQuery } from "gatsby"
 import "../../scss/style.scss"
 import "../../scss/components/header2.scss"
 import image from "../../static/assets/images/tema2/benefit1.jpg"
 import image1 from "../../static/assets/images/tema2/benefit2.jpg"
 import image2 from "../../static/assets/images/tema2/benefit3.jpg"
-
 import Footer from "../components/footer"
 import Hero from "../components/Hero"
 import MainSection from "../components/MainSection"
@@ -17,6 +17,17 @@ import OurServices from "../components/OurServices"
 import ContactSection from "../components/ContactSection"
 
 const Index = () => {
+  const data = useStaticQuery(graphql`
+    query IndexQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/index.md/" }) {
+        frontmatter {
+          title
+          subtitle
+          thumbnail
+        }
+      }
+    }
+  `)
   return (
     <>
       <Hero
