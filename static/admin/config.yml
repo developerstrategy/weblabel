@@ -3,7 +3,7 @@ backend:
   repo: developerstrategy/weblabel
   #repo: ali-baker/huss-gatsby
 media_folder: "static/assets/images"
-public_folder: "../../static/assets/images"
+public_folder: "../assets/images"
 media_folder_relative: true
 
 collections:
