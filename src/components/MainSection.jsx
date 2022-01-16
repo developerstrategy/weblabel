@@ -1,4 +1,5 @@
 import React from "react"
+import { Remarkable } from "remarkable"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 const MainSection = ({
@@ -8,6 +9,8 @@ const MainSection = ({
   firstText,
   secondText,
 }) => {
+  var md = new Remarkable()
+
   return (
     <>
       <section data-scroll-container className=" pt-md pb-md">
@@ -27,9 +30,12 @@ const MainSection = ({
                 </div>
                 <div className="col-xs-10 col-sm-10">
                   <p className="h3 mb-16">{subHeading} </p>
-                  <p className="p1">{firstText}</p>
-                  <br />
-                  <p className="p1">{secondText}</p>
+                  <p
+                    className="p1"
+                    dangerouslySetInnerHTML={{
+                      __html: md.render(firstText),
+                    }}
+                  ></p>
                 </div>
               </div>
             </div>

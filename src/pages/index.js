@@ -24,14 +24,17 @@ const Index = () => {
           title
           subtitle
           thumbnail
+          incino_title
+          incino_description_title
+          incino_description
         }
       }
     }
   `)
 
   const content = data.markdownRemark.frontmatter
+  const word = content.incino_title.split(" ")
 
-  console.log(content)
   return (
     <>
       <Hero
@@ -41,17 +44,10 @@ const Index = () => {
         button={true}
       />
       <MainSection
-        firstHeading="Human"
-        secondHeading="Marketing"
-        subHeading="UN ENFOQUE DEL MARKETING DIGITAL CENTRADO EN EL SER HUMANO."
-        firstText="Somos socios de marketing digital liderados por marcas con sede en
-            Tāmaki Makaurau, Auckland. Brindamos un enfoque centrado en el ser
-            humano para el marketing digital, creando e implementando
-            estrategias digitales a medida que amplifican la visión de una marca
-            al tiempo que alcanzan los objetivos comerciales."
-        secondText="Nos apasiona hacer crecer marcas con propósito de una manera
-        considerada y nos encanta conectarnos con cualquiera que comparta
-        esta visión."
+        firstHeading={word.slice(0, -1).join(" ")}
+        secondHeading={word[word.length - 1]}
+        subHeading={content.incino_description_title}
+        firstText={content.incino_description}
       />
       <Portfolio />
       <TextSection />
