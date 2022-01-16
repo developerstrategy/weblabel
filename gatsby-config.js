@@ -10,6 +10,8 @@ module.exports = {
     `gatsby-plugin-image`,
     "gatsby-plugin-sass",
     `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -58,8 +60,7 @@ module.exports = {
         path: `${__dirname}/src/assets/fonts`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

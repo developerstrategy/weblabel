@@ -10,7 +10,8 @@ const MainSection = ({
   image,
 }) => {
   var md = new Remarkable()
-
+  const mainImage = getImage(image)
+  console.log(image, mainImage, "ki")
   return (
     <>
       <section data-scroll-container className=" pt-md pb-md">
@@ -45,10 +46,7 @@ const MainSection = ({
               data-scroll-speed="6"
               className="col-xs-12 col-sm-5"
             >
-              <StaticImage
-                src="../../static/assets/images/tema2/start.jpg"
-                alt=""
-              />
+              <GatsbyImage image={image} alt="" />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import "../../scss/style.scss"
 import "../../scss/components/header2.scss"
 import image from "../../static/assets/images/tema2/benefit1.jpg"
@@ -35,7 +36,8 @@ const Index = () => {
 
   const content = data.markdownRemark.frontmatter
   const word = content.incino_title.split(" ")
-
+  const mainImage = getImage(content.incino_thumbnail)
+  console.log(content)
   return (
     <>
       <Hero
@@ -49,7 +51,7 @@ const Index = () => {
         secondHeading={word[word.length - 1]}
         subHeading={content.incino_description_title}
         firstText={content.incino_description}
-        image={}
+        image={mainImage}
       />
       <Portfolio />
       <TextSection />
