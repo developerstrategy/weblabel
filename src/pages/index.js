@@ -36,8 +36,7 @@ const Index = () => {
 
   const content = data.markdownRemark.frontmatter
   const word = content.incino_title.split(" ")
-  const mainImage = getImage(content.incino_thumbnail)
-  console.log(content)
+
   return (
     <>
       <Hero
@@ -51,7 +50,7 @@ const Index = () => {
         secondHeading={word[word.length - 1]}
         subHeading={content.incino_description_title}
         firstText={content.incino_description}
-        image={mainImage}
+        image={content.incino_thumbnail.replace("/assets/images/", "")}
       />
       <Portfolio />
       <TextSection />

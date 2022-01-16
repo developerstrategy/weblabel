@@ -1,6 +1,7 @@
 import React from "react"
 import { Remarkable } from "remarkable"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import Image from "../components/Image"
 
 const MainSection = ({
   firstHeading,
@@ -46,7 +47,7 @@ const MainSection = ({
               data-scroll-speed="6"
               className="col-xs-12 col-sm-5"
             >
-              <GatsbyImage image={image} alt="" />
+              <Image name={image} />
             </div>
           </div>
         </div>
