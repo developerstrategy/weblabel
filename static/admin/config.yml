@@ -25,6 +25,12 @@ collections:
           - { label: Incino Titulo, name: incino_title, widget: string }
           - { label: Incino Description Titulo, name: incino_description_title, widget: string }
           - { label: Incino Description, name: incino_description, widget: markdown }
+          - {
+              label: "Incino Imagen",
+              name: "incino_thumbnail",
+              widget: "image",
+              default: "",
+            }
 
           # - { label: Second Section Title, name: title2, widget: string }
           # - { label: Second Section SubTitle, name: subtitle2, widget: text }

@@ -7,7 +7,7 @@ const MainSection = ({
   secondHeading,
   subHeading,
   firstText,
-  secondText,
+  image,
 }) => {
   var md = new Remarkable()
 

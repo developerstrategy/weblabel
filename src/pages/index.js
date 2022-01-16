@@ -27,6 +27,7 @@ const Index = () => {
           incino_title
           incino_description_title
           incino_description
+          incino_thumbnail
         }
       }
     }
@@ -48,6 +49,7 @@ const Index = () => {
         secondHeading={word[word.length - 1]}
         subHeading={content.incino_description_title}
         firstText={content.incino_description}
+        image={}
       />
       <Portfolio />
       <TextSection />
