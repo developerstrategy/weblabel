@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import { getImage } from "gatsby-plugin-image"
 import "../../scss/style.scss"
 import "../../scss/components/header2.scss"
@@ -39,6 +40,13 @@ const Index = () => {
 
   return (
     <>
+      <Helmet>
+        {" "}
+        <script
+          type="text/javascript"
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
+      </Helmet>
       <Hero
         heading={content.title}
         text={content.subtitle}
