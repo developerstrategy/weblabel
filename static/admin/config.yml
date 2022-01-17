@@ -31,15 +31,17 @@ collections:
               widget: "image",
               default: "",
             }
+          - { label: Proyecto Subtitulo, name: proyecto_subtitulo, widget: string }
+          - { label: Proyecto Titulo, name: proyecto_titulo, widget: string }
 
           # - { label: Second Section Title, name: title2, widget: string }
           # - { label: Second Section SubTitle, name: subtitle2, widget: text }
           # - { label: Contact Section Title, name: contacttitle, widget: string }
           # - { label: E-mail, name: email, widget: string }
           # - { label: Contact, name: contact, widget: string }
-          # - label: "Table data"
-          #   name: "listitems"
-          #   widget: "list"
-          #   fields:
-          #     - { label: "Title", name: "title", widget: "text" }
+          - label: "Table data"
+            name: "listitems"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
       

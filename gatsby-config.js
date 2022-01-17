@@ -64,7 +64,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify-identity`,
       options: {
-        url: `https://mussa-web.netlify.app/admin`, // required!
+        url: `https://mussa-web.netlify.app`, // required!
       },
     },
 
