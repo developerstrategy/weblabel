@@ -55,3 +55,21 @@ collections:
             widget: "list"
             fields:
               - { label: "Marcas Imagen", name: "marcas_imagen", widget: "image" }
+      - label: "Contacto"
+        name: "Contacto"
+        file: "src/markdownPages/contacto.md"
+        fields:
+          - { label: Contacto Titulo, name: contacto_titulo, widget: string }
+          - { label: Contacto SubTitulo, name: contacto_subtitulo, widget: string }
+          - { label: Direction , name: direction, widget: string }
+          - { label: Direction Link, name: direction_link, widget: string }
+          - { label: Email Titulo, name: email_titulo, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Telephono Titulo, name: telefono_titulo, widget: string }
+          - { label: Telephono, name: telefono, widget: string }
+          - { label: WhatsApp Titulo, name: whatsapp_titulo, widget: string }
+          - { label: WhatsApp, name: whatsapp, widget: string }
+          - { label: Contacta Pregunta, name: contacta_pregunta, widget: string }
+          - { label: check acepta la politica, name: check_acepta_la_politica, widget: string }
+          - { label: Contacta Cta, name: contacta_cta, widget: string }
+          - { label: WhatsApp, name: whatsapp, widget: string }
