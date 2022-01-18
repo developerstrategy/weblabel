@@ -42,7 +42,7 @@ beneficos:
     beneficios_description: Un aspecto muy importante en este sentido es que cuando
       cambias de color un vehículo mediante vinilo, no es necesario
     proyecto_imagen: ""
-  - proyecto_imagen: /assets/images/noticia1.webp
+  - proyecto_imagen: /assets/images/benefit3.jpg
     beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Últimas Noticias
     beneficios_description: >-
@@ -53,7 +53,7 @@ beneficos:
 
 
       **“Nombre del dueño”**
-  - proyecto_imagen: /assets/images/noticia2.webp
+  - proyecto_imagen: /assets/images/benefit2.jpg
     beneficios_subtitulo: Ir a la cuenta
     beneficios_description: >-
       Un aspecto muy importante en este sentido es que cuando cambias de color
