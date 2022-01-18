@@ -36,4 +36,8 @@ bloque_description: >-
 
 
   ***“Nombre del dueño”***
+beneficios_subtitulo: Ir a la cuenta
+beneficios_titulo: Beneficios producto
+beneficios_description: Un aspecto muy importante en este sentido es que cuando
+  cambias de color un vehículo mediante vinilo, no es necesario
 ---
