@@ -16,13 +16,14 @@ const Partners = ({ title, subTitle, images }) => {
             </div>
           </div>
           <div className="row scroll-nat text-center">
-            {images.map(image => (
-              <div className="col-xs-3">
-                <Image
-                  name={image.marcas_imagen.replace("/assets/images/", "")}
-                />
-              </div>
-            ))}
+            {images &&
+              images.map(image => (
+                <div className="col-xs-3">
+                  <Image
+                    name={image.marcas_imagen.replace("/assets/images/", "")}
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </section>

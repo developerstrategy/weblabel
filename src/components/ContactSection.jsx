@@ -1,26 +1,42 @@
 import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const ContactSection = () => {
+  const data = useStaticQuery(graphql`
+    query ContactSectionQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
+        frontmatter {
+          contacto_titulo
+          contacto_subtitulo
+          direction
+          direction_link
+          email_titulo
+          email
+          telefono_titulo
+          telefono
+          whatsapp_titulo
+          whatsapp
+          contacta_pregunta
+          check_acepta_la_politica
+          contacta_cta
+        }
+      }
+    }
+  `)
+
+  const content = data.markdownRemark.frontmatter
+
   return (
     <>
       <section className="pt-md pb-md">
         <div className="container pt-md">
           <div className="row pb-50">
-            <div className="col-xs-12 col-sm-6">
+            <div className="col-xs-12 col-sm-5">
               <div className="barmini mb-16"></div>
               <div className="text-16-r pb-40">
-                <em>Contacta con nosotros </em>
+                <em>{content.contacto_subtitulo} </em>
               </div>
-              <div className="fluid-1-b mb-16">
-                Contacta <br />
-                con Nosotros
-              </div>
-              <p className="p1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                quam asperiores nisi minima totam, ipsum sequi amet? Ipsum,
-                placeat iure quasi architecto asperiores excepturi iusto, illo
-                eum error inventore accusamus?
-              </p>
+              <div className="fluid-1-b mb-16">{content.contacto_titulo}</div>
             </div>
           </div>
           <div className="row mb-50">
@@ -28,37 +44,37 @@ const ContactSection = () => {
               <div className="box mini-box p-20 mb-16 bg-cream">
                 <h5 className="h3 mb-20">Dirección</h5>
                 <p className="p1">
-                  <span className="variable">
-                    Carrer de Josep Anselm Clavé, 35, 08950 Esplugues de
-                    Llobregat, Barcelona
-                  </span>
+                  <span className="variable">{content.direction}</span>
                 </p>
-                <a className="mt-20 link5" href="">
-                  {" "}
+                <a
+                  className="mt-20 link5"
+                  href={content.direction_link}
+                  target="_blank"
+                >
                   See map
                 </a>
               </div>
             </div>
             <div className="col-xs-12 col-sm-4">
               <div className="box mini-box p-20 mb-16 bg-cream">
-                <h5 className="h3 mb-20">Email</h5>
+                <h5 className="h3 mb-20">{content.email_titulo}</h5>
                 <p className="p1">
-                  <span className="variable">info@domain.com</span>
+                  <span className="variable">{content.email}</span>
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-4">
               <div className="box mini-box p-20 mb-16 bg-cream">
-                <h5 className="h3">Telephone</h5>
+                <h5 className="h3">{content.telefono_titulo}</h5>
                 <p className="p1">
-                  <span className="variable">+34 178 717 717 </span>
+                  <span className="variable">{content.telefono}</span>
                 </p>
                 <div className="mb-20"></div>
-                <h5 className="h3">whatsapp</h5>
+                <h5 className="h3">{content.whatsapp_titulo}</h5>
                 <p className="p1">
                   <span className="variable">
                     <a href="whatsapp://send?text=Hello World!&phone=+9198********1">
-                      Ping me on WhatsApp
+                      {content.whatsapp}
                     </a>
                   </span>
                 </p>
@@ -67,7 +83,7 @@ const ContactSection = () => {
           </div>
           <div className="row">
             <div className="col-xs-7 col-sm-4">
-              <h3 className="fluid-2-b mb-16">¿Tienes alguna duda?</h3>
+              <h3 className="fluid-2-b mb-16">{content.contacta_pregunta}</h3>
               <div className="barx mt-10 mb-20"></div>
             </div>
             <div className="col-xs-12 col-sm-8">
@@ -122,11 +138,14 @@ const ContactSection = () => {
                       </label>
                     </div>
                     <span className="text-14-r">
-                      Checkbox básico ,
-                      <a className="link4" href="">
-                        {" "}
+                      Checkbox básico,
+                      <Link
+                        className="link4"
+                        to={"/" + content.check_acepta_la_politica}
+                        target="_blank"
+                      >
                         politica privacidad
-                      </a>
+                      </Link>
                     </span>
                   </div>
                   <span className="is-error text-14-r">
@@ -136,7 +155,9 @@ const ContactSection = () => {
               </div>
               <div className="row mb-50">
                 <div className="col-xs-12">
-                  <div className="btn btn-primary btn--medium">SEND</div>
+                  <div className="btn btn-primary btn--medium">
+                    {content.contacta_cta}
+                  </div>
                 </div>
               </div>
             </div>

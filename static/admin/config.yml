@@ -72,3 +72,4 @@ collections:
           - { label: Contacta Pregunta, name: contacta_pregunta, widget: string }
           - { label: check acepta la politica, name: check_acepta_la_politica, widget: string }
           - { label: Contacta Cta, name: contacta_cta, widget: string }
+          - { label: Contacta Map, name: contacta_map, widget: string }
