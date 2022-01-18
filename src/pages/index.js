@@ -42,6 +42,11 @@ const Index = () => {
             beneficios_titulo
             beneficios_description
           }
+          marcas_subtitulo
+          marcas_titulo
+          Marcas {
+            marcas_imagen
+          }
         }
       }
     }
@@ -91,7 +96,11 @@ const Index = () => {
         />
       ))}
 
-      <Partners />
+      <Partners
+        title={content.marcas_titulo}
+        subTitle={content.marcas_subtitulo}
+        images={content.Marcas}
+      />
       <LatestNews />
       <OurServices />
       <ContactSection />
