@@ -20,4 +20,9 @@ incino_description: >-
 incino_thumbnail: /assets/images/start.jpg
 proyecto_subtitulo: Work Porfolio
 proyecto_titulo: Work Portfolio
+listitems:
+  - proyecto_imagen: /assets/images/project1.jpg
+  - proyecto_imagen: /assets/images/project2.jpg
+  - proyecto_imagen: /assets/images/project3.jpg
+  - proyecto_imagen: /assets/images/project4.jpg
 ---
