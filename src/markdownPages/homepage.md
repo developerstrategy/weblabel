@@ -41,7 +41,7 @@ beneficos:
     beneficios_titulo: Beneficios producto
     beneficios_description: Un aspecto muy importante en este sentido es que cuando
       cambias de color un vehículo mediante vinilo, no es necesario
-    proyecto_imagen: /assets/images/king1.png
+    proyecto_imagen: ""
   - proyecto_imagen: /assets/images/noticia1.webp
     beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Últimas Noticias
