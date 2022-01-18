@@ -37,18 +37,31 @@ bloque_description: >-
 
   ***“Nombre del dueño”***
 beneficos:
-  - beneficios_subtitulo: Hello
-    beneficios_titulo: hdaklasd asd
+  - beneficios_subtitulo: Ir a la cuenta
+    beneficios_titulo: Beneficios producto
     beneficios_description: Un aspecto muy importante en este sentido es que cuando
-      cambias de color un vehículo mediante vinilo, no es necesario realizar un
-      cambio en los papeles de tu coche. El vinilo se considera un accesorio y
-      no una modificación del color original.
-    proyecto_imagen: /assets/images/project2.jpg
-  - proyecto_imagen: /assets/images/noticia3.webp
-    beneficios_subtitulo: asdasd asdsa
-    beneficios_titulo: " asdasd qweqwe "
-    beneficios_description: Un aspecto muy importante en este sentido es que cuando
-      cambias de color un vehículo mediante vinilo, no es necesario realizar un
-      cambio en los papeles de tu coche. El vinilo se considera un accesorio y
-      no una modificación del color original.
+      cambias de color un vehículo mediante vinilo, no es necesario
+    proyecto_imagen: /assets/images/king1.png
+  - proyecto_imagen: /assets/images/noticia1.webp
+    beneficios_subtitulo: Ir a la cuenta
+    beneficios_titulo: Últimas Noticias
+    beneficios_description: >-
+      Un aspecto muy importante en este sentido es que cuando cambias de color
+      un vehículo mediante vinilo, no es necesario realizar un cambio en los
+      papeles de tu coche. El vinilo se considera un accesorio y no una
+      modificación del color original.
+
+
+      **“Nombre del dueño”**
+  - proyecto_imagen: /assets/images/noticia2.webp
+    beneficios_subtitulo: Ir a la cuenta
+    beneficios_description: >-
+      Un aspecto muy importante en este sentido es que cuando cambias de color
+      un vehículo mediante vinilo, no es necesario realizar un cambio en los
+      papeles de tu coche. El vinilo se considera un accesorio y no una
+      modificación del color original.
+
+
+      **“Nombre del dueño”**
+    beneficios_titulo: Últimas Noticias
 ---
