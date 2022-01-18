@@ -64,4 +64,12 @@ beneficos:
 
       **“Nombre del dueño”**
     beneficios_titulo: Últimas Noticias
+marcas_subtitulo: Ir a la cuenta
+marcas_titulo: Marcas que han confiado en nosotros
+Marcas:
+  - marcas_imagen: /assets/images/brand1.jpg
+  - marcas_imagen: /assets/images/brand2.jpg
+  - marcas_imagen: /assets/images/brand3.jpg
+  - marcas_imagen: /assets/images/brand4.jpg
+  - marcas_imagen: /assets/images/brand5.jpg
 ---
