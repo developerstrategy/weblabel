@@ -25,4 +25,13 @@ listitems:
   - proyecto_imagen: /assets/images/project2.jpg
   - proyecto_imagen: /assets/images/project3.jpg
   - proyecto_imagen: /assets/images/project4.jpg
+bloque_titulo: Nuestra filosofía alimentaria
+bloque_description: >-
+  Un aspecto muy importante en este sentido es que cuando cambias de color un
+  vehículo mediante vinilo, no es necesario realizar un cambio en los papeles de
+  tu coche. El vinilo se considera un accesorio y no una modificación del color
+  original.
+
+
+  ***“Nombre del dueño”***
 ---
