@@ -10,6 +10,42 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
+      - label: "About"
+        name: "About"
+        file: "src/markdownPages/about.md"
+        fields:
+          - { label: Slider Titulo, name: title, widget: string }
+          - { label: Slider SubTitulo, name: subtitle, widget: string }
+          - {
+              label: "Slider Imagen",
+              name: "thumbnail",
+              widget: "image",
+              default: "",
+            }
+          - { label: Incino Titulo, name: incino_title, widget: string }
+          - { label: Incino Description Titulo, name: incino_description_title, widget: string }
+          - { label: Incino Description, name: incino_description, widget: markdown }
+          - {
+              label: "Incino Imagen",
+              name: "incino_thumbnail",
+              widget: "image",
+              default: "",
+            }
+          - label: "Beneficos"
+            name: "beneficos"
+            widget: "list"
+            fields:
+              - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image", optional: true, required: false}
+              - { label: Beneficios SubTitulo, name: beneficios_subtitulo, widget: string }
+              - { label: Beneficios Titulo, name: beneficios_titulo, widget: string }
+              - { label: Beneficios Description, name: beneficios_description, widget: markdown }
+          - { label: Marcas Subtitulo, name: marcas_subtitulo, widget: string }
+          - { label: Marcas Titulo, name: marcas_titulo, widget: string }
+          - label: "Marcas Imagen"
+            name: "Marcas"
+            widget: "list"
+            fields:
+              - { label: "Marcas Imagen", name: "marcas_imagen", widget: "image" }
       - label: "Homepage"
         name: "Homepage"
         file: "src/markdownPages/homepage.md"
