@@ -33,20 +33,14 @@ collections:
             }
           - { label: Proyecto Subtitulo, name: proyecto_subtitulo, widget: string }
           - { label: Proyecto Titulo, name: proyecto_titulo, widget: string }
-
-          # - { label: Second Section Title, name: title2, widget: string }
-          # - { label: Second Section SubTitle, name: subtitle2, widget: text }
-          # - { label: Contact Section Title, name: contacttitle, widget: string }
-          # - { label: E-mail, name: email, widget: string }
-          # - { label: Contact, name: contact, widget: string }
-          - label: "Table data"
+          - label: "Proyecto Imagen"
             name: "listitems"
             widget: "list"
             fields:
               - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image" }
           - { label: Bloque Titulo, name: bloque_titulo, widget: string }
           - { label: Bloque Description, name: bloque_description, widget: markdown }
-          - label: "Table data"
+          - label: "Beneficos"
             name: "beneficos"
             widget: "list"
             fields:
@@ -54,3 +48,10 @@ collections:
               - { label: Beneficios SubTitulo, name: beneficios_subtitulo, widget: string }
               - { label: Beneficios Titulo, name: beneficios_titulo, widget: string }
               - { label: Beneficios Description, name: beneficios_description, widget: markdown }
+          - { label: Marcas Subtitulo, name: marcas_subtitulo, widget: string }
+          - { label: Marcas Titulo, name: marcas_titulo, widget: string }
+          - label: "Marcas Imagen"
+            name: "Marcas"
+            widget: "list"
+            fields:
+              - { label: "Marcas Imagen", name: "marcas_imagen", widget: "image" }

@@ -16,7 +16,7 @@ const Image = props => (
               childImageSharp {
                 gatsbyImageData(
                   placeholder: BLURRED
-                  formats: [AUTO, WEBP, AVIF, JPG, PNG]
+                  formats: [AUTO, WEBP, AVIF]
                 )
               }
             }
