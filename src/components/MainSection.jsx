@@ -1,6 +1,5 @@
 import React from "react"
 import { Remarkable } from "remarkable"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import Image from "../components/Image"
 
 const MainSection = ({
@@ -11,8 +10,7 @@ const MainSection = ({
   image,
 }) => {
   var md = new Remarkable()
-  const mainImage = getImage(image)
-  console.log(image, mainImage, "ki")
+
   return (
     <>
       <section data-scroll-container className=" pt-md pb-md">

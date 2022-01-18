@@ -1,6 +1,9 @@
 import React from "react"
+import { Remarkable } from "remarkable"
 
-const TextSection = () => {
+const TextSection = ({ firstHeading, secondHeading, description }) => {
+  var md = new Remarkable()
+
   return (
     <>
       <section className=" pt-md pb-md">
@@ -10,19 +13,17 @@ const TextSection = () => {
               <div className="row ">
                 <div className=" col-xs-12 col-sm-6 is-flex flex-column content-center  ">
                   <div className="fluid-1-b  ">
-                    Nuestra filosofía <em>Humana</em>
+                    {firstHeading} <em>{secondHeading}</em>
                   </div>
                 </div>
                 <div className=" col-xs-12 col-sm-6 is-flex flex-column content-center ">
                   <br />
-                  <p className="p1">
-                    {" "}
-                    «Los ingredientes frescos y los sabores puros y desnudos son
-                    de suma importancia para nosotros. Al mismo tiempo, queremos
-                    brindar una experiencia gastronómica única que lleve a Our
-                    huéspedes más allá de su zona de confort ».{" "}
-                  </p>
-                  <br /> - Chef Nicolai Ellitsgaard
+                  <p
+                    className="p1"
+                    dangerouslySetInnerHTML={{
+                      __html: md.render(description),
+                    }}
+                  ></p>
                 </div>
               </div>
             </div>

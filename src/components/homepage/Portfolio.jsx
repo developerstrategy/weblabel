@@ -6,8 +6,10 @@ import project1 from "../../../static/assets/images/tema2/project1.jpg"
 import project2 from "../../../static/assets/images/tema2/project2.jpg"
 import project3 from "../../../static/assets/images/tema2/project3.jpg"
 import project4 from "../../../static/assets/images/tema2/project4.jpg"
+import Image from "../Image"
 
-const Portfolio = ({ title }) => {
+const Portfolio = ({ title, images }) => {
+  console.log(images, "image")
   useEffect(() => {
     const swiper = new Swiper(".swiper", {
       // Optional parameters
@@ -77,19 +79,13 @@ const Portfolio = ({ title }) => {
                     ></path>
                   </svg>{" "}
                 </div>
+
                 <div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                    <img src={project1} alt="" />
-                  </div>
-                  <div className="swiper-slide">
-                    <img src={project2} alt="" />
-                  </div>
-                  <div className="swiper-slide">
-                    <img src={project3} alt="" />
-                  </div>
-                  <div className="swiper-slide">
-                    <img src={project4} alt="" />
-                  </div>
+                  {images.map(image => (
+                    <div className="swiper-slide">
+                      <img src={image.proyecto_imagen} alt="" />
+                    </div>
+                  ))}
                 </div>
 
                 <div className="swiper-pagination"></div>

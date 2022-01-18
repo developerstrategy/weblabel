@@ -31,6 +31,17 @@ const Index = () => {
           incino_description
           incino_thumbnail
           proyecto_titulo
+          listitems {
+            proyecto_imagen
+          }
+          bloque_titulo
+          bloque_description
+          beneficos {
+            proyecto_imagen
+            beneficios_subtitulo
+            beneficios_titulo
+            beneficios_description
+          }
         }
       }
     }
@@ -42,7 +53,6 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        {" "}
         <script
           type="text/javascript"
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
@@ -61,15 +71,25 @@ const Index = () => {
         firstText={content.incino_description}
         image={content.incino_thumbnail.replace("/assets/images/", "")}
       />
-      <Portfolio title={content.proyecto_titulo} />
-      <TextSection />
-      <TextImage
-        sub="Los Beneficios"
-        heading="Beneficios producto"
-        text="Crear el plan de beneficios perfecto es posible. Encuentra la flexibilidad que necesitas y da a tus empleados el poder que se merecen."
-        image=""
-        reverse={false}
+      <Portfolio title={content.proyecto_titulo} images={content.listitems} />
+      <TextSection
+        firstHeading={content.bloque_titulo.split(" ").slice(0, -1).join(" ")}
+        secondHeading={
+          content.bloque_titulo.split(" ")[
+            content.bloque_titulo.split(" ").length - 1
+          ]
+        }
+        description={content.bloque_description}
       />
+      {content.beneficos.map(item => (
+        <TextImage
+          sub={item.beneficios_subtitulo}
+          heading={item.beneficios_titulo}
+          text={item.beneficios_description}
+          image={item.proyecto_imagen.replace("/assets/images/", "")}
+          reverse={false}
+        />
+      ))}
       <TextImage
         sub="La experiencia"
         heading="La arquitectura"

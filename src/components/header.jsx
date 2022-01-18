@@ -8,8 +8,6 @@ const Header = ({ offset }) => {
   const [pageOffset, setPageOffset] = useState(offset)
 
   const handleScroll = headerClassName => {
-    console.log(100, window.pageYOffset)
-
     if (headerClassName !== "menuscroll" && window.pageYOffset >= pageOffset) {
       setHeaderClassName("menuscroll")
       console.log(100, window.pageYOffset)

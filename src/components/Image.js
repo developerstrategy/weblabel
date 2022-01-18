@@ -7,14 +7,17 @@ const Image = props => (
     query={graphql`
       query {
         images: allFile(
-          filter: { extension: { in: ["png", "jpg", "jpeg", "PNG"] } }
+          filter: { extension: { in: ["png", "jpg", "jpeg", "PNG", "webp"] } }
         ) {
           edges {
             node {
               relativePath
               name
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF, JPG, PNG]
+                )
               }
             }
           }
@@ -30,9 +33,6 @@ const Image = props => (
       if (!image) {
         return null
       }
-
-      const dataImage = getImage(image)
-      console.log(image, props.name, dataImage, "hi")
 
       return <GatsbyImage image={image.node.childImageSharp.gatsbyImageData} />
     }}

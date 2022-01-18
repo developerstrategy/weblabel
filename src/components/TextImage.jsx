@@ -1,9 +1,7 @@
 import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Image from "../components/Image"
 
 const TextImage = ({ sub, heading, text, image, reverse, link }) => {
-  const data = getImage(image)
-
   return (
     <>
       <section className="bg-cream">
@@ -35,7 +33,7 @@ const TextImage = ({ sub, heading, text, image, reverse, link }) => {
               {image && (
                 <div className="rat-32-11">
                   <div className="rat-content">
-                    <img src={image} alt="" />
+                    <Image name={image} />
                   </div>
                 </div>
               )}
