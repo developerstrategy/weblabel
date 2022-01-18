@@ -43,5 +43,5 @@ collections:
             name: "listitems"
             widget: "list"
             fields:
-              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image" }
       

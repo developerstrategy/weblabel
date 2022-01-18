@@ -30,6 +30,7 @@ const Index = () => {
           incino_description_title
           incino_description
           incino_thumbnail
+          proyecto_titulo
         }
       }
     }
@@ -60,7 +61,7 @@ const Index = () => {
         firstText={content.incino_description}
         image={content.incino_thumbnail.replace("/assets/images/", "")}
       />
-      <Portfolio />
+      <Portfolio title={content.proyecto_titulo} />
       <TextSection />
       <TextImage
         sub="Los Beneficios"

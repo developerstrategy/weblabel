@@ -7,7 +7,7 @@ import project2 from "../../../static/assets/images/tema2/project2.jpg"
 import project3 from "../../../static/assets/images/tema2/project3.jpg"
 import project4 from "../../../static/assets/images/tema2/project4.jpg"
 
-const Portfolio = () => {
+const Portfolio = ({ title }) => {
   useEffect(() => {
     const swiper = new Swiper(".swiper", {
       // Optional parameters
@@ -39,7 +39,7 @@ const Portfolio = () => {
         <div className="container mb-16  ">
           <div className="row ">
             <div className=" col-xs-12 col-sm-6 is-flex flex-column content-center  ">
-              <div className="fluid-1-b mb-20  "> Work portfolio </div>
+              <div className="fluid-1-b mb-20  ">{title} </div>
             </div>
           </div>
         </div>
