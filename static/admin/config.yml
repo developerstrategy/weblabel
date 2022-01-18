@@ -50,7 +50,7 @@ collections:
             name: "beneficos"
             widget: "list"
             fields:
-              - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image", optional: true}
+              - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image", optional: true, required: false}
               - { label: Beneficios SubTitulo, name: beneficios_subtitulo, widget: string }
               - { label: Beneficios Titulo, name: beneficios_titulo, widget: string }
               - { label: Beneficios Description, name: beneficios_description, widget: markdown }

@@ -81,75 +81,16 @@ const Index = () => {
         }
         description={content.bloque_description}
       />
-      {content.beneficos.map(item => (
+      {content.beneficos.map((item, index) => (
         <TextImage
           sub={item.beneficios_subtitulo}
           heading={item.beneficios_titulo}
           text={item.beneficios_description}
           image={item.proyecto_imagen.replace("/assets/images/", "")}
-          reverse={false}
+          reverse={index % 2 === 0 ? true : false}
         />
       ))}
-      <TextImage
-        sub="La experiencia"
-        heading="La arquitectura"
-        text={
-          <>
-            Rest ha sido diseñado con una consideración sensible para su
-            contexto geográfico y vecinos acuáticos. La estructura está diseñada
-            para integrarse completamente en su entorno marino a lo largo del
-            tiempo, ya que la rugosidad del caparazón de hormigón funcionará
-            como un arrecife artificial, dando la bienvenida a lapas y algas
-            marinas para habitarlo.
-            <br />
-            Con los gruesos muros de hormigón contra la escarpada costa, la
-            estructura está construida para resistir la presión y el impacto de
-            las agitadas condiciones del mar.
-          </>
-        }
-        image={image}
-        reverse={true}
-      />
-      <TextImage
-        sub="La experiencia"
-        heading="La arquitectura"
-        text={
-          <>
-            Rest ha sido diseñado con una consideración sensible para su
-            contexto geográfico y vecinos acuáticos. La estructura está diseñada
-            para integrarse completamente en su entorno marino a lo largo del
-            tiempo, ya que la rugosidad del caparazón de hormigón funcionará
-            como un arrecife artificial, dando la bienvenida a lapas y algas
-            marinas para habitarlo.
-            <br />
-            Con los gruesos muros de hormigón contra la escarpada costa, la
-            estructura está construida para resistir la presión y el impacto de
-            las agitadas condiciones del mar.
-          </>
-        }
-        image={image1}
-        reverse={false}
-      />{" "}
-      <TextImage
-        sub="La experiencia"
-        heading="La arquitectura"
-        text={
-          <>
-            Rest ha sido diseñado con una consideración sensible para su
-            contexto geográfico y vecinos acuáticos. La estructura está diseñada
-            para integrarse completamente en su entorno marino a lo largo del
-            tiempo, ya que la rugosidad del caparazón de hormigón funcionará
-            como un arrecife artificial, dando la bienvenida a lapas y algas
-            marinas para habitarlo.
-            <br />
-            Con los gruesos muros de hormigón contra la escarpada costa, la
-            estructura está construida para resistir la presión y el impacto de
-            las agitadas condiciones del mar.
-          </>
-        }
-        image={image2}
-        reverse={true}
-      />
+
       <Partners />
       <LatestNews />
       <OurServices />
