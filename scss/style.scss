@@ -70,6 +70,40 @@ b {
   color: $c-primary;
 }
 
+blockquote {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px !important;
+  line-height: 110%;
+  margin: 25px 0px !important;
+
+  text-align: center;
+
+  color: #000000;
+  p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 36px !important;
+    line-height: 110%;
+    /* or 40px */
+
+    text-align: center;
+
+    color: #000000;
+  }
+  strong {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 36px !important;
+    line-height: 110%;
+    /* or 40px */
+
+    text-align: center;
+
+    color: #000000;
+  }
+}
+
 .bg-cream {
   background-color: $bg-light;
   .input {
