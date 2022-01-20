@@ -60,6 +60,13 @@ module.exports = {
         path: `${__dirname}/src/assets/fonts`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      },
+    },
 
     {
       resolve: `gatsby-plugin-netlify-identity`,
