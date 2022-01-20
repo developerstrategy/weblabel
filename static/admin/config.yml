@@ -7,6 +7,27 @@ public_folder: "/assets/images"
 media_folder_relative: true
 
 collections:
+  - name: blog
+    label: Blog
+    folder: blog
+    create: true
+    fields:
+      - { name: blogtitle, label: Página noticia titulo }
+      - { name: blogsubtitle, label: Página noticia Subtitulo }
+      - { name: path, label: Path (post url) }
+      - { name: date, label: Date, widget: datetime }
+      - {
+          label: "Blog Page",
+          name: "blogpage",
+          widget: "hidden",
+          default: true,
+        }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+        }
+      - { name: body, label: Body, widget: markdown }
   - label: "Pages"
     name: "pages"
     files:

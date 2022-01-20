@@ -1,0 +1,231 @@
+import React from "react"
+import ContactSection from "../components/ContactSection"
+import Footer from "../components/footer"
+import Header from "../components/header"
+
+const BlogInternal = () => {
+  return (
+    <>
+      <Header offset="0" />
+      <div>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" pt-big ">
+            <div class="container-3">
+                <div class="row pb-20">
+                    <div class="col-xs-12  p-content">
+                        <div class="text-14-r  align-middle mb-20 ">
+                            <svg class="mr-20" width="13" height="15" viewBox="0 0 13 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7" stroke="#fb263b"></path>
+                            </svg>
+                   
+                            <div class="text-14-l red">
+                                Category
+                            </div>
+                        </div>
+                        <div class="fluid-2-b mb-50  "> Trópico 2021: De vuelta al paraíso en Acapulco </div>
+                        <div class="fluid-3-b mb-20"> Nos lanzamos al <b>icónico festival</b> en la costa de Guerrero
+                            tras casi dos años sin disfrutar una nueva edición. </div>
+
+<div class="social-bar ">    <ul class="list-clear list-inline">
+    <li>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>logo-instagram</title><g fill="#000000"><path d="M12,2.982c2.937,0,3.285.011,4.445.064a6.072,6.072,0,0,1,2.042.379,3.4,3.4,0,0,1,1.265.823,3.4,3.4,0,0,1,.823,1.265,6.072,6.072,0,0,1,.379,2.042c.053,1.16.064,1.508.064,4.445s-.011,3.285-.064,4.445a6.072,6.072,0,0,1-.379,2.042,3.644,3.644,0,0,1-2.088,2.088,6.072,6.072,0,0,1-2.042.379c-1.16.053-1.508.064-4.445.064s-3.285-.011-4.445-.064a6.072,6.072,0,0,1-2.042-.379,3.4,3.4,0,0,1-1.265-.823,3.4,3.4,0,0,1-.823-1.265,6.072,6.072,0,0,1-.379-2.042c-.053-1.16-.064-1.508-.064-4.445s.011-3.285.064-4.445a6.072,6.072,0,0,1,.379-2.042,3.4,3.4,0,0,1,.823-1.265,3.4,3.4,0,0,1,1.265-.823,6.072,6.072,0,0,1,2.042-.379c1.16-.053,1.508-.064,4.445-.064M12,1c-2.987,0-3.362.013-4.535.066a8.108,8.108,0,0,0-2.67.511A5.625,5.625,0,0,0,1.577,4.8a8.108,8.108,0,0,0-.511,2.67C1.013,8.638,1,9.013,1,12s.013,3.362.066,4.535a8.108,8.108,0,0,0,.511,2.67A5.625,5.625,0,0,0,4.8,22.423a8.108,8.108,0,0,0,2.67.511C8.638,22.987,9.013,23,12,23s3.362-.013,4.535-.066a8.108,8.108,0,0,0,2.67-.511A5.625,5.625,0,0,0,22.423,19.2a8.108,8.108,0,0,0,.511-2.67C22.987,15.362,23,14.987,23,12s-.013-3.362-.066-4.535a8.108,8.108,0,0,0-.511-2.67A5.625,5.625,0,0,0,19.2,1.577a8.108,8.108,0,0,0-2.67-.511C15.362,1.013,14.987,1,12,1Z" fill="#000000"></path><path d="M12,6.351A5.649,5.649,0,1,0,17.649,12,5.649,5.649,0,0,0,12,6.351Zm0,9.316A3.667,3.667,0,1,1,15.667,12,3.667,3.667,0,0,1,12,15.667Z" fill="#000000"></path><circle cx="17.872" cy="6.128" r="1.32" fill="#000000"></circle></g></svg>
+
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>logo-youtube</title><g fill="#000000"><path fill="#000000" d="M23.8,7.2c0,0-0.2-1.7-1-2.4c-0.9-1-1.9-1-2.4-1C17,3.6,12,3.6,12,3.6h0c0,0-5,0-8.4,0.2 c-0.5,0.1-1.5,0.1-2.4,1c-0.7,0.7-1,2.4-1,2.4S0,9.1,0,11.1v1.8c0,1.9,0.2,3.9,0.2,3.9s0.2,1.7,1,2.4c0.9,1,2.1,0.9,2.6,1 c1.9,0.2,8.2,0.2,8.2,0.2s5,0,8.4-0.3c0.5-0.1,1.5-0.1,2.4-1c0.7-0.7,1-2.4,1-2.4s0.2-1.9,0.2-3.9v-1.8C24,9.1,23.8,7.2,23.8,7.2z M9.5,15.1l0-6.7l6.5,3.4L9.5,15.1z"></path></g></svg>
+        </a>
+    </li>
+
+    <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>logo-linkedin</title><g fill="#000000"><path fill="#000000" d="M23,0H1C0.4,0,0,0.4,0,1v22c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V1C24,0.4,23.6,0,23,0z M7.1,20.5H3.6V9h3.6 V20.5z M5.3,7.4c-1.1,0-2.1-0.9-2.1-2.1c0-1.1,0.9-2.1,2.1-2.1c1.1,0,2.1,0.9,2.1,2.1C7.4,6.5,6.5,7.4,5.3,7.4z M20.5,20.5h-3.6 v-5.6c0-1.3,0-3-1.8-3c-1.9,0-2.1,1.4-2.1,2.9v5.7H9.4V9h3.4v1.6h0c0.5-0.9,1.6-1.8,3.4-1.8c3.6,0,4.3,2.4,4.3,5.5V20.5z"></path></g></svg></a></li>
+</ul></div>
+
+
+                        <div class="text-16-r pb-16   "> <i> Por Manuel Ruiz </i></div>
+                        <div class="barx "></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="p1 mb-50 p-content"> Nos dedicamos al diseño, personalización y rotulación de
+                            cualquier tipo de superficie utilizando el vinilo de más alta calidad. Cada proyecto es
+                            único para nosotros, por lo que ofrecemos un asesoramiento personalizado adaptado a las
+                            necesidades de cada cliente. <br> Nos gusta formar parte de los proyectos desde el
+                            principio. Our servicios van desde el asesoramiento y el diseño, hasta la impresión y
+                            rotulación. Nuestro equipo se encuentra en continua formación para poder seguir ofreciendo
+                            el mejor servicio y resultado. Estamos especializados en el car Wrapping (forrado integral
+                            de vehículos) aunque contamos con una amplia experiencia en rotulación de vehículos
+                            comerciales además de ofrecer cualquier tipo de servicio relacionado con el vinilo. </p>
+                       
+                        <div class="rat-2-1 bg-cream mb-50">
+                            <div class="rat-content is-flex rat-content is-flex  align-bottom ">
+                                <img alt="marca" src="assets/images/tema2/new-1.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <blockquote class="p-content text-center "
+                            cite='http://html.conclase.net/w3c/html401...def-BLOCKQUOTE'>
+                            <i class="h2"> " <strong>Nota.</strong> Recomendamos que las implementaciones de hojas de
+                                estilo porporcionen un mecanismo para insertar signos de puntuación de citas el contexto
+                                del idioma actual y el grado de anidamiento de las citas." </i>
+                        </blockquote>
+                        <p class="p1 mb-50 p-content"> Nos dedicamos al diseño, personalización y rotulación de
+                            cualquier tipo de superficie utilizando el vinilo de más alta calidad. Cada proyecto es
+                            único para nosotros, por lo que ofrecemos un asesoramiento personalizado adaptado a las
+                            necesidades de cada cliente. Nos gusta formar parte de los proyectos desde el principio. Our
+                            servicios van desde el asesoramiento y el diseño, hasta la impresión y rotulación. Nuestro
+                            equipo se encuentra en continua formación para poder seguir ofreciendo el mejor servicio y
+                            resultado. Estamos especializados en el car Wrapping (forrado integral de vehículos) aunque
+                            contamos con una amplia experiencia en rotulación de vehículos comerciales además de ofrecer
+                            cualquier tipo de servicio relacionado con el vinilo. </p>
+                        <div class="rat-2-1 bg-cream mb-50">
+                            <div class="rat-content is-flex rat-content is-flex  align-bottom ">
+                                <img alt="marca" src="assets/images/tema2/new-2.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 p-content">
+                        <p class="p1 mb-20"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+                            laborum animi eligendi. Perferendis at iure eius distinctio natus voluptatum aspernatur
+                            beatae esse perspiciatis! Facere commodi soluta illum aliquid distinctio porro? </p>
+                        <hr class="mt-50" />
+                        <ul class="list-clear list-inline text-12-r">
+                            <li>
+                                <a href=""> keyword </a>
+                            </li>
+                            <li>
+                                <a href=""> keyword </a>
+                            </li>
+                            <li>
+                                <a href=""> keyword </a>
+                            </li>
+                            <li>
+                                <a href=""> keyword </a>
+                            </li>
+                            <li>
+                                <a href=""> keyword </a>
+                            </li>
+                            <li>
+                                <a href=""> keyword </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" height-sm ">
+         <hr/>
+                        <div class="container">
+                            <div class="row pt-50 pb-50">
+                                <div class="col-xs-6">
+                                    <div>
+                                        <div class="arrowpost">
+                                            <svg class="turn" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
+                                                    fill="#fb263b"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="fluid-3-b">Anterior Post</div>
+                                        <p class="p1"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <div class="arrowpost">
+                                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
+                                                fill="#fb263b"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="fluid-3-b"> Next Post </div>
+                                    <p class="p1"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                <hr/>
+            </div>
+        </section>
+        <section class=" pt-md pb-md bg-cream">
+            <div class="container pt-md">
+                <div class="row">
+                    <div class="col-xs-7 col-sm-4">
+                        <h3 class="fluid-2-b mb-16"> ¿Tienes alguna duda? </h3>
+                        <div class="barx mt-10 mb-20"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <div class="row mb-16">
+                            <div class="col-xs-12">
+                                <input type="text" class="input" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="row mb-16">
+                            <div class="col-xs-12">
+                                <input type="text" class="input" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row mb-16">
+                            <div class="col-xs-12">
+                                <input type="text" class="input" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="row mb-20 ">
+                            <div class="col-xs-12">
+                                <textarea class="input textarea " id="comment" name="comment" cols="45" rows="8"
+                                    aria-required="true" placeholder="Write your comment here..."></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-50">
+                            <div class="col-xs-12">
+                                <div class="checkbox-item-text">
+                                    <div class="checkbox-item">
+                                        <input id="checkbox_0" type="checkbox" />
+                                        <label for="checkbox_0">
+                                            <i class="icon ">
+                                                <svg width="16" height="16" viewBox="0 0 16 16">
+                                                    <g stroke-width="1" fill="#000000" stroke="#000000">
+                                                        <polyline fill="none" stroke="#000000" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-miterlimit="10"
+                                                            points="1,9 5,13 15,3 ">
+                                                        </polyline>
+                                                    </g>
+                                                </svg></i>
+                                        </label>
+                                    </div>
+                                    <span class="text-14-r ">Checkbox básico , <a class="link4" href=""> politica
+                                            privacidad</a> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-50">
+                            <div class="col-xs-12">
+                                <div class="btn btn-primary btn--medium">SEND</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+      <ContactSection />
+      <Footer />
+    </>
+  )
+}
+
+export default BlogInternal
