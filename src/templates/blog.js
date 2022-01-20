@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
@@ -23,7 +23,7 @@ export const query = graphql`
 `
 
 const BlogInternal = props => {
-  console.log(props.data.markdownRemark.html)
+  console.log(props.pageContext)
   return (
     <>
       <Header offset="0" />
@@ -158,24 +158,15 @@ const BlogInternal = props => {
               <div className="col-xs-12 p-content">
                 <hr className="mt-50" />
                 <ul className="list-clear list-inline text-12-r">
-                  <li>
-                    <a href=""> keyword </a>
-                  </li>
-                  <li>
-                    <a href=""> keyword </a>
-                  </li>
-                  <li>
-                    <a href=""> keyword </a>
-                  </li>
-                  <li>
-                    <a href=""> keyword </a>
-                  </li>
-                  <li>
-                    <a href=""> keyword </a>
-                  </li>
-                  <li>
-                    <a href=""> keyword </a>
-                  </li>
+                  {props.data.markdownRemark.frontmatter.keyword
+                    ? props.data.markdownRemark.frontmatter.keyword.map(
+                        keyword => (
+                          <li>
+                            <a href=""> {keyword.blog_keyword} </a>
+                          </li>
+                        )
+                      )
+                    : ""}
                 </ul>
               </div>
             </div>
@@ -186,10 +177,38 @@ const BlogInternal = props => {
             <div className="container">
               <div className="row pt-50 pb-50">
                 <div className="col-xs-6">
-                  <div>
+                  {" "}
+                  {props.pageContext.prev && (
+                    <div>
+                      <div className="arrowpost">
+                        <svg
+                          className="turn"
+                          width="26"
+                          height="26"
+                          viewBox="0 0 26 26"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
+                            fill="#fb263b"
+                          ></path>
+                        </svg>
+                      </div>
+
+                      <Link
+                        to={"/blog/" + props.pageContext.prev.frontmatter.path}
+                      >
+                        {" "}
+                        Anterior Post{" "}
+                      </Link>
+                    </div>
+                  )}
+                </div>{" "}
+                {props.pageContext.next && (
+                  <div className="col-xs-6 text-right">
                     <div className="arrowpost">
                       <svg
-                        className="turn"
                         width="26"
                         height="26"
                         viewBox="0 0 26 26"
@@ -202,34 +221,16 @@ const BlogInternal = props => {
                         ></path>
                       </svg>
                     </div>
-                    <div className="fluid-3-b">Anterior Post</div>
-                    <p className="p1">
-                      {" "}
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
-                    </p>
+                    <div className="fluid-3-b">
+                      <Link
+                        to={"/blog/" + props.pageContext.next.frontmatter.path}
+                      >
+                        {" "}
+                        Next Post
+                      </Link>
+                    </div>
                   </div>
-                </div>
-                <div className="col-xs-6 text-right">
-                  <div className="arrowpost">
-                    <svg
-                      width="26"
-                      height="26"
-                      viewBox="0 0 26 26"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                        fill="#fb263b"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div className="fluid-3-b"> Next Post </div>
-                  <p className="p1">
-                    {" "}
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
-                  </p>
-                </div>
+                )}
               </div>
             </div>
 

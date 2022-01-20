@@ -18,13 +18,21 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  result.data.allMarkdownRemark.edges.forEach(edge => {
+  result.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
     createPage({
       component: blogTemplate,
-      path: `/blog/${edge.node.frontmatter.path}`,
+      path: `/blog/${node.frontmatter.path}`,
 
       context: {
-        slug: edge.node.frontmatter.path,
+        slug: node.frontmatter.path,
+        prev:
+          index === 0
+            ? null
+            : result.data.allMarkdownRemark.edges[index - 1].node,
+        next:
+          index === result.data.allMarkdownRemark.edges.length - 1
+            ? null
+            : result.data.allMarkdownRemark.edges[index + 1].node,
       }, // additional data can be passed via context
     })
   })
