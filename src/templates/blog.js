@@ -14,6 +14,9 @@ export const query = graphql`
         blogtitle
         blogsubtitle
         thumbnail
+        keyword {
+          blog_keyword
+        }
       }
     }
   }
