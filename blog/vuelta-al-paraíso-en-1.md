@@ -1,11 +1,14 @@
 ---
-blogtitle: "Trópico 2022: De vuelta al paraíso en Acapulco"
+blogtitle: "Tróp 2: De vuelta al paraíso en Acapulco"
 blogsubtitle: Nos lanzamos al icónico festival en la costa de Guerrero tras casi
   dos años sin disfrutar una nueva edición.
 path: vuelta-al-paraíso-en
 date: 2022-01-20T19:50:46.558Z
 blogpage: true
 thumbnail: /assets/images/lenka-sluneckova-xxsz5xzfuas-unsplash.jpg
+keyword:
+  - blog_keyword: Keyword1
+  - blog_keyword: keyword 2
 ---
 Nos dedicamos al diseño, personalización y rotulación de cualquier tipo de superficie utilizando el vinilo de más alta calidad. Cada proyecto es único para nosotros, por lo que ofrecemos un asesoramiento personalizado adaptado a las necesidades de cada cliente.
 Nos gusta formar parte de los proyectos desde el principio. Nuestros servicios van desde el asesoramiento y el diseño, hasta la impresión y rotulación.
