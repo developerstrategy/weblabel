@@ -39,7 +39,8 @@ bloque_description: >-
 beneficos:
   - beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Beneficios producto
-    beneficios_description: Un aspecto muy importante en este sentido es que cuando
+    beneficios_description:
+      Un aspecto muy importante en este sentido es que cuando
       cambias de color un vehículo mediante vinilo, no es necesario
     proyecto_imagen: ""
   - proyecto_imagen: /assets/images/benefit3.jpg
@@ -72,4 +73,5 @@ Marcas:
   - marcas_imagen: /assets/images/brand3.jpg
   - marcas_imagen: /assets/images/brand4.jpg
   - marcas_imagen: /assets/images/brand5.jpg
+page: true
 ---

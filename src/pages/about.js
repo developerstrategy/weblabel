@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Hero from "../components/Hero"
 import MainSection from "../components/MainSection"
 import TextImage from "../components/TextImage"
@@ -9,89 +10,70 @@ import Partners from "../components/Partners"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 const About = () => {
+  const data = useStaticQuery(graphql`
+    query AboutQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/about.md/" }) {
+        frontmatter {
+          title
+          subtitle
+          thumbnail
+          incino_title
+          incino_description_title
+          incino_description
+          incino_thumbnail
+
+          beneficos {
+            proyecto_imagen
+            beneficios_subtitulo
+            beneficios_titulo
+            beneficios_description
+          }
+          marcas_subtitulo
+          marcas_titulo
+          Marcas {
+            marcas_imagen
+          }
+        }
+      }
+    }
+  `)
+
+  const content = data.markdownRemark.frontmatter
+  const word = content.incino_title.split(" ")
+
   return (
     <>
       <Hero
-        heading="About Us"
-        text="Ayudamos a las marcas a generar conciencia y aumentar las ventas."
+        heading={content.title}
+        text={content.subtitle}
+        bgImage={content.thumbnail}
         button={false}
       />
       <MainSection
-        firstHeading="About"
-        secondHeading="US"
-        subHeading="Un enfoque del marketing digital centrado en el ser humano."
-        firstText="Somos socios de marketing digital liderados por marcas con sede en Tāmaki Makaurau, Auckland. Brindamos un enfoque centrado en el ser humano para el marketing digital, creando e implementando estrategias digitales a medida que amplifican la visión de una marca al tiempo que alcanzan los objetivos comerciales"
-        secondText="Nos apasiona hacer crecer marcas con propósito de una manera considerada y nos encanta conectarnos con cualquiera que comparta esta visión."
+        firstHeading={word.slice(0, -1).join(" ")}
+        secondHeading={word[word.length - 1]}
+        subHeading={content.incino_description_title}
+        firstText={content.incino_description}
+        image={content.incino_thumbnail.replace("/assets/images/", "")}
       />
-      <TextImage
-        sub="Los Beneficios"
-        heading="Beneficios producto"
-        text="Crear el plan de beneficios perfecto es posible. Encuentra la flexibilidad que necesitas y da a tus empleados el poder que se merecen."
-        image=""
-        reverse={false}
+      {content.beneficos.map((item, index) => (
+        <TextImage
+          sub={item.beneficios_subtitulo}
+          heading={item.beneficios_titulo}
+          text={item.beneficios_description}
+          image={
+            item.proyecto_imagen
+              ? item.proyecto_imagen.replace("/assets/images/", "")
+              : ""
+          }
+          reverse={index % 2 === 0 ? false : true}
+        />
+      ))}
+      <Partners
+        title={content.marcas_titulo}
+        subTitle={content.marcas_subtitulo}
+        images={content.Marcas}
       />
-      <TextImage
-        sub="La experiencia"
-        heading="La arquitectura"
-        text={
-          <>
-            Rest ha sido diseñado con una consideración sensible para su
-            contexto geográfico y vecinos acuáticos. La estructura está diseñada
-            para integrarse completamente en su entorno marino a lo largo del
-            tiempo, ya que la rugosidad del caparazón de hormigón funcionará
-            como un arrecife artificial, dando la bienvenida a lapas y algas
-            marinas para habitarlo.
-            <br />
-            Con los gruesos muros de hormigón contra la escarpada costa, la
-            estructura está construida para resistir la presión y el impacto de
-            las agitadas condiciones del mar.
-          </>
-        }
-        link={true}
-        image={image}
-        reverse={true}
-      />
-      <TextImage
-        sub="La experiencia"
-        heading="La arquitectura"
-        text={
-          <>
-            Rest ha sido diseñado con una consideración sensible para su
-            contexto geográfico y vecinos acuáticos. La estructura está diseñada
-            para integrarse completamente en su entorno marino a lo largo del
-            tiempo, ya que la rugosidad del caparazón de hormigón funcionará
-            como un arrecife artificial, dando la bienvenida a lapas y algas
-            marinas para habitarlo.
-            <br />
-            Con los gruesos muros de hormigón contra la escarpada costa, la
-            estructura está construida para resistir la presión y el impacto de
-            las agitadas condiciones del mar.
-          </>
-        }
-        image={image1}
-        reverse={false}
-      />{" "}
-      <TextImage
-        sub="La experiencia"
-        heading="La arquitectura"
-        text={
-          <>
-            Rest ha sido diseñado con una consideración sensible para su
-            contexto geográfico y vecinos acuáticos. La estructura está diseñada
-            para integrarse completamente en su entorno marino a lo largo del
-            tiempo, ya que la rugosidad del caparazón de hormigón funcionará
-            como un arrecife artificial, dando la bienvenida a lapas y algas
-            marinas para habitarlo.
-            <br />
-            Con los gruesos muros de hormigón contra la escarpada costa, la
-            estructura está construida para resistir la presión y el impacto de
-            las agitadas condiciones del mar.
-          </>
-        }
-        image={image2}
-        reverse={true}
-      />
-      <Partners />
       <ContactSection />
       <Footer />
     </>

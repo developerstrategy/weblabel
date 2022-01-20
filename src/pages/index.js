@@ -88,7 +88,7 @@ const Index = () => {
           heading={item.beneficios_titulo}
           text={item.beneficios_description}
           image={item.proyecto_imagen.replace("/assets/images/", "")}
-          reverse={index % 2 === 0 ? true : false}
+          reverse={index % 2 === 0 ? false : true}
         />
       ))}
 

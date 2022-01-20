@@ -5,7 +5,7 @@ thumbnail: /assets/images/kevin-grieve-6w3dxwoq9l8-unsplash.jpg
 incino_title: About US
 incino_description_title: 10 AÑOS DE ROTULACIÓN INTEGRAL Y CAR WRAPPING
 incino_description: >-
-  
+
 
   Nos dedicamos al diseño, personalización y rotulación de cualquier tipo de superficie utilizando el vinilo de más alta calidad.\
 
@@ -20,7 +20,8 @@ incino_thumbnail: /assets/images/benefit3.jpg
 beneficos:
   - beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Beneficios producto
-    beneficios_description: Un aspecto muy importante en este sentido es que cuando
+    beneficios_description:
+      Un aspecto muy importante en este sentido es que cuando
       cambias de color un vehículo mediante vinilo, no es necesario
   - proyecto_imagen: /assets/images/project3.jpg
     beneficios_subtitulo: Ir a la cuenta
@@ -58,4 +59,5 @@ Marcas:
   - marcas_imagen: /assets/images/brand7.jpg
   - marcas_imagen: /assets/images/brand8.jpg
   - marcas_imagen: /assets/images/brand6.jpg
+page: true
 ---
