@@ -36,7 +36,7 @@ const BlogInternal = props => {
           </div>
         </section>
         <section className=" pt-big ">
-          <div className="container-3">
+          <div className="container-3 blog-inner">
             <div className="row pb-20">
               <div className="col-xs-12  p-content">
                 <div className="text-14-r  align-middle mb-20 ">
@@ -142,16 +142,16 @@ const BlogInternal = props => {
               </div>
             </div>
             <div className="row">
-              <div className="col-xs-12">
-                <p className="p1 mb-50 p-content">
-                  {" "}
+              <div className="col-xs-12 mb-50">
+           
+               
                   <div
-                    className="p1 mb-50 p-content"
+                    className="p1  p-content"
                     dangerouslySetInnerHTML={{
                       __html: props.data.markdownRemark.html,
                     }}
                   />
-                </p>
+          
               </div>
             </div>
             <div className="row">
