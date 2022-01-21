@@ -146,7 +146,6 @@ const BlogInternal = props => {
            
                
                   <div
-                    className="p1  p-content"
                     dangerouslySetInnerHTML={{
                       __html: props.data.markdownRemark.html,
                     }}

@@ -825,4 +825,18 @@ section {
     font-size: 16px;
     line-height: 1.5;
   }
+
+
+  blockquote {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 36px !important;
+    line-height: 1;
+    margin: 25px 0px !important;
+  
+    text-align: center;
+  
+    color: #000000;
+
+  }
 }
