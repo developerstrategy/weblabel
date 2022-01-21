@@ -792,3 +792,25 @@ section {
     margin-top: 0px;
   }
 }
+
+
+.half-white-bg-r {
+  position: relative;
+  @media (min-width: 768px) {
+    * {
+      position: relative;
+      z-index: 1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -4rem;
+      left: 0;
+      right: auto;
+      bottom: -4rem;
+      z-index: 0;
+      width: 100vw;
+      background-color: #fff;
+    }
+  }
+}
