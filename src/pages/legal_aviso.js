@@ -2,8 +2,39 @@ import React from "react"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import { useStaticQuery, graphql } from "gatsby"
 
 const LegalAviso = () => {
+  const data = useStaticQuery(graphql`
+    query LegalSectionQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
+        frontmatter {
+          contacto_titulo
+          contacto_subtitulo
+          direction
+          direction_link
+          email_titulo
+          email
+          telefono_titulo
+          telefono
+          whatsapp_titulo
+          whatsapp
+          contacta_pregunta
+          check_acepta_la_politica
+          contacta_cta
+          website
+          empresa_corto
+          empresa_legal
+          empresa_dni
+          empresa_legal_direccion
+        }
+      }
+    }
+  `)
+
+
+  const content = data.markdownRemark.frontmatter
+
   return (
     <>
       <Header offset="0" />
@@ -11,11 +42,11 @@ const LegalAviso = () => {
         <div className="container-3">
           <div className="row pb-20">
             <div className="col-xs-12 align-center">
-              <div className="fluid-1-b mb-50  "> Aviso Legal </div>
+              <div className="fluid-1-b mb-50  ">Aviso legal</div>
               <div className="text-16-r pb-16  ">
-                {" "}
+                
                 <i>
-                  <div className="variable"> Nombre empresa </div>
+                  <div className="variable">  {content.empresa_corto}  </div>
                 </i>
               </div>
               <div className="barx "></div>
@@ -24,17 +55,16 @@ const LegalAviso = () => {
           <div className="row">
             <div className="col-xs-12">
               <div className="p1  p-content">
-              <h5 className="h3 mb-20">Datos Identificativos</h5> Este sitio web{" "}
-              <span className="variable">** https://www.rubenmanez.com</span>{" "}
-              está gestionado por{" "}
-              <span className="variable">**Rubén Máñez</span>con{" "}
-              <span className="variable">** DNI 53258492-Z</span> (“el titular”)
-              con domicilio en{" "}
-              <span className="variable">
-                ** Enguera, Patio19, 46018 (Valencia).
-              </span>{" "}
-              Correo electrónico de contacto:{" "}
-              <span className="variable">** hola@rubenmanez.com. </span>
+              <h5 className="h3 mb-20">Datos Identificativos</h5> Este sitio web
+              <span className="variable"> {content.website}  </span>
+              está gestionado por
+              <span className="variable"> {content.empresa_legal}  </span>con
+              <span className="variable"> {content.empresa_dni} </span> (“el titular”)
+              con domicilio en
+              <span className="variable">  {content.empresa_legal_direccion}  
+              </span>
+               Correo electrónico de contacto:
+              <span className="variable"> {content.email}  </span>
               <br /> <br />
               <h5 className="h3 mb-20">Condiciones generales</h5> El presente
               AVISO LEGAL tiene por objeto regular el acceso, navegación y, en
@@ -48,7 +78,7 @@ const LegalAviso = () => {
               del usuario cada vez que se visite la web. El titular perseguirá
               el incumplimiento de las presentes condiciones así como cualquier
               utilización indebida de su portal ejerciendo todas las acciones
-              civiles y penales que le puedan corresponder en derecho. <br />{" "}
+              civiles y penales que le puedan corresponder en derecho. <br />
               <br />
               <h5 className="h3 mb-20">Objeto y contenidos ofrecidos</h5> Este
               sitio ofrece información sobre marketing digital y social media y
@@ -64,26 +94,26 @@ const LegalAviso = () => {
               datos, imágenes, expresiones e informaciones, así como cualquier
               otra creación protegida por las leyes nacionales y los tratados
               internacionales sobre propiedad intelectual e industrial) en el
-              dominio <span className="variable">rubenmanez.com. </span>El
+              dominio <span className="variable"> {content.website}. </span>El
               propietario se reserva el derecho de retirar todos aquellos
               comentarios y aportaciones que vulneren el respeto a la dignidad
               de la persona, que sean discriminatorios, xenófobos, racistas,
               pornográficos, que atenten contra alguna ley vigente, el orden o
               la seguridad pública o que, a su juicio, no resulten adecuados
-              para su publicación. En cualquier caso,{" "}
-              <span className="variable">** Rubén Máñez </span>no será
+              para su publicación. En cualquier caso,
+              <span className="variable"> {content.empresa_corto} </span>no será
               responsable de las opiniones vertidas por los usuarios a través de
-              los foros, chats, u otras herramientas de participación. <br />{" "}
+              los foros, chats, u otras herramientas de participación. <br />
               <br />
               <h5 className="h3 mb-20">
                 Propiedad Intelectual y uso de los contenidos
-              </h5>{" "}
-              El sitio web de <span className="variable">** Rubén Máñez</span>, incluyendo a título enunciativo,
+              </h5>
+              El sitio web de <span className="variable"> {content.empresa_corto}  </span>, incluyendo a título enunciativo,
               pero no limitativo su programación, edición, compilación y demás
               elementos necesarios para su funcionamiento, los diseños,
               logotipos, texto y/o gráficos son propiedad del prestador o en su
               caso dispone de licencia o autorización expresa por parte de los
-              autores. <span className="variable">** Rubén Máñez </span>otorga
+              autores. <span className="variable"> {content.empresa_corto} </span>otorga
               al usuario una licencia Creative Commons
               Reconocimiento-NoComercial-CompartirIgual 3.0. Cualquier uso no
               autorizado previamente por parte del prestador será considerado un
@@ -98,18 +128,18 @@ const LegalAviso = () => {
               posibles incumplimientos de los derechos de propiedad intelectual
               o industrial, así como sobre cualquiera de los contenidos del
               sitio web, puede hacerlo a través del formulario de contacto que
-              se mantiene en el sitio web o en el correo{" "}
-              <span className="variable">hola@rubenmanez.com.</span>
+              se mantiene en el sitio web o en el correo
+              <span className="variable">  {content.email} </span>
               <br /> <br />
               <h5 className="h3 mb-20">Enlaces de terceros y afiliación</h5> En
-              el caso de que en <span className="variable">rubenmanez.com</span>{" "}
+              el caso de que en <span className="variable"> {content.website}   </span>
               se dispusiesen enlaces o hipervínculos hacía otros sitios de
               internet, el titular no ejercerá control sobre el contenido
               publicado en dichos sitios ni asumirá responsabilidad alguna por
               ellos al pertenecer a sitios web ajenos. Asimismo, la inclusión de
               estas conexiones externas e hipervínculos no implicará ningún tipo
               de asociación, fusión o participación con las entidades
-              conectadas. <span className="variable">rubenmanez.com</span>
+              conectadas. <span className="variable"> {content.website}  </span>
               utiliza ocasionalmente enlaces de afiliación de productos y
               servicios de marcas que hayan establecido un programa de
               afiliados. Estos enlaces se usan exclusivamente después de haber
@@ -130,13 +160,13 @@ const LegalAviso = () => {
               que se produzca dicha utilización y/o contratación. <br /> <br />
               <h5 className="h3 mb-20">
                 Exclusión de garantías y responsabilidad
-              </h5>{" "}
+              </h5>
               El titular no se hace responsable, en ningún caso, de los daños y
               perjuicios de cualquier naturaleza que pudieran ocasionar, a
               título enunciativo: errores u omisiones en los contenidos, falta
               de disponibilidad del portal o la transmisión de virus o programas
               maliciosos o lesivos en los contenidos, a pesar de haber adoptado
-              todas las medidas tecnológicas necesarias para evitarlo. <br />{" "}
+              todas las medidas tecnológicas necesarias para evitarlo. <br />
               <br />
               <h5 className="h3 mb-20">Modificaciones</h5> El titular se reserva
               el derecho de efectuar sin previo aviso las modificaciones que
@@ -144,8 +174,8 @@ const LegalAviso = () => {
               cambiar, suprimir o añadir tanto los contenidos y servicios que se
               presten a través de la misma como la forma en la que éstos
               aparezcan <br /> <br />
-              <h5 className="h3 mb-20">Derecho de exclusión</h5>{" "}
-              <span className="variable">** Rubén Máñez </span>se reserva el
+              <h5 className="h3 mb-20">Derecho de exclusión</h5>
+              <span className="variable"> {content.empresa_corto} </span>se reserva el
               derecho a denegar o retirar el acceso a portal y/o los servicios
               ofrecidos sin necesidad de preaviso, a instancia propia o de un
               tercero, a aquellos usuarios que incumplan las presentes
@@ -157,7 +187,7 @@ const LegalAviso = () => {
               que se someten expresamente las partes. Para la resolución de
               cualquier conflicto que pueda surgir con ocasión de la vista al
               portal o del uso de los servicios que en él se puedan ofertar,
-              <span className="variable"> ** Rubén Máñez </span>y el usuario
+              <span className="variable">  {content.empresa_corto}  </span>y el usuario
               acuerdan someterse a los Jueces y Tribunales de Valencia.
               </div>
             </div>
@@ -216,9 +246,9 @@ const LegalAviso = () => {
                       </div>
                       <div className="fluid-3-b">Anterior Post</div>
                       <p className="p1">
-                        {" "}
+                        
                         Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit.{" "}
+                        elit.
                       </p>
                     </div>
                   </div>
@@ -239,8 +269,8 @@ const LegalAviso = () => {
                     </div>
                     <div className="fluid-3-b"> Next Post </div>
                     <p className="p1">
-                      {" "}
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
+                      
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>

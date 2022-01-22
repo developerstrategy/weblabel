@@ -33,7 +33,7 @@ const Blog = () => {
           </div>
           <div className="row mb-16">
             <div className="col-xs-12">
-              <a href="blog2.html">
+              <a href="//blog/bbb">
                 <div className="rat-11-21 bg-cream has-light">
                   <div className="rat-content is-flex rat-content is-flex p-20 align-bottom p-20">
                     <div className="fullimg">
@@ -75,7 +75,7 @@ const Blog = () => {
 
           <div className="row ">
             <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="blog2.html">
+              <a href="//blog/bbb">
                 <div className="mb-16 ">
                   <div className=" rat-2-1">
                     <div className="rat-content   img-container">
@@ -109,7 +109,7 @@ const Blog = () => {
               </a>
             </div>
             <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="blog2.html">
+              <a href="/blog/bbb">
                 <div className="mb-16 ">
                   <div className=" rat-2-1">
                     <div className="rat-content   img-container">
@@ -143,7 +143,7 @@ const Blog = () => {
               </a>
             </div>
             <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="blog2.html">
+              <a href="/blog/bbb">
                 <div className="mb-16 ">
                   <div className=" rat-2-1">
                     <div className="rat-content   img-container">
@@ -179,7 +179,7 @@ const Blog = () => {
           </div>
           <div className="row ">
             <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="blog2.html">
+              <a href="/blog/bbb">
                 <div className="mb-16 ">
                   <div className=" rat-2-1">
                     <div className="rat-content   img-container">
@@ -213,7 +213,7 @@ const Blog = () => {
               </a>
             </div>
             <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="blog2.html">
+              <a href="/blog/bbb">
                 <div className="mb-16 ">
                   <div className=" rat-2-1">
                     <div className="rat-content   img-container">
@@ -247,7 +247,7 @@ const Blog = () => {
               </a>
             </div>
             <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="blog2.html">
+              <a href="/blog/bbb">
                 <div className="mb-16 ">
                   <div className=" rat-2-1">
                     <div className="rat-content   img-container">

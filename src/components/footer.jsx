@@ -1,7 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import { useStaticQuery, graphql } from "gatsby"
 const Footer = () => {
+
+  const data = useStaticQuery(graphql`
+  query FooterPage {
+    markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
+      frontmatter {
+        social_youtube
+        social_instagram
+        social_linkedin
+      }
+    }
+  }
+`)
+const content = data.markdownRemark.frontmatter
+
+  
   return (
     <>
       <footer className="footer">
@@ -78,26 +93,26 @@ const Footer = () => {
               <ul className="list-inline text-12-r  social">
                 <li>© 2021 The Digital Strategy</li>
                 <li>
-                  <a href="">youtube</a>
+                  <a href={content.social_youtube}>youtube</a>
                 </li>
                 <li>
-                  <a href=""> instagram</a>
+                  <a href={content.social_instagram}> instagram</a>
                 </li>
                 <li>
-                  <a href=""> linkedin</a>
+                  <a href={content.social_linkedin}> linkedin</a>
                 </li>
               </ul>
             </div>
             <div className="col-xs-12 col-sm-6 sm:min-text-right">
               <ul className="list-inline text-12-r social content-end">
                 <li>
-                  <a href="legal_aviso"> Aviso legal</a>
+                  <a href="/legal_aviso"> Aviso legal</a>
                 </li>
                 <li>
-                  <a href="legal_cookies"> Política de cookies</a>
+                  <a href="/legal_cookies"> Política de cookies</a>
                 </li>
                 <li>
-                  <a href="legal_privacidad">Política de Privacidad</a>
+                  <a href="/legal_privacidad">Política de Privacidad</a>
                 </li>
               </ul>
             </div>

@@ -54,7 +54,9 @@ const BlogInternal = props => {
                     ></path>
                   </svg>
 
-                  <div className="text-14-l red">Category</div>
+                  <a href="/blog">
+                    <div className="text-14-l red">Category link</div>
+                  </a>
                 </div>
                 <div className="fluid-2-b mb-50  ">
                   {props.data.markdownRemark.frontmatter.blogtitle}

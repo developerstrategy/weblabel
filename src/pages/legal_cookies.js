@@ -2,8 +2,39 @@ import React from "react"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import { useStaticQuery, graphql } from "gatsby"
 
 const LegalCookies = () => {
+
+  const data = useStaticQuery(graphql`
+  query LegalCookiesSectionQuery {
+    markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
+      frontmatter {
+        contacto_titulo
+        contacto_subtitulo
+        direction
+        direction_link
+        email_titulo
+        email
+        telefono_titulo
+        telefono
+        whatsapp_titulo
+        whatsapp
+        contacta_pregunta
+        check_acepta_la_politica
+        contacta_cta
+        website
+        empresa_corto
+        empresa_legal
+        empresa_dni
+        empresa_legal_direccion
+      }
+    }
+  }
+`)
+
+
+const content = data.markdownRemark.frontmatter
   return (
     <>
       <Header offset="0" />
@@ -20,10 +51,10 @@ const LegalCookies = () => {
             <div className="col-xs-12 align-center">
               <div className="fluid-1-b mb-50  "> Política de cookies </div>
               <div className="text-16-r pb-16   ">
-                {" "}
+                
                 <i>
-                  {" "}
-                  <span className="variable"> Nombre empresa </span>{" "}
+                  
+                  <span className="variable"> {content.empresa_corto} </span>
                 </i>
               </div>
               <div className="barx "></div>
@@ -32,14 +63,14 @@ const LegalCookies = () => {
           <div className="row">
             <div className="col-xs-12">
               <div className="p1  p-content">
-                {" "}
+                
                 En cumplimiento con lo dispuesto en el artículo 22.2 de la Ley
                 34/2002, de 11 de julio, de Services de la Sociedad de la
-                Información y de Comercio Electrónico,{" "}
-                <span className="variable">Rubén Máñez Leal</span>, titular y
-                propietario del website{" "}
-                <span className="variable">https://www.rubenmanez.com/,</span>{" "}
-                le informa en esta sección la política de recogida y tratamiento
+                Información y de Comercio Electrónico,
+                <span className="variable"> {content.empresa_corto}</span>, titular y
+                propietario del website
+                <span className="variable"> {content.website}, </span>
+                 le informa en esta sección la política de recogida y tratamiento
                 de cookies propias y de terceros con fines de Análisis,
                 Personalización, de Marketing y Técnicos en dicho website. Las
                 cookies son pequeños archivos de texto que las páginas web
@@ -102,7 +133,7 @@ const LegalCookies = () => {
                 inscripción o participación en un evento, utilizar elementos de
                 seguridad durante la navegación, almacenar contenidos para la
                 difusión de videos o sonido o compartir contenidos a través de
-                redes sociales.{" "}
+                redes sociales.
               </div>
             </div>
           </div>
@@ -159,9 +190,9 @@ const LegalCookies = () => {
                       </div>
                       <div className="fluid-3-b">Anterior Post</div>
                       <p className="p1">
-                        {" "}
+                        
                         Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit.{" "}
+                        elit.
                       </p>
                     </div>
                   </div>
@@ -182,8 +213,8 @@ const LegalCookies = () => {
                     </div>
                     <div className="fluid-3-b"> Next Post </div>
                     <p className="p1">
-                      {" "}
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
+                      
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
                 </div>

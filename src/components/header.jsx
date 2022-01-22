@@ -82,17 +82,17 @@ const Header = ({ offset }) => {
                       </Link>
                     </li>
                     <li>
-                      <a className="fluid-2-l" href="servicio.html">
+                      <a className="fluid-2-l" href="/servicio">
                         Servicio
                       </a>
                     </li>
                     <li>
-                      <a className="fluid-2-l" href="blog.html">
+                      <a className="fluid-2-l" href="/blog">
                         blog
                       </a>
                     </li>
                     <li>
-                      <a className="fluid-2-l" href="blog2.html">
+                      <a className="fluid-2-l" href="/blog/aaa">
                         blog interior
                       </a>
                     </li>
@@ -102,13 +102,13 @@ const Header = ({ offset }) => {
                       </Link>
                     </li>
                     <li className="text-14-r">
-                      <a href="legal_aviso">aviso legal</a>{" "}
+                      <a href="/legal_aviso">aviso legal</a>{" "}
                     </li>
                     <li className="text-14-r">
-                      <a href="legal_cookies">política cookies</a>{" "}
+                      <a href="/legal_cookies">política cookies</a>{" "}
                     </li>
                     <li className="text-14-r">
-                      <a href="legal_privacidad">privacidad</a>{" "}
+                      <a href="/legal_privacidad">privacidad</a>{" "}
                     </li>
                   </ul>
                 </div>

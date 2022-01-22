@@ -9,29 +9,26 @@ const OurServices = () => {
             <div className="col-xs-8 col-sm-6 mb-20">
               <div className="barmini mb-16"></div>
               <div className="text-16-r pb-40">
-                <em>Our Services</em>
+                <em>All our  Services </em>
               </div>
               <div className="fluid-1-b mb-16">
-                Our <br />
+                All Our <br />
                 Services
               </div>
               <p className="p1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                quam asperiores nisi minima totam, ipsum sequi amet? Ipsum,
-                placeat iure quasi architecto asperiores excepturi iusto, illo
-                eum error inventore accusamus?
+          Description of all services
               </p>
             </div>
             <div className="col-xs-4 col-sm-6 align-bottom text-right is-flex content-end mb-20">
-              <a href="servicios.html">
-                <button className="btn btn-primary btn--small">See all</button>
+              <a href="/servicios">
+                <button className="btn btn-primary btn--small">See Services page</button>
               </a>
             </div>
           </div>
 
           <div className="row scroll-nat scroll-nat-2">
             <div className="col-xs-3 mb-16">
-              <a href="servicio.html">
+              <a href="/servicio-1">
                 <div className="boxservice">
                   <div className="rat-1-1">
                     <div className="rat-content p-20">
@@ -65,7 +62,7 @@ const OurServices = () => {
               </a>
             </div>
             <div className="col-xs-3 mb-16">
-              <a href="servicio.html">
+              <a href="/servicio-1">
                 <div className="boxservice">
                   <div className="rat-1-1">
                     <div className="rat-content p-20">
@@ -99,7 +96,7 @@ const OurServices = () => {
               </a>
             </div>
             <div className="col-xs-3 mb-16">
-              <a href="servicio.html">
+              <a href="/servicio-1">
                 <div className="boxservice">
                   <div className="rat-1-1">
                     <div className="rat-content p-20">
@@ -133,7 +130,7 @@ const OurServices = () => {
               </a>
             </div>
             <div className="col-xs-3 mb-16">
-              <a href="servicio.html">
+              <a href="/servicio-1">
                 <div className="boxservice">
                   <div className="rat-1-1">
                     <div className="rat-content p-20">
@@ -167,7 +164,7 @@ const OurServices = () => {
               </a>
             </div>
             <div className="col-xs-3 mb-16">
-              <a href="servicio.html">
+              <a href="/servicio-1">
                 <div className="boxservice">
                   <div className="rat-1-1">
                     <div className="rat-content p-20">
@@ -201,7 +198,7 @@ const OurServices = () => {
               </a>
             </div>
             <div className="col-xs-3 mb-16">
-              <a href="servicio.html">
+              <a href="/servicio-1">
                 <div className="boxservice">
                   <div className="rat-1-1">
                     <div className="rat-content p-20">
@@ -235,7 +232,7 @@ const OurServices = () => {
               </a>
             </div>
             <div className="col-xs-3 mb-16">
-              <a href="servicio.html">
+              <a href="/servicio-1">
                 <div className="boxservice">
                   <div className="rat-1-1">
                     <div className="rat-content p-20">
@@ -269,7 +266,7 @@ const OurServices = () => {
               </a>
             </div>
             <div className="col-xs-3 mb-16">
-              <a href="servicio.html">
+              <a href="/servicio-1">
                 <div className="boxservice">
                   <div className="rat-1-1">
                     <div className="rat-content p-20">

@@ -2,8 +2,40 @@ import React from "react"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import { useStaticQuery, graphql } from "gatsby"
 
 const LegalPrivacy = () => {
+
+    const data = useStaticQuery(graphql`
+    query LegalPrivacySectionQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
+        frontmatter {
+          contacto_titulo
+          contacto_subtitulo
+          direction
+          direction_link
+          email_titulo
+          email
+          telefono_titulo
+          telefono
+          whatsapp_titulo
+          whatsapp
+          contacta_pregunta
+          check_acepta_la_politica
+          contacta_cta
+          website
+          empresa_corto
+          empresa_legal
+          empresa_dni
+          empresa_legal_direccion
+        }
+      }
+    }
+  `)
+  
+  
+  const content = data.markdownRemark.frontmatter
+    
   return (
     <>
       <Header offset="0" />
@@ -30,11 +62,11 @@ const LegalPrivacy = () => {
                 <div className="row">
                     <div className="col-xs-12">
                         <div className="p1  p-content">
-                            <span className="variable">** RUBÉN DAVID MÁÑEZ LEAL</span> en adelante, <span
-                                className="variable">** RUBÉN MÁÑEZ </span> |, con ** DNI <span
-                                className="variable">53258492Z</span>, dirección en ** Calle Enguera, Nº 24 Patio 19, 46018
-                            | Valencia|| y correo electrónico <span className="variable">ruben.manez.leal@gmail.com</span>,
-                            titular y propietario del website <span className="variable">https://rubenmanez.com</span>
+                            <span className="variable">{content.empresa_corto}  </span> en adelante, <span
+                                className="variable">{content.empresa_corto} </span> |, con DNI <span
+                                className="variable">{content.empresa_dni}</span>, dirección en {content.empresa_legal_direccion}
+                            | Valencia|| y correo electrónico <span className="variable">{content.email}  </span>,
+                            titular y propietario del website <span className="variable">{content.website}  </span>
                             | desde ahora, “el website”||, garantiza la protección de todos los datos de carácter personal
                             que proporcione el usuario en el website. En cumplimiento de lo establecido en la Ley
                             Orgánica de Protección de Datos y el Reglamento General de Protección de Datos europeo,
@@ -46,9 +78,9 @@ const LegalPrivacy = () => {
                             expreso, así como de todos los datos de carácter personal que proporcione el usuario en el
                             website , a que éstos queden incorporados y sean tratados en el registro de actividades de
                             tratamiento de datos personales creado al efecto y mantenido bajo la responsabilidad de
-                            <span className="variable">** RUBÉN MÁÑEZ </span>con DNI ** <span
-                                className="variable">53258492Z</span>, cuyo domicilio se sitúa en ** <span className="variable">
-                                Calle Enguera, Nº 24 Patio 19, 46018 | Valencia||</span> b|| Los datos que se recojan a
+                            <span className="variable">{content.empresa_corto} </span>con DNI  <span
+                                className="variable">{content.empresa_dni}</span>, cuyo domicilio se sitúa en  <span className="variable">
+                              {content.empresa_legal_direccion}</span> b|| Los datos que se recojan a
                             través del website son los suficientes y necesarios para las siguientes finalidades: Envío
                             por medios electrónicos de información de publicidad, noticias y novedades relacionadas con
                             los productos y servicios profesionales del titular, como asesoría, marketing de contenidos
