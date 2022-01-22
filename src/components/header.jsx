@@ -92,7 +92,7 @@ const Header = ({ offset }) => {
                       </a>
                     </li>
                     <li>
-                      <a className="fluid-2-l" href="/blog/aaa">
+                      <a className="fluid-2-l" href="/blog/bbb">
                         blog interior
                       </a>
                     </li>
