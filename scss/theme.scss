@@ -823,9 +823,11 @@ section {
     margin: 0 auto 20px;
     font-size: 16px;
     line-height: 1.5;
+    padding: 0 8px;
   .gatsby-resp-image-wrapper{
     @media (min-width: 1280px) {
       width: 1000px;
+      margin-left: calc((-1000px + 650px - 16px) / 2);
 
   }
   }
