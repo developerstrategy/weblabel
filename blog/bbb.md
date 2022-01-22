@@ -7,3 +7,7 @@ blogpage: true
 thumbnail: /assets/images/7-300x300.png
 ---
 bbbb
+
+
+
+![](/assets/images/home.jpg)
