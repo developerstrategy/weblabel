@@ -6,15 +6,19 @@ const TextImage = ({ sub, heading, text, image, reverse, link }) => {
     <>
       <section className="bg-cream">
         <div className="container">
+
+
+
+          
           <div
             className="row pt-md pb-md small-bg-white"
             style={
               reverse
-                ? { flexDirection: "row-reverse" }
-                : { flexDirection: "row" }
+                ? { flexDirection: "row-reverse " }
+                : { flexDirection: "row "  }
             }
           >
-            <div className="col-xs-12 col-sm-6 is-flex flex-column content-center">
+            <div className={"col-xs-12 col-sm-6 is-flex flex-column content-center " + (  reverse ?  "half-white-bg-r " :  "half-white-bg "   ) }>
               <div className="barmini mb-16"></div>
               <div className="h5 pb-16">
                 <em>{sub}</em>
