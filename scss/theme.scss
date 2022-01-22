@@ -827,7 +827,7 @@ section {
   .gatsby-resp-image-wrapper{
     @media (min-width: 1280px) {
       width: 1000px;
-      margin-left: calc((-1000px + 650px - 16px) / 2);
+      margin-left: calc((-1000px + 650px - 16px) / 2)!important;
 
   }
   }
