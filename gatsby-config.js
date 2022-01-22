@@ -30,7 +30,7 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-figure-caption`,
+            resolve: `gatsby-remark-remove-root-p-tag`,
           },
         ],
       },
