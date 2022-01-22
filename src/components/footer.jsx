@@ -10,6 +10,7 @@ const Footer = () => {
         social_youtube
         social_instagram
         social_linkedin
+        empresa_copyright
       }
     }
   }
@@ -35,7 +36,7 @@ const content = data.markdownRemark.frontmatter
                     <div className="p mb-16"> The company </div>
                     <ul className="list-clear">
                       <li>
-                        <Link to="/about"> About us</Link>
+                        <Link to="/about"> About us   </Link>
                       </li>
                       <li>
                         <Link to="/contacta"> Contacta</Link>
@@ -48,7 +49,7 @@ const content = data.markdownRemark.frontmatter
                     </div>
                     <ul className="list-clear">
                       <li>
-                        <a href=" "> Service 1</a>
+                        <a class="missing" href=" "> Service 1</a>
                       </li>
                       <li>
                         <a href=" "> Service 2</a>
@@ -67,7 +68,7 @@ const content = data.markdownRemark.frontmatter
                   <div className="col-xs-12 col-sm-2 mb-20">
                     <div className="p mb-16"> Blog </div>
                     <ul className="list-clear">
-                      <li>
+                      <li class="missing">
                         <a href=" "> Blog Last news 1</a>
                       </li>
                       <li>
@@ -91,9 +92,9 @@ const content = data.markdownRemark.frontmatter
           <div className="row pt-20 pb-20">
             <div className="col-xs-12 col-sm-6  mdmax:mb-16">
               <ul className="list-inline text-12-r  social">
-                <li>© 2021 The Digital Strategy</li>
+                <li>{content.empresa_copyright}  </li>
                 <li>
-                  <a href={content.social_youtube}>youtube</a>
+                  <a href={content.social_youtube}> youtube</a>
                 </li>
                 <li>
                   <a href={content.social_instagram}> instagram</a>

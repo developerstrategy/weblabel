@@ -155,7 +155,7 @@ const ContactSection = () => {
                       </Link>
                     </span>
                   </div>
-                  <span className="is-error text-14-r">
+                  <span className="is-error text-14-r missing">
                     You need check this Error checkbox
                   </span>
                 </div>

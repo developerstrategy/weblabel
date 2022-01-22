@@ -37,14 +37,13 @@ bloque_description: >-
 
   ***“Nombre del dueño”***
 beneficos:
-  - beneficios_subtitulo: Ir a la cuenta
-    beneficios_titulo: Beneficios producto
+  - beneficios_subtitulo: This is a title, the white box should not appear in the title but in the loop yes
+    beneficios_titulo: Title benefits section
     beneficios_description:
-      Un aspecto muy importante en este sentido es que cuando
-      cambias de color un vehículo mediante vinilo, no es necesario
+      This is the benefits title and global description, is diferent. 
     proyecto_imagen: ""
   - proyecto_imagen: /assets/images/benefit3.jpg
-    beneficios_subtitulo: Ir a la cuenta
+    beneficios_subtitulo: this white box is ok here
     beneficios_titulo: Últimas Noticias
     beneficios_description: >-
       Un aspecto muy importante en este sentido es que cuando cambias de color
@@ -55,7 +54,7 @@ beneficos:
 
       **“Nombre del dueño”**
   - proyecto_imagen: /assets/images/benefit2.jpg
-    beneficios_subtitulo: Ir a la cuenta
+    beneficios_subtitulo: this white box is ok here
     beneficios_description: >-
       Un aspecto muy importante en este sentido es que cuando cambias de color
       un vehículo mediante vinilo, no es necesario realizar un cambio en los
