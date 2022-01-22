@@ -50,6 +50,7 @@
         "gatsby-plugin-react-helmet": "^5.4.0",
         "gatsby-plugin-sass": "^5.4.0",
         "gatsby-plugin-sharp": "^4.4.0",
+        "gatsby-remark-figure-caption": "^2.0.0",
         "gatsby-remark-images": "^6.5.1",
         "gatsby-remark-relative-images-v2": "^0.1.5",
         "gatsby-source-filesystem": "^4.4.0",
