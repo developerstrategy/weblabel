@@ -1,9 +1,21 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import { Link, graphql, StaticQuery } from "gatsby"
+import Image from "../components/Image"
+import PropTypes from "prop-types"
 
-const Blog = () => {
+const Blog = props => {
+  const { data } = props
+  const { edges: posts } = data.allMarkdownRemark
+
+  const [visible, setVisible] = useState(3)
+
+  const showMoreItems = () => {
+    setVisible(prevValue => prevValue + 3)
+  }
+
   return (
     <>
       <Header offset="0" />
@@ -33,36 +45,43 @@ const Blog = () => {
           </div>
           <div className="row mb-16">
             <div className="col-xs-12">
-              <a href="//blog/bbb">
+              <Link to={"/blob/" + posts && posts[0].node.frontmatter.path}>
                 <div className="rat-11-21 bg-cream has-light">
                   <div className="rat-content is-flex rat-content is-flex p-20 align-bottom p-20">
                     <div className="fullimg">
-                      <img
+                      <Image
                         width="100%"
                         alt="imagenes"
-                        src="assets/images/tema2/newsbig.jpg"
+                        name={
+                          posts &&
+                          posts[0].node.frontmatter.thumbnail.replace(
+                            "/assets/images/",
+                            ""
+                          )
+                        }
                         alt=""
                       />
                     </div>
                     <div className="row fulltext">
-                      <div className="col-xs-5 ">
-                        <p className="p1">Category </p>
-                      </div>
+                      <div className="col-xs-5 "></div>
                       <div className="col-xs-12">
-                        <div className="fluid-2-b"> Title - primary new </div>
+                        <div className="fluid-2-b">
+                          {posts && posts[0].node.frontmatter.blogtitle}{" "}
+                        </div>
                       </div>
                       <div className="col-xs-12">
                         <div className="text-16-r mb-20">
-                          {" "}
-                          Compra un coche usado tan simple como comprarlo{" "}
+                          {posts && posts[0].node.excerpt}
                         </div>
-                        <div className="text-date"> Date:12.12.21</div>
+                        <div className="text-date">
+                          {posts && posts[0].node.frontmatter.date}
+                        </div>
                       </div>
                       <div className="col-xs-7"></div>
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -74,220 +93,50 @@ const Blog = () => {
           </div>
 
           <div className="row ">
-            <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="//blog/bbb">
-                <div className="mb-16 ">
-                  <div className=" rat-2-1">
-                    <div className="rat-content   img-container">
-                      <img
-                        width="100%"
-                        alt="imagenes"
-                        src="assets/images/tema2/news1.jpg"
-                        alt=""
-                      />
+            {posts &&
+              posts.slice(0, visible).map(({ node: post }) => (
+                <div className="col-xs-12 col-sm-4 mb-50">
+                  <Link to={"/blog/" + post.frontmatter.path} target="_blank">
+                    <div className="mb-16 ">
+                      <div className=" rat-2-1">
+                        <div className="rat-content   img-container">
+                          <Image
+                            name={post.frontmatter.thumbnail.replace(
+                              "/assets/images/",
+                              ""
+                            )}
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="text-12-r mb-16">
-                  <em>Category</em>
-                </div>
-                <div className="fluid-4-b mb-20">
-                  Compra un coche usado tan simple como comprarlo
-                </div>
-                <div className="text-14-r mb-20">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                  molestiae voluptate odit natus et modi dolorum soluta
-                  excepturi nam ...{" "}
-                </div>
-                <div className="text-14-r">
-                  <a className="text-date" href="">
-                    {" "}
-                    Date: 12.12.21
-                  </a>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="/blog/bbb">
-                <div className="mb-16 ">
-                  <div className=" rat-2-1">
-                    <div className="rat-content   img-container">
-                      <img
-                        width="100%"
-                        alt="imagenes"
-                        src="assets/images/tema2/news1.jpg"
-                        alt=""
-                      />
+                    <div className="text-12-r mb-16"></div>
+                    <div className="fluid-4-b mb-20">
+                      {post.frontmatter.blogtitle}
                     </div>
-                  </div>
-                </div>
-                <div className="text-12-r mb-16">
-                  <em>Category</em>
-                </div>
-                <div className="fluid-4-b mb-20">
-                  Compra un coche usado tan simple como comprarlo
-                </div>
-                <div className="text-14-r mb-20">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                  molestiae voluptate odit natus et modi dolorum soluta
-                  excepturi nam ...{" "}
-                </div>
-                <div className="text-14-r">
-                  <a className="text-date" href="">
-                    {" "}
-                    Date: 12.12.21
-                  </a>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="/blog/bbb">
-                <div className="mb-16 ">
-                  <div className=" rat-2-1">
-                    <div className="rat-content   img-container">
-                      <img
-                        width="100%"
-                        alt="imagenes"
-                        src="assets/images/tema2/news1.jpg"
-                        alt=""
-                      />
+                    <div className="text-14-r mb-20">{post.excerpt}</div>
+                    <div className="text-14-r">
+                      <a className="text-date" href="">
+                        {post.frontmatter.date}
+                      </a>
                     </div>
-                  </div>
+                  </Link>
                 </div>
-                <div className="text-12-r mb-16">
-                  <em>Category</em>
-                </div>
-                <div className="fluid-4-b mb-20">
-                  Compra un coche usado tan simple como comprarlo
-                </div>
-                <div className="text-14-r mb-20">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                  molestiae voluptate odit natus et modi dolorum soluta
-                  excepturi nam ...{" "}
-                </div>
-                <div className="text-14-r">
-                  <a className="text-date" href="">
-                    {" "}
-                    Date: 12.12.21
-                  </a>
-                </div>
-              </a>
-            </div>
+              ))}
           </div>
-          <div className="row ">
-            <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="/blog/bbb">
-                <div className="mb-16 ">
-                  <div className=" rat-2-1">
-                    <div className="rat-content   img-container">
-                      <img
-                        width="100%"
-                        alt="imagenes"
-                        src="assets/images/tema2/news1.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="text-12-r mb-16">
-                  <em>Category</em>
-                </div>
-                <div className="fluid-4-b mb-20">
-                  Compra un coche usado tan simple como comprarlo
-                </div>
-                <div className="text-14-r mb-20">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                  molestiae voluptate odit natus et modi dolorum soluta
-                  excepturi nam ...{" "}
-                </div>
-                <div className="text-14-r">
-                  <a className="text-date" href="">
-                    {" "}
-                    Date: 12.12.21
-                  </a>
-                </div>
-              </a>
+          {posts.length >= visible && (
+            <div className="row">
+              <div className="col-xs-1 col-md-5"> </div>
+              <div className="col-xs-10 col-md-2">
+                <button
+                  className="btn btn-invert btn--full"
+                  onClick={showMoreItems}
+                >
+                  SEE MORE
+                </button>
+              </div>
+              <div className="col-xs-1 col-md-5"> </div>
             </div>
-            <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="/blog/bbb">
-                <div className="mb-16 ">
-                  <div className=" rat-2-1">
-                    <div className="rat-content   img-container">
-                      <img
-                        width="100%"
-                        alt="imagenes"
-                        src="assets/images/tema2/news1.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="text-12-r mb-16">
-                  <em>Category</em>
-                </div>
-                <div className="fluid-4-b mb-20">
-                  Compra un coche usado tan simple como comprarlo
-                </div>
-                <div className="text-14-r mb-20">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                  molestiae voluptate odit natus et modi dolorum soluta
-                  excepturi nam ...{" "}
-                </div>
-                <div className="text-14-r">
-                  <a className="text-date" href="">
-                    {" "}
-                    Date: 12.12.21
-                  </a>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-12 col-sm-4 mb-50">
-              <a href="/blog/bbb">
-                <div className="mb-16 ">
-                  <div className=" rat-2-1">
-                    <div className="rat-content   img-container">
-                      <img
-                        width="100%"
-                        alt="imagenes"
-                        src="assets/images/tema2/news1.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="text-12-r mb-16">
-                  <em>Category</em>
-                </div>
-                <div className="fluid-4-b mb-20">
-                  Compra un coche usado tan simple como comprarlo
-                </div>
-                <div className="text-14-r mb-20">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-                  molestiae voluptate odit natus et modi dolorum soluta
-                  excepturi nam ...{" "}
-                </div>
-                <div className="text-14-r">
-                  <a className="text-date" href="">
-                    {" "}
-                    Date: 12.12.21
-                  </a>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xs-1 col-md-5"> </div>
-            <div className="col-xs-10 col-md-2">
-              <button className="btn btn-invert btn--full"> SEE MORE </button>
-            </div>
-            <div className="col-xs-1 col-md-5"> </div>
-          </div>
+          )}
         </div>
       </section>
       <ContactSection />
@@ -296,4 +145,37 @@ const Blog = () => {
   )
 }
 
-export default Blog
+Blog.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query BlogRollQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { page: { ne: true } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 250)
+              id
+              frontmatter {
+                path
+                blogtitle
+                thumbnail
+                date(formatString: "MMMM DD, YYYY")
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data, count) => <Blog data={data} count={count} />}
+  />
+)
