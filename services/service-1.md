@@ -1,4 +1,5 @@
 ---
+title: First Service
 path: service-1
 servicepage: true
 beneficos:
