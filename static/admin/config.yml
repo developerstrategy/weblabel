@@ -48,7 +48,7 @@ collections:
       - { name: blogsubtitle, label: Página noticia Subtitulo }
       - { name: path, label: Path (post url) }
       - { name: date, label: Date, widget: datetime }
-      - { name: category, label: Category,  optional: true, required: false}
+      - { name: category, label: Category,  }
 
       - {
           label: "Blog Page",

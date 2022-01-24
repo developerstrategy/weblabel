@@ -4,6 +4,7 @@ blogsubtitle: Nos lanzamos al icónico festival en la costa de Guerrero tras cas
   dos años sin disfrutar una nueva edición.
 path: vuelta-al-paraíso-en-2
 date: 2022-01-20T20:38:18.620Z
+category: Technology, Mobile
 blogpage: true
 thumbnail: /assets/images/lenka-sluneckova-xxsz5xzfuas-unsplash.jpg
 keyword:

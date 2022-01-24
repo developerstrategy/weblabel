@@ -16,6 +16,7 @@ const Blog = props => {
     setVisible(prevValue => prevValue + 3)
   }
 
+  console.log(data, "data")
   return (
     <>
       <Header offset="0" />
@@ -65,7 +66,9 @@ const Blog = props => {
                     <div className="row fulltext">
                       <div className="col-xs-5 ">
                         <p class="p1">
-                          {posts && posts[0].node.frontmatter.category}{" "}
+                          {posts && posts[0].node.frontmatter.category
+                            ? posts[0].node.frontmatter.category
+                            : ""}{" "}
                         </p>
                       </div>
                       <div className="col-xs-12">
@@ -114,7 +117,7 @@ const Blog = props => {
                       </div>
                     </div>
                     <div className="text-12-r mb-16">
-                      {posts.frontmatter.category}{" "}
+                      {posts.frontmatter ? posts.frontmatter.category : ""}{" "}
                     </div>
                     <div className="fluid-4-b mb-20">
                       {post.frontmatter.blogtitle}
@@ -165,7 +168,9 @@ export default () => (
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { page: { ne: true } } }
+          filter: {
+            frontmatter: { page: { ne: true }, servicepage: { ne: true } }
+          }
         ) {
           edges {
             node {
