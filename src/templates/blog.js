@@ -23,7 +23,7 @@ export const query = graphql`
 `
 
 const BlogInternal = props => {
-  console.log(props.pageContext)
+  console.log(props.pageContext, "page")
   return (
     <>
       <Header offset="0" />
@@ -145,14 +145,11 @@ const BlogInternal = props => {
             </div>
             <div className="row">
               <div className="col-xs-12 mb-50">
-           
-               
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: props.data.markdownRemark.html,
-                    }}
-                  />
-          
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: props.data.markdownRemark.html,
+                  }}
+                />
               </div>
             </div>
             <div className="row">
@@ -200,9 +197,11 @@ const BlogInternal = props => {
                       <Link
                         to={"/blog/" + props.pageContext.prev.frontmatter.path}
                       >
-                        {" "}
-                        Anterior Post{" "}
+                        Anterior Post
                       </Link>
+                      <p class="p1">
+                        {props.pageContext.prev.frontmatter.blogtitle}
+                      </p>
                     </div>
                   )}
                 </div>{" "}
@@ -229,6 +228,10 @@ const BlogInternal = props => {
                         {" "}
                         Next Post
                       </Link>
+                      <p class="p1">
+                        {" "}
+                        {props.pageContext.next.frontmatter.blogtitle}{" "}
+                      </p>
                     </div>
                   </div>
                 )}

@@ -4,6 +4,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogTemplate = path.resolve(`./src/templates/blog.js`)
+  const serviceTemplate = path.resolve(`./src/templates/services.js`)
 
   const result = await graphql(`
     {
@@ -12,6 +13,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
           node {
             frontmatter {
               path
+              blogtitle
             }
           }
         }
@@ -25,6 +27,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
       context: {
         slug: node.frontmatter.path,
+        title: node.frontmatter.blogtitle,
         prev:
           index === 0
             ? null
@@ -33,6 +36,34 @@ module.exports.createPages = async ({ graphql, actions }) => {
           index === result.data.allMarkdownRemark.edges.length - 1
             ? null
             : result.data.allMarkdownRemark.edges[index + 1].node,
+      }, // additional data can be passed via context
+    })
+  })
+
+  //SERVICES
+
+  const results = await graphql(`
+    {
+      allMarkdownRemark(
+        filter: { frontmatter: { page: { ne: true }, blogpage: { ne: true } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+  result.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
+    createPage({
+      component: serviceTemplate,
+      path: `/services/${node.frontmatter.path}`,
+
+      context: {
+        slug: node.frontmatter.path,
       }, // additional data can be passed via context
     })
   })

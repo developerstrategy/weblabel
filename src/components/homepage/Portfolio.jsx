@@ -34,10 +34,6 @@ const Portfolio = ({ title, images }) => {
         el: ".swiper-scrollbar",
       },
     })
-
-
-
-    
   }, [])
   return (
     <>

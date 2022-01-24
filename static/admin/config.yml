@@ -7,6 +7,31 @@ public_folder: "/assets/images"
 media_folder_relative: true
 
 collections:
+  - name: services
+    label: Services
+    folder: services
+    create: true
+    fields:
+      - { name: path, label: Path (service url) }
+      - {
+          label: "Blog Page",
+          name: "servicepage",
+          widget: "hidden",
+          default: true,
+        }
+      - label: "Beneficos"
+        name: "beneficos"
+        widget: "list"
+        fields:
+              - { label: "Beneficios Imagen", name: "beneficios_imagen", widget: "image", optional: true, required: false}
+              - { label: Beneficios SubTitulo, name: beneficios_subtitulo, widget: string }
+              - { label: Beneficios Titulo, name: beneficios_titulo, widget: string }
+              - { label: Beneficios Description, name: beneficios_description, widget: markdown }
+      - label: "Proyecto Imagen"
+        name: "listitems"
+        widget: "list"
+        fields:
+              - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image" }
   - name: blog
     label: Blog
     folder: blog
