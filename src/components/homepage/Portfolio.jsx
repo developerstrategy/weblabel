@@ -82,9 +82,11 @@ const Portfolio = ({ title, images }) => {
 
                 <div className="swiper-wrapper">
                   {images.map(image => (
-                    <div className="swiper-slide">
-                      <img src={image.proyecto_imagen} alt="" />
-                    </div>
+                    <>
+                      <div className="swiper-slide">
+                        <img src={image.proyecto_imagen} alt="" />
+                      </div>
+                    </>
                   ))}
                 </div>
 

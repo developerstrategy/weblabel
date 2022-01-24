@@ -34,6 +34,11 @@ collections:
         widget: "list"
         fields:
               - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image" }
+      - label: "Keyword (One keyword per field)"
+        name: "keyword"
+        widget: "list"
+        fields:
+          - { label: "Blog Keyword", name: "blog_keyword", widget: "string", optional: true, required: false}
   - name: blog
     label: Blog
     folder: blog
@@ -43,6 +48,8 @@ collections:
       - { name: blogsubtitle, label: Página noticia Subtitulo }
       - { name: path, label: Path (post url) }
       - { name: date, label: Date, widget: datetime }
+      - { name: category, label: Category, widget: datetime }
+
       - {
           label: "Blog Page",
           name: "blogpage",
