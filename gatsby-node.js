@@ -61,7 +61,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  result.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
+  results.data.allMarkdownRemark.edges.forEach(({ node }, index) => {
     createPage({
       component: serviceTemplate,
       path: `/services/${node.frontmatter.path}`,
