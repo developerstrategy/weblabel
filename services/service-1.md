@@ -21,4 +21,7 @@ listitems:
   - proyecto_imagen: /assets/images/new-1.jpg
   - proyecto_imagen: /assets/images/benefit2.jpg
   - proyecto_imagen: /assets/images/project1.jpg
+keyword:
+  - blog_keyword: keyword 1
+  - blog_keyword: keyword 2
 ---
