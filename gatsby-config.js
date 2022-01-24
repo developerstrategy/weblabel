@@ -25,23 +25,22 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-               maxWidth: 1280,
+              maxWidth: 1280,
               linkImagesToOriginal: false,
             },
           },
-            {
-              resolve: `gatsby-remark-table-of-contents`,
-              options: {
-                exclude: "Table of Contents",
-                tight: false,
-                ordered: false,
-                fromHeading: 1,
-                toHeading: 6,
-                className: "table-of-contents"
-              },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 6,
+              className: "table-of-contents",
             },
-            `gatsby-remark-autolink-headers`
-  
+          },
+          `gatsby-remark-autolink-headers`,
         ],
       },
     },
@@ -80,7 +79,13 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
-
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `services`,
+        path: `${__dirname}/services`,
+      },
+    },
     {
       resolve: `gatsby-plugin-netlify-identity`,
       options: {
