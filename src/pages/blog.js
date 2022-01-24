@@ -63,7 +63,11 @@ const Blog = props => {
                       />
                     </div>
                     <div className="row fulltext">
-                      <div className="col-xs-5 "></div>
+                      <div className="col-xs-5 ">
+                        <p class="p1">
+                          {posts && posts[0].node.frontmatter.category}{" "}
+                        </p>
+                      </div>
                       <div className="col-xs-12">
                         <div className="fluid-2-b">
                           {posts && posts[0].node.frontmatter.blogtitle}{" "}
@@ -109,7 +113,9 @@ const Blog = props => {
                         </div>
                       </div>
                     </div>
-                    <div className="text-12-r mb-16"></div>
+                    <div className="text-12-r mb-16">
+                      {posts.frontmatter.category}{" "}
+                    </div>
                     <div className="fluid-4-b mb-20">
                       {post.frontmatter.blogtitle}
                     </div>
@@ -170,6 +176,7 @@ export default () => (
                 blogtitle
                 thumbnail
                 date(formatString: "MMMM DD, YYYY")
+                category
               }
             }
           }

@@ -24,6 +24,9 @@ export const query = graphql`
           beneficios_titulo
           beneficios_description
         }
+        keyword {
+          blog_keyword
+        }
       }
     }
   }
@@ -43,11 +46,26 @@ const Service = props => {
           reverse={index % 2 === 0 ? false : true}
         />
       ))}
-
       <Portfolio
         title="Our Work"
         images={props.data.markdownRemark.frontmatter.listitems}
-      />
+      />{" "}
+      <div class="container mb-50">
+        <div className="row">
+          <div className="col-xs-12 ">
+            <hr className="mt-50" />
+            <ul className="list-clear list-inline text-12-r">
+              {props.data.markdownRemark.frontmatter.keyword
+                ? props.data.markdownRemark.frontmatter.keyword.map(keyword => (
+                    <li>
+                      <a href=""> {keyword.blog_keyword} </a>
+                    </li>
+                  ))
+                : ""}
+            </ul>
+          </div>
+        </div>
+      </div>
       <ContactSection />
       <Footer />
     </>
