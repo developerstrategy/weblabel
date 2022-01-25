@@ -1,5 +1,7 @@
 import React from "react"
-
+import { Link, graphql, StaticQuery } from "gatsby"
+import Image from "../components/Image"
+import PropTypes from "prop-types"
 const OurServices = () => {
   return (
     <>
@@ -9,19 +11,19 @@ const OurServices = () => {
             <div className="col-xs-8 col-sm-6 mb-20">
               <div className="barmini mb-16"></div>
               <div className="text-16-r pb-40">
-                <em>All our  Services </em>
+                <em>All our Services </em>
               </div>
               <div className="fluid-1-b mb-16">
                 All Our <br />
                 Services
               </div>
-              <p className="p1">
-          Description of all services
-              </p>
+              <p className="p1">Description of all services</p>
             </div>
             <div className="col-xs-4 col-sm-6 align-bottom text-right is-flex content-end mb-20">
               <a href="/servicios">
-                <button className="btn btn-primary btn--small">See Services page</button>
+                <button className="btn btn-primary btn--small">
+                  See Services page
+                </button>
               </a>
             </div>
           </div>
@@ -306,4 +308,40 @@ const OurServices = () => {
   )
 }
 
-export default OurServices
+OurServices.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query ServicesQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: {
+            frontmatter: { page: { ne: true }, blogpage: { ne: true } }
+          }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 250)
+              id
+              frontmatter {
+                path
+                blogtitle
+                thumbnail
+                date(formatString: "MMMM DD, YYYY")
+                category
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data, count) => <OurServices data={data} count={count} />}
+  />
+)

@@ -13,7 +13,11 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+        }
       - { name: path, label: Path (service url) }
       - {
           label: "Blog Page",
