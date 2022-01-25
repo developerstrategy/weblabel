@@ -890,3 +890,19 @@ h4{
     content:'missing'
   }
 }
+
+.swiper-wrapper{
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.swiper-slide  { 
+overflow: hidden;
+
+}
+
+.swiper-slide img {
+ max-width: none;
+  height: 400px!important;
+  object-fit: cover;
+}

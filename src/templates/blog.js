@@ -14,6 +14,7 @@ export const query = graphql`
         blogtitle
         blogsubtitle
         thumbnail
+        category
         keyword {
           blog_keyword
         }
@@ -40,6 +41,8 @@ const BlogInternal = props => {
             <div className="row pb-20">
               <div className="col-xs-12  p-content">
                 <div className="text-14-r  align-middle mb-20 ">
+
+                <a href="/blog">
                   <svg
                     className="mr-20"
                     width="13"
@@ -54,9 +57,15 @@ const BlogInternal = props => {
                     ></path>
                   </svg>
 
-                  <a href="/blog">
-                    <div className="text-14-l red">Category link</div>
                   </a>
+                    <div className="text-14-l red">
+                      
+                      
+                    
+                    {props.data.markdownRemark.frontmatter.category}
+                    
+                      </div>
+               
                 </div>
                 <div className="fluid-2-b mb-50  ">
                   {props.data.markdownRemark.frontmatter.blogtitle}

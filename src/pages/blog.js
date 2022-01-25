@@ -119,7 +119,7 @@ const Blog = props => {
                     <div className="text-12-r mb-16">
                       {post.frontmatter.category
                         ? post.frontmatter.category
-                        : ""}{" "}
+                        : ""}
                     </div>
                     <div className="fluid-4-b mb-20">
                       {post.frontmatter.blogtitle}
