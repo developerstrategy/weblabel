@@ -2,7 +2,9 @@ import React from "react"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Image from "../components/Image"
 import PropTypes from "prop-types"
-const OurServices = () => {
+const OurServices = props => {
+  const { data } = props
+  const { edges: posts } = data.allMarkdownRemark
   return (
     <>
       <section className="pt-md pb-md">
@@ -29,278 +31,46 @@ const OurServices = () => {
           </div>
 
           <div className="row scroll-nat scroll-nat-2">
-            <div className="col-xs-3 mb-16">
-              <a href="/servicio-1">
-                <div className="boxservice">
-                  <div className="rat-1-1">
-                    <div className="rat-content p-20">
-                      <div className="boxservice-title">
-                        <div className="text-16-b">SERVICE</div>
-                        <div className="text-12-r">
-                          TITLE DESCRIPTION SERVICE
+            {posts &&
+              posts.map(({ node: post }) => (
+                <div className="col-xs-3 mb-16">
+                  <Link
+                    to={"/services/" + post.frontmatter.path}
+                    target="_blank"
+                  >
+                    <div className="boxservice">
+                      <div className="rat-1-1">
+                        <div className="rat-content p-20">
+                          <div className="boxservice-title">
+                            <div className="text-16-b">SERVICE</div>
+                            <div className="text-12-r">
+                              {post.frontmatter.title}
+                            </div>
+                            <svg
+                              width="26"
+                              height="26"
+                              viewBox="0 0 26 26"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </div>
+                          <div
+                            className="boxservice-img"
+                            style={{
+                              backgroundImage: `url(${post.frontmatter.thumbnail})`,
+                            }}
+                          ></div>
                         </div>
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="white"
-                          />
-                        </svg>
                       </div>
-                      <div
-                        className="boxservice-img"
-                        style={{
-                          backgroundImage: `url('assets/images/tema2/service1.jpg')`,
-                        }}
-                      ></div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
-              </a>
-            </div>
-            <div className="col-xs-3 mb-16">
-              <a href="/servicio-1">
-                <div className="boxservice">
-                  <div className="rat-1-1">
-                    <div className="rat-content p-20">
-                      <div className="boxservice-title">
-                        <div className="text-16-b">SERVICE</div>
-                        <div className="text-12-r">
-                          TITLE DESCRIPTION SERVICE
-                        </div>
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        className="boxservice-img"
-                        style={{
-                          backgroundImage: `url('assets/images/tema2/service1.jpg')`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-3 mb-16">
-              <a href="/servicio-1">
-                <div className="boxservice">
-                  <div className="rat-1-1">
-                    <div className="rat-content p-20">
-                      <div className="boxservice-title">
-                        <div className="text-16-b">SERVICE</div>
-                        <div className="text-12-r">
-                          TITLE DESCRIPTION SERVICE
-                        </div>
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        className="boxservice-img"
-                        style={{
-                          backgroundImage: `url('assets/images/tema2/service1.jpg')`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-3 mb-16">
-              <a href="/servicio-1">
-                <div className="boxservice">
-                  <div className="rat-1-1">
-                    <div className="rat-content p-20">
-                      <div className="boxservice-title">
-                        <div className="text-16-b">SERVICE</div>
-                        <div className="text-12-r">
-                          TITLE DESCRIPTION SERVICE
-                        </div>
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        className="boxservice-img"
-                        style={{
-                          backgroundImage: `url('assets/images/tema2/service1.jpg')`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-3 mb-16">
-              <a href="/servicio-1">
-                <div className="boxservice">
-                  <div className="rat-1-1">
-                    <div className="rat-content p-20">
-                      <div className="boxservice-title">
-                        <div className="text-16-b">SERVICE</div>
-                        <div className="text-12-r">
-                          TITLE DESCRIPTION SERVICE
-                        </div>
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        className="boxservice-img"
-                        style={{
-                          backgroundImage: `url('assets/images/tema2/service1.jpg')`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-3 mb-16">
-              <a href="/servicio-1">
-                <div className="boxservice">
-                  <div className="rat-1-1">
-                    <div className="rat-content p-20">
-                      <div className="boxservice-title">
-                        <div className="text-16-b">SERVICE</div>
-                        <div className="text-12-r">
-                          TITLE DESCRIPTION SERVICE
-                        </div>
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        className="boxservice-img"
-                        style={{
-                          backgroundImage: `url('assets/images/tema2/service1.jpg')`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-3 mb-16">
-              <a href="/servicio-1">
-                <div className="boxservice">
-                  <div className="rat-1-1">
-                    <div className="rat-content p-20">
-                      <div className="boxservice-title">
-                        <div className="text-16-b">SERVICE</div>
-                        <div className="text-12-r">
-                          TITLE DESCRIPTION SERVICE
-                        </div>
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        className="boxservice-img"
-                        style={{
-                          backgroundImage: `url('assets/images/tema2/service1.jpg')`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-xs-3 mb-16">
-              <a href="/servicio-1">
-                <div className="boxservice">
-                  <div className="rat-1-1">
-                    <div className="rat-content p-20">
-                      <div className="boxservice-title">
-                        <div className="text-16-b">SERVICE</div>
-                        <div className="text-12-r">
-                          TITLE DESCRIPTION SERVICE
-                        </div>
-                        <svg
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <div
-                        className="boxservice-img"
-                        style={{
-                          backgroundImage: `url('assets/images/tema2/service1.jpg')`,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+              ))}
           </div>
         </div>
       </section>
@@ -328,14 +98,11 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 250)
               id
               frontmatter {
                 path
-                blogtitle
+                title
                 thumbnail
-                date(formatString: "MMMM DD, YYYY")
-                category
               }
             }
           }
