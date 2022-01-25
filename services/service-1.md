@@ -1,5 +1,6 @@
 ---
 title: First Service
+thumbnail: /assets/images/benefit1.jpg
 path: service-1
 servicepage: true
 beneficos:
