@@ -170,3 +170,10 @@ collections:
           - { label: check acepta la politica, name: check_acepta_la_politica, widget: string }
           - { label: Contacta Cta, name: contacta_cta, widget: string }
           - { label: Contacta Map, name: contacta_map, widget: string }
+      - label: "Servicios"
+        name: "Servicios"
+        file: "src/markdownPages/servicios.md"
+        fields:
+          - { label: Servicios Titulo, name: servicios_titulo, widget: string }
+          - { label: Servicios SubTitulo, name: servicios_subtitulo, widget: string }
+          - { label: "Servicios Imagen", name: "servicios_imagen", widget: "image" }    
