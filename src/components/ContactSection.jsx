@@ -2,8 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const ContactSection = () => {
-
-
   const data = useStaticQuery(graphql`
     query ContactSectionQuery {
       markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
