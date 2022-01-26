@@ -13,7 +13,7 @@ import Partners from "../components/Partners"
 import LatestNews from "../components/LatestNews"
 import OurServices from "../components/OurServices"
 import ContactSection from "../components/ContactSection"
-
+import HeadingSection from "../components/HeadingSection"
 const Index = () => {
   const data = useStaticQuery(graphql`
     query IndexQuery {
@@ -35,6 +35,9 @@ const Index = () => {
           }
           bloque_titulo
           bloque_description
+          main_title
+          main_subtitulo
+          main_description
           beneficos {
             proyecto_imagen
             beneficios_subtitulo
@@ -87,6 +90,11 @@ const Index = () => {
           ]
         }
         description={content.bloque_description}
+      />
+      <HeadingSection
+        sub={content.main_subtitulo}
+        heading={content.main_title}
+        text={content.main_description}
       />
       {content.beneficos.map((item, index) => (
         <TextImage

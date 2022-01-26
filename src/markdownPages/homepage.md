@@ -39,12 +39,13 @@ bloque_description: >-
 
 
   ***“Nombre del dueño”***
+main_title: Beneficios producto
+main_subtitulo: Los Beneficios
+main_description: >-
+  
+
+  Crear el plan de beneficios perfecto es posible. Encuentra la flexibilidad que necesitas y da a tus empleados el poder que se merecen.
 beneficos:
-  - beneficios_subtitulo: This is a title, the white box should not appear in the title but in the loop yes
-    beneficios_titulo: Title benefits section
-    beneficios_description:
-      This is the benefits title and global description, is diferent. 
-    proyecto_imagen: ""
   - proyecto_imagen: /assets/images/benefit3.jpg
     beneficios_subtitulo: this white box is ok here
     beneficios_titulo: Últimas Noticias
@@ -69,11 +70,11 @@ beneficos:
     beneficios_titulo: Últimas Noticias
 marcas_subtitulo: Ir a la cuenta
 marcas_titulo: Marcas que han confiado en nosotros
+page: true
 Marcas:
   - marcas_imagen: /assets/images/brand1.jpg
   - marcas_imagen: /assets/images/brand2.jpg
   - marcas_imagen: /assets/images/brand3.jpg
   - marcas_imagen: /assets/images/brand4.jpg
   - marcas_imagen: /assets/images/brand5.jpg
-page: true
 ---
