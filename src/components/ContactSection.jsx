@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const ContactSection = () => {
@@ -30,6 +30,44 @@ const ContactSection = () => {
   `)
 
   const content = data.markdownRemark.frontmatter
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  const [form, setForm] = useState(null)
+  const [message, setMessage] = useState(false)
+  const [checked, setChecked] = useState(false)
+  const [checkError, setCheckError] = useState(false)
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    if (checked === false) {
+      setCheckError(true)
+      e.preventDefault()
+    } else {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...form }),
+      })
+        .then(() => {
+          setMessage(
+            "Thank you for contacting us. We will get right back to you!"
+          )
+          setForm(null)
+        })
+        .catch(error => alert(error))
+
+      e.preventDefault()
+      e.target.reset()
+    }
+  }
+
+  const handleChange = e =>
+    setForm({ ...form, [e.target.name]: e.target.value })
 
   return (
     <>
@@ -86,87 +124,130 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-xs-7 col-sm-4">
-              <h3 className="fluid-2-b mb-16">{content.contacta_pregunta}</h3>
-              <div className="barx mt-10 mb-20"></div>
-            </div>
-            <div className="col-xs-12 col-sm-8">
-              <div className="row mb-16">
-                <div className="col-xs-12">
-                  <input type="text" className="input" placeholder="Nombre" />
-                </div>
+          <form
+            id="contactForm"
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <div className="row">
+              <div className="col-xs-7 col-sm-4">
+                <h3 className="fluid-2-b mb-16">{content.contacta_pregunta}</h3>
+                <div className="barx mt-10 mb-20"></div>
               </div>
-              <div className="row mb-16">
-                <div className="col-xs-12">
-                  <input type="text" className="input" placeholder="Email" />
+              <div className="col-xs-12 col-sm-8">
+                <div className="row mb-16">
+                  <div className="col-xs-12">
+                    <input
+                      name="Name"
+                      type="text"
+                      className="input"
+                      placeholder="Nombre"
+                      onChange={e => handleChange(e)}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="row mb-16">
-                <div className="col-xs-12">
-                  <input type="text" className="input" placeholder="Nombre" />
+                <div className="row mb-16">
+                  <div className="col-xs-12">
+                    <input
+                      name="Email"
+                      type="text"
+                      className="input"
+                      placeholder="Email"
+                      onChange={e => handleChange(e)}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="row mb-20">
-                <div className="col-xs-12">
-                  <textarea
-                    className="input textarea"
-                    id="comment"
-                    name="comment"
-                    cols="45"
-                    rows="8"
-                    aria-required="true"
-                    placeholder="Write your comment here..."
-                  ></textarea>
+                <div className="row mb-16">
+                  <div className="col-xs-12">
+                    <input
+                      name="Nombre"
+                      type="text"
+                      className="input"
+                      placeholder="Nombre"
+                      onChange={e => handleChange(e)}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="row mb-50">
-                <div className="col-xs-12">
-                  <div className="checkbox-item-text">
-                    <div className="checkbox-item">
-                      <input id="checkbox_0" type="checkbox" />
-                      <label htmlFor="checkbox_0">
-                        <i className="icon">
-                          <svg width="16" height="16" viewBox="0 0 16 16">
-                            <g strokeWidth="1" fill="#000000" stroke="#000000">
-                              <polyline
-                                fill="none"
+                <div className="row mb-20">
+                  <div className="col-xs-12">
+                    <textarea
+                      className="input textarea"
+                      id="comment"
+                      name="Comment"
+                      cols="45"
+                      rows="8"
+                      aria-required="true"
+                      placeholder="Write your comment here..."
+                      onChange={e => handleChange(e)}
+                    ></textarea>
+                  </div>
+                </div>
+                <div className="row mb-50">
+                  <div className="col-xs-12">
+                    <div className="checkbox-item-text">
+                      <div className="checkbox-item">
+                        <input
+                          id="checkbox_0"
+                          type="checkbox"
+                          onClick={() => setChecked(!checked)}
+                        />
+                        <label htmlFor="checkbox_0">
+                          <i className="icon">
+                            <svg width="16" height="16" viewBox="0 0 16 16">
+                              <g
+                                strokeWidth="1"
+                                fill="#000000"
                                 stroke="#000000"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeMiterlimit="10"
-                                points="1,9 5,13 15,3 "
-                              ></polyline>
-                            </g>
-                          </svg>
-                        </i>
-                      </label>
+                              >
+                                <polyline
+                                  fill="none"
+                                  stroke="#000000"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeMiterlimit="10"
+                                  points="1,9 5,13 15,3 "
+                                ></polyline>
+                              </g>
+                            </svg>
+                          </i>
+                        </label>
+                      </div>
+                      <span className="text-14-r">
+                        Checkbox básico,
+                        <Link
+                          className="link4"
+                          to={"/" + content.check_acepta_la_politica}
+                          target="_blank"
+                        >
+                          politica privacidad
+                        </Link>
+                      </span>
                     </div>
-                    <span className="text-14-r">
-                      Checkbox básico,
-                      <Link
-                        className="link4"
-                        to={"/" + content.check_acepta_la_politica}
-                        target="_blank"
-                      >
-                        politica privacidad
-                      </Link>
-                    </span>
+                    {checkError && (
+                      <span className="is-error text-14-r ">
+                        You need check this Error checkbox
+                      </span>
+                    )}
                   </div>
-                  <span className="is-error text-14-r missing">
-                    You need check this Error checkbox
-                  </span>
                 </div>
-              </div>
-              <div className="row mb-50">
-                <div className="col-xs-12">
-                  <div className="btn btn-primary btn--medium">
-                    {content.contacta_cta}
+                {message ? <i style={{ color: "green" }}>{message}</i> : ""}
+
+                <div className="row mb-50">
+                  <div className="col-xs-12">
+                    <button
+                      className="btn btn-primary btn--medium"
+                      type="submit"
+                    >
+                      {content.contacta_cta}
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
         <div className="container-fluid"></div>
       </section>
