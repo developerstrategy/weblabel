@@ -117,7 +117,7 @@ collections:
         fields:
           - { label: Seo Title, name: title, widget: string }
           - { label: Seo description, name: title, widget: string }
-          - { label: "Seo Robots", name: "tags", widget: "select", multiple:true , options:["index", "nofollow" ],default: ["index"] }
+          - { label: "Seo Robots", name: title, widget: string }
           - { label: Slider Titulo, name: title, widget: string }
           - { label: Slider SubTitulo, name: subtitle, widget: string }
           - {
