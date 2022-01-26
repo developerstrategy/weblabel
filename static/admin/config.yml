@@ -141,6 +141,10 @@ collections:
               - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image" }
           - { label: Bloque Titulo, name: bloque_titulo, widget: string }
           - { label: Bloque Description, name: bloque_description, widget: markdown }
+          - { label: Main Titulo, name: main_title, widget: string }
+          - { label: Main Subtitulo, name: main_subtitulo, widget: string }
+          - { label: Main Description, name: main_description, widget: markdown }
+
           - label: "Beneficos"
             name: "beneficos"
             widget: "list"
