@@ -115,9 +115,9 @@ collections:
         name: "Homepage"
         file: "src/markdownPages/homepage.md"
         fields:
-          - { label: Seo Title, name: seo_title, widget: string }
-          - { label: Seo description, name: seo_description, widget: string }
-          - { label: "Seo Robots", name: seo_robots, widget: string }
+          - { label: Seo Title (máx 65), name: seo_title, widget: string }
+          - { label: Seo description (max 150), name: seo_description, widget: string }
+          - { label: "Seo Robots (all, noindex, norobots) ", name: seo_robots, widget: string }
           - { label: Slider Titulo, name: title, widget: string }
           - { label: Slider SubTitulo, name: subtitle, widget: string }
           - {

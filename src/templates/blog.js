@@ -75,7 +75,7 @@ const BlogInternal = props => {
                 </div>
 
                 <div className="social-bar ">
-                  {" "}
+                  
                   <ul className="list-clear list-inline">
                     <li>
                       <a href="">
@@ -146,7 +146,7 @@ const BlogInternal = props => {
                 </div>
 
                 <div className="text-16-r pb-16   ">
-                  {" "}
+                  
                   <i>{props.data.markdownRemark.frontmatter.date} </i>
                 </div>
                 <div className="barx "></div>
@@ -184,7 +184,7 @@ const BlogInternal = props => {
             <div className="container">
               <div className="row pt-50 pb-50">
                 <div className="col-xs-6">
-                  {" "}
+                  
                   {props.pageContext.prev && (
                     <div>
                       <div className="arrowpost">
@@ -207,13 +207,14 @@ const BlogInternal = props => {
                         to={"/blog/" + props.pageContext.prev.frontmatter.path}
                       >
                         Anterior Post
-                      </Link>
+                     
                       <p class="p1">
                         {props.pageContext.prev.frontmatter.blogtitle}
                       </p>
+                      </Link>
                     </div>
                   )}
-                </div>{" "}
+                </div>
                 {props.pageContext.next && (
                   <div className="col-xs-6 text-right">
                     <div className="arrowpost">
@@ -234,13 +235,14 @@ const BlogInternal = props => {
                       <Link
                         to={"/blog/" + props.pageContext.next.frontmatter.path}
                       >
-                        {" "}
+                        
                         Next Post
-                      </Link>
+                 
                       <p class="p1">
-                        {" "}
-                        {props.pageContext.next.frontmatter.blogtitle}{" "}
+                        
+                        {props.pageContext.next.frontmatter.blogtitle}
                       </p>
+                      </Link>
                     </div>
                   </div>
                 )}
