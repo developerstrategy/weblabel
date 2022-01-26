@@ -2,9 +2,9 @@
 title: About us
 subtitle: TU COCHE DE ELEGANTE A ÉPICO
 thumbnail: /assets/images/kevin-grieve-6w3dxwoq9l8-unsplash.jpg
-incino_title: About US
-incino_description_title: 10 AÑOS DE ROTULACIÓN INTEGRAL Y CAR WRAPPING
-incino_description: >-
+inicio_title: About US
+inicio_description_title: 10 AÑOS DE ROTULACIÓN INTEGRAL Y CAR WRAPPING
+inicio_description: >-
 
 
   Nos dedicamos al diseño, personalización y rotulación de cualquier tipo de superficie utilizando el vinilo de más alta calidad.\
@@ -16,7 +16,7 @@ incino_description: >-
   Nuestro equipo se encuentra en continua formación para poder seguir ofreciendo el mejor servicio y resultado.\
 
   Estamos especializados en el car Wrapping (forrado integral de vehículos) aunque contamos con una amplia experiencia en rotulación de vehículos comerciales además de ofrecer cualquier tipo de servicio relacionado con el vinilo.
-incino_thumbnail: /assets/images/benefit3.jpg
+inicio_thumbnail: /assets/images/benefit3.jpg
 beneficos:
   - beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Beneficios producto

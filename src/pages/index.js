@@ -19,13 +19,16 @@ const Index = () => {
     query IndexQuery {
       markdownRemark(fileAbsolutePath: { regex: "/homepage.md/" }) {
         frontmatter {
+          seo_title
+          seo_description
+          seo_robots
           title
           subtitle
           thumbnail
-          incino_title
-          incino_description_title
-          incino_description
-          incino_thumbnail
+          inicio_title
+          inicio_description_title
+          inicio_description
+          inicio_thumbnail
           proyecto_titulo
           listitems {
             proyecto_imagen
@@ -49,7 +52,7 @@ const Index = () => {
   `)
 
   const content = data.markdownRemark.frontmatter
-  const word = content.incino_title.split(" ")
+  const word = content.inicio_title.split(" ")
 
   return (
     <>
@@ -59,6 +62,9 @@ const Index = () => {
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         ></script>
       </Helmet>
+      {content.seo_title}
+      {content.seo_description}
+      {content.seo_robots}
       <Hero
         heading={content.title}
         text={content.subtitle}
@@ -68,9 +74,9 @@ const Index = () => {
       <MainSection
         firstHeading={word.slice(0, -1).join(" ")}
         secondHeading={word[word.length - 1]}
-        subHeading={content.incino_description_title}
-        firstText={content.incino_description}
-        image={content.incino_thumbnail.replace("/assets/images/", "")}
+        subHeading={content.inicio_description_title}
+        firstText={content.inicio_description}
+        image={content.inicio_thumbnail.replace("/assets/images/", "")}
       />
       <Portfolio title={content.proyecto_titulo} images={content.listitems} />
       <TextSection

@@ -17,10 +17,10 @@ const About = () => {
           title
           subtitle
           thumbnail
-          incino_title
-          incino_description_title
-          incino_description
-          incino_thumbnail
+          inicio_title
+          inicio_description_title
+          inicio_description
+          inicio_thumbnail
 
           beneficos {
             proyecto_imagen
@@ -39,7 +39,7 @@ const About = () => {
   `)
 
   const content = data.markdownRemark.frontmatter
-  const word = content.incino_title.split(" ")
+  const word = content.inicio_title.split(" ")
 
   return (
     <>
@@ -52,9 +52,9 @@ const About = () => {
       <MainSection
         firstHeading={word.slice(0, -1).join(" ")}
         secondHeading={word[word.length - 1]}
-        subHeading={content.incino_description_title}
-        firstText={content.incino_description}
-        image={content.incino_thumbnail.replace("/assets/images/", "")}
+        subHeading={content.inicio_description_title}
+        firstText={content.inicio_description}
+        image={content.inicio_thumbnail.replace("/assets/images/", "")}
       />
       {content.beneficos.map((item, index) => (
         <TextImage
