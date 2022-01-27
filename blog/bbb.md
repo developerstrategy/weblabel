@@ -4,7 +4,7 @@ seo_title: dasdas
 seo_description: asdasdsa
 blogtitle: Título
 blogsubtitle: Subtitulo
-path: nuevo post
+path: nuevo-post
 date: 2022-01-22T15:23:09.685Z
 category: Technology, Mobile
 blogpage: true
