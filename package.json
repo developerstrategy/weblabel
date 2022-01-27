@@ -83,6 +83,7 @@
         "resolve-url-loader": "^4.0.0",
         "sass": "~1.32.12",
         "scroll": "^3.0.1",
+        "simple-react-lightbox": "^3.6.9-0",
         "smooth-scrollbar": "^8.7.2",
         "splitting": "^1.0.6",
         "swiper": "^7.4.1",

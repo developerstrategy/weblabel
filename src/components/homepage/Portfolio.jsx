@@ -1,15 +1,11 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Swiper from "swiper/bundle"
-// import Swiper styles
+import { Dialog } from "@reach/dialog"
+import "@reach/dialog/styles.css"
 import "swiper/css"
-import project1 from "../../../static/assets/images/tema2/project1.jpg"
-import project2 from "../../../static/assets/images/tema2/project2.jpg"
-import project3 from "../../../static/assets/images/tema2/project3.jpg"
-import project4 from "../../../static/assets/images/tema2/project4.jpg"
-import Image from "../Image"
+import { SRLWrapper } from "simple-react-lightbox"
 
 const Portfolio = ({ title, images }) => {
-  console.log(images, "image")
   useEffect(() => {
     const swiper = new Swiper(".swiper", {
       // Optional parameters
@@ -35,6 +31,9 @@ const Portfolio = ({ title, images }) => {
       },
     })
   }, [])
+
+  const [showLightBox, SetShowLightBox] = useState(false)
+  const imageRef = React.useRef("")
   return (
     <>
       <section className="bg-cream pt-md pb-md">
@@ -84,11 +83,26 @@ const Portfolio = ({ title, images }) => {
                   {images.map(image => (
                     <>
                       <div className="swiper-slide">
-                        <div className="swiper-item">
-                        <img src={image.proyecto_imagen} alt="" />
-                        </div>
-                    
+                        <img
+                          src={image.proyecto_imagen}
+                          alt=""
+                          onClick={() => {
+                            SetShowLightBox(!showLightBox)
+                            imageRef.current = image.proyecto_imagen
+                          }}
+                        />
                       </div>
+                      {showLightBox && (
+                        <Dialog>
+                          <img src={imageRef.current} alt="" />
+                          <button
+                            type="button"
+                            onClick={() => SetShowLightBox(false)}
+                          >
+                            Clos
+                          </button>
+                        </Dialog>
+                      )}
                     </>
                   ))}
                 </div>

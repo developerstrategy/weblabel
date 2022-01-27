@@ -10,7 +10,6 @@ const Header = ({ offset }) => {
   const handleScroll = headerClassName => {
     if (headerClassName !== "menuscroll" && window.pageYOffset >= pageOffset) {
       setHeaderClassName("menuscroll")
-      console.log(100, window.pageYOffset)
     } else if (
       headerClassName === "menuscroll" &&
       window.pageYOffset < pageOffset
@@ -21,7 +20,6 @@ const Header = ({ offset }) => {
 
   React.useEffect(() => {
     window.onscroll = () => handleScroll(headerClassName)
-    console.log(offset)
   }, [headerClassName])
 
   React.useEffect(() => {

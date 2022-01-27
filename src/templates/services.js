@@ -33,7 +33,6 @@ export const query = graphql`
 `
 
 const Service = props => {
-  console.log(props)
   return (
     <>
       <Header offset="0" />

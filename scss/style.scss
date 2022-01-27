@@ -28,6 +28,24 @@ a {
   text-decoration: none !important;
 }
 
+[data-reach-dialog-overlay] {
+  z-index: 100;
+}
+[data-reach-dialog-content] {
+  width: 30vw;
+  display: flex;
+  padding: 10px 0px;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  background: white;
+  padding: 5rem 1rem;
+  outline: none;
+  button {
+    align-self: flex-start;
+  }
+}
+
 /*+------------------------------------------------------------+
  |       - FASE 2: CUSTOM
  +------------------------------------------------------------+*/

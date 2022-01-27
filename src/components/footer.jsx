@@ -2,22 +2,43 @@ import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 const Footer = () => {
-
   const data = useStaticQuery(graphql`
-  query FooterPage {
-    markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
-      frontmatter {
-        social_youtube
-        social_instagram
-        social_linkedin
-        empresa_copyright
+    query FooterPage {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter: { page: { ne: true } } }
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 250)
+            id
+            frontmatter {
+              path
+              blogtitle
+              thumbnail
+              date(formatString: "MMMM DD, YYYY")
+              category
+              title
+              blogpage
+              servicepage
+            }
+          }
+        }
+      }
+      markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
+        frontmatter {
+          social_youtube
+          social_instagram
+          social_linkedin
+          empresa_copyright
+        }
       }
     }
-  }
-`)
-const content = data.markdownRemark.frontmatter
+  `)
 
-  
+  const content = data.markdownRemark.frontmatter
+  const posts = data.allMarkdownRemark.edges
+
   return (
     <>
       <footer className="footer">
@@ -36,7 +57,7 @@ const content = data.markdownRemark.frontmatter
                     <div className="p mb-16"> The company </div>
                     <ul className="list-clear">
                       <li>
-                        <Link to="/about"> About us   </Link>
+                        <Link to="/about"> About us </Link>
                       </li>
                       <li>
                         <Link to="/contacta"> Contacta</Link>
@@ -48,38 +69,47 @@ const content = data.markdownRemark.frontmatter
                       <Link to="/servicios"> Servicios </Link>
                     </div>
                     <ul className="list-clear">
-                      <li>
-                        <a class="missing" href=" "> Service 1</a>
-                      </li>
-                      <li>
-                        <a href=" "> Service 2</a>
-                      </li>
-                      <li>
-                        <a href=" "> Service 3</a>
-                      </li>
-                      <li>
-                        <a href=" "> Service 4</a>
-                      </li>
-                      <li>
-                        <a href=" "> Service 5</a>
-                      </li>
+                      {posts &&
+                        posts
+
+                          .filter(
+                            ({ node: post }) =>
+                              post.frontmatter.servicepage === true
+                          )
+
+                          .map(({ node: post }) => (
+                            <li class="missing">
+                              <Link
+                                to={"/services/" + post.frontmatter.path}
+                                target="_blank"
+                              >
+                                {post.frontmatter.title}
+                              </Link>
+                            </li>
+                          ))}
                     </ul>
                   </div>
                   <div className="col-xs-12 col-sm-2 mb-20">
                     <div className="p mb-16"> Blog </div>
                     <ul className="list-clear">
-                      <li class="missing">
-                        <a href=" "> Blog Last news 1</a>
-                      </li>
-                      <li>
-                        <a href=" ">Blog Last news 2</a>
-                      </li>
-                      <li>
-                        <a href=" ">Blog Last news 3</a>
-                      </li>
-                      <li>
-                        <a href=" "> Blog Last news 4</a>
-                      </li>
+                      {posts &&
+                        posts
+
+                          .filter(
+                            ({ node: post }) =>
+                              post.frontmatter.blogpage === true
+                          )
+                          .slice(0, 4)
+                          .map(({ node: post }) => (
+                            <li class="missing">
+                              <Link
+                                to={"/blog/" + post.frontmatter.path}
+                                target="_blank"
+                              >
+                                {post.frontmatter.blogtitle}
+                              </Link>
+                            </li>
+                          ))}
                     </ul>
                   </div>
                 </div>
@@ -92,7 +122,7 @@ const content = data.markdownRemark.frontmatter
           <div className="row pt-20 pb-20">
             <div className="col-xs-12 col-sm-6  mdmax:mb-16">
               <ul className="list-inline text-12-r  social">
-                <li>{content.empresa_copyright}  </li>
+                <li>{content.empresa_copyright} </li>
                 <li>
                   <a href={content.social_youtube}> youtube</a>
                 </li>

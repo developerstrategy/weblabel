@@ -6,8 +6,6 @@ import bg from "../assets/images/home.jpg"
 const Hero = ({ heading, text, button, bgImage }) => {
   const image = getImage(bgImage)
 
-  console.log(bgImage, image, "image")
-
   return (
     <>
       <section>
