@@ -3,6 +3,9 @@ blogtitle: "frg2: De vuelta al paraíso en Acapulco"
 blogsubtitle: Nos lanzamos al icónico festival en la costa de Guerrero tras casi
   dos años sin disfrutar una nueva edición.
 path: vuelta-al-paraíso-en-2
+social-twitter: "http://www.instagram.es"
+social-linkedin: "http://www.instagram.es"
+social-youtube: "http://www.instagram.es"
 date: 2022-01-20T20:38:18.620Z
 category: Technology, Mobile
 blogpage: true

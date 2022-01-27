@@ -49,7 +49,7 @@ const Service = props => {
       <Portfolio
         title="Our Work"
         images={props.data.markdownRemark.frontmatter.listitems}
-      />{" "}
+      />
       <div class="container mb-50">
         <div className="row">
           <div className="col-xs-12 ">

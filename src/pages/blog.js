@@ -32,12 +32,12 @@ const Blog = props => {
           <div className="row pb-50">
             <div className="col-xs-6">
               <div className="fluid-1-b mb-20  ">
-                {" "}
+                
                 Our <br />
-                News{" "}
+                News
               </div>
               <div className="text-16-r pb-16   ">
-                {" "}
+                
                 <i>Our news subtitle </i>
               </div>
               <div className="barx "></div>
@@ -68,12 +68,12 @@ const Blog = props => {
                         <p class="p1">
                           {posts && posts[0].node.frontmatter.category
                             ? posts[0].node.frontmatter.category
-                            : ""}{" "}
+                            : ""}
                         </p>
                       </div>
                       <div className="col-xs-12">
                         <div className="fluid-2-b">
-                          {posts && posts[0].node.frontmatter.blogtitle}{" "}
+                          {posts && posts[0].node.frontmatter.blogtitle}
                         </div>
                       </div>
                       <div className="col-xs-12">

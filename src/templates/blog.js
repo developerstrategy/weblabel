@@ -78,7 +78,7 @@ const BlogInternal = props => {
                   
                   <ul className="list-clear list-inline">
                     <li>
-                      <a href="">
+                      <a href="  ">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"

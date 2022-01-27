@@ -3,6 +3,9 @@ blogtitle: "Trópico 2021: De vuelta al paraíso en Acapulco"
 blogsubtitle: Nos lanzamos al icónico festival en la costa de Guerrero tras casi
   dos años sin disfrutar una nueva edición.
 path: vuelta-al-paraíso-en
+social-twitter: "http://www.instagram.es"
+social-linkedin: "http://www.instagram.es"
+social-youtube: "http://www.instagram.es"
 date: 2022-01-20T19:41:57.643Z
 category: Technology, Mobile
 blogpage: true

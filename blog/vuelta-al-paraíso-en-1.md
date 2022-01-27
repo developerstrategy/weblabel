@@ -1,8 +1,11 @@
 ---
+path: vuelta-al-paraíso-en-1
+social-twitter: "http://www.instagram.es"
+social-linkedin: "http://www.instagram.es"
+social-youtube: "http://www.instagram.es"
 blogtitle: "Tróp 2: De vuelta al paraíso en Acapulco"
 blogsubtitle: Nos lanzamos al icónico festival en la costa de Guerrero tras casi
   dos años sin disfrutar una nueva edición.
-path: vuelta-al-paraíso-en-1
 date: 2022-01-20T19:50:46.558Z
 category: Technology, Mobile
 blogpage: true

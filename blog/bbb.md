@@ -2,6 +2,9 @@
 blogtitle: Título
 blogsubtitle: Subtitulo
 path: nuevo post
+social-twitter: "http://www.instagram.es"
+social-linkedin: "http://www.instagram.es"
+social-youtube: "http://www.instagram.es"
 category: Technology, Mobile
 date: 2022-01-22T15:23:09.685Z
 blogpage: true
