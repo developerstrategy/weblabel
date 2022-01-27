@@ -14,6 +14,7 @@ import LatestNews from "../components/LatestNews"
 import OurServices from "../components/OurServices"
 import ContactSection from "../components/ContactSection"
 import HeadingSection from "../components/HeadingSection"
+import Seo from "../components/seo"
 const Index = () => {
   const data = useStaticQuery(graphql`
     query IndexQuery {
@@ -65,9 +66,7 @@ const Index = () => {
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         ></script>
       </Helmet>
-      {content.seo_title}
-      {content.seo_description}
-      {content.seo_robots}
+      <Seo title={content.seo_title} description={content.seo_description} />
       <Hero
         heading={content.title}
         text={content.subtitle}

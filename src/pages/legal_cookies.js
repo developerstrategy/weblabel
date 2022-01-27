@@ -3,40 +3,44 @@ import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import { useStaticQuery, graphql } from "gatsby"
+import Seo from "../components/seo"
+import Helmet from "react-helmet"
 
 const LegalCookies = () => {
-
   const data = useStaticQuery(graphql`
-  query LegalCookiesSectionQuery {
-    markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
-      frontmatter {
-        contacto_titulo
-        contacto_subtitulo
-        direction
-        direction_link
-        email_titulo
-        email
-        telefono_titulo
-        telefono
-        whatsapp_titulo
-        whatsapp
-        contacta_pregunta
-        check_acepta_la_politica
-        contacta_cta
-        website
-        empresa_corto
-        empresa_legal
-        empresa_dni
-        empresa_legal_direccion
+    query LegalCookiesSectionQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
+        frontmatter {
+          contacto_titulo
+          contacto_subtitulo
+          direction
+          direction_link
+          email_titulo
+          email
+          telefono_titulo
+          telefono
+          whatsapp_titulo
+          whatsapp
+          contacta_pregunta
+          check_acepta_la_politica
+          contacta_cta
+          website
+          empresa_corto
+          empresa_legal
+          empresa_dni
+          empresa_legal_direccion
+        }
       }
     }
-  }
-`)
+  `)
 
-
-const content = data.markdownRemark.frontmatter
+  const content = data.markdownRemark.frontmatter
   return (
     <>
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
+      <Seo title="Legal Cookies" description="Legal Cookies" />
       <Header offset="0" />
       <section>
         <div className="container">
@@ -51,9 +55,7 @@ const content = data.markdownRemark.frontmatter
             <div className="col-xs-12 align-center">
               <div className="fluid-1-b mb-50  "> Política de cookies </div>
               <div className="text-16-r pb-16   ">
-                
                 <i>
-                  
                   <span className="variable"> {content.empresa_corto} </span>
                 </i>
               </div>
@@ -63,14 +65,13 @@ const content = data.markdownRemark.frontmatter
           <div className="row">
             <div className="col-xs-12">
               <div className="p1  p-content">
-                
                 En cumplimiento con lo dispuesto en el artículo 22.2 de la Ley
                 34/2002, de 11 de julio, de Services de la Sociedad de la
                 Información y de Comercio Electrónico,
-                <span className="variable"> {content.empresa_corto}</span>, titular y
-                propietario del website
+                <span className="variable"> {content.empresa_corto}</span>,
+                titular y propietario del website
                 <span className="variable"> {content.website}, </span>
-                 le informa en esta sección la política de recogida y tratamiento
+                le informa en esta sección la política de recogida y tratamiento
                 de cookies propias y de terceros con fines de Análisis,
                 Personalización, de Marketing y Técnicos en dicho website. Las
                 cookies son pequeños archivos de texto que las páginas web
@@ -190,7 +191,6 @@ const content = data.markdownRemark.frontmatter
                       </div>
                       <div className="fluid-3-b">Anterior Post</div>
                       <p className="p1">
-                        
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit.
                       </p>
@@ -213,7 +213,6 @@ const content = data.markdownRemark.frontmatter
                     </div>
                     <div className="fluid-3-b"> Next Post </div>
                     <p className="p1">
-                      
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>

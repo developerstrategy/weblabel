@@ -7,6 +7,7 @@ import OurServices from "../components/OurServices"
 import ServiciosMain from "../components/ServiciosMain"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
+import Seo from "../components/seo"
 
 const Servicios = () => {
   const data = useStaticQuery(graphql`
@@ -16,6 +17,8 @@ const Servicios = () => {
           servicios_titulo
           servicios_subtitulo
           servicios_imagen
+          seo_title
+          seo_description
         }
       }
     }
@@ -24,6 +27,8 @@ const Servicios = () => {
 
   return (
     <>
+      <Seo title={content.seo_title} description={content.seo_description} />
+
       <Header offset="0" />
       <ServiciosMain
         title={content.servicios_titulo}

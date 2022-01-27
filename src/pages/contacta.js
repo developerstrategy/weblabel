@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import Seo from "../components/seo"
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -10,6 +11,8 @@ const Contact = () => {
       markdownRemark(fileAbsolutePath: { regex: "/contacto.md/" }) {
         frontmatter {
           contacta_map
+          seo_title
+          seo_description
         }
       }
     }
@@ -18,6 +21,8 @@ const Contact = () => {
 
   return (
     <>
+      <Seo title={content.seo_title} description={content.seo_description} />
+
       <Header offset="0" />
       <ContactSection />
       <div class="container-fluid">

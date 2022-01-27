@@ -5,6 +5,7 @@ import Header from "../components/header"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Image from "../components/Image"
 import PropTypes from "prop-types"
+import Seo from "../components/seo"
 
 const Blog = props => {
   const { data } = props
@@ -19,6 +20,8 @@ const Blog = props => {
   console.log(data, "data")
   return (
     <>
+      <Seo title="Blog Section" description="Find the latest News" />
+
       <Header offset="0" />
       <section>
         <div className="container">
@@ -32,12 +35,10 @@ const Blog = props => {
           <div className="row pb-50">
             <div className="col-xs-6">
               <div className="fluid-1-b mb-20  ">
-                
                 Our <br />
                 News
               </div>
               <div className="text-16-r pb-16   ">
-                
                 <i>Our news subtitle </i>
               </div>
               <div className="barx "></div>

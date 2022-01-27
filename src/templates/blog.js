@@ -3,6 +3,8 @@ import { graphql, Link } from "gatsby"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import Seo from "../components/seo"
+import Helmet from "react-helmet"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -15,6 +17,8 @@ export const query = graphql`
         blogsubtitle
         thumbnail
         category
+        seo_title
+        seo_description
         keyword {
           blog_keyword
         }
@@ -27,6 +31,17 @@ const BlogInternal = props => {
   console.log(props.pageContext, "page")
   return (
     <>
+      <Helmet>
+        <meta
+          property="og:image"
+          content={props.data.markdownRemark.frontmatter.thumbnail}
+        />
+      </Helmet>
+      <Seo
+        title={props.data.markdownRemark.frontmatter.seo_title}
+        description={props.data.markdownRemark.frontmatter.seo_description}
+      />
+
       <Header offset="0" />
       <div>
         <section>
@@ -41,31 +56,24 @@ const BlogInternal = props => {
             <div className="row pb-20">
               <div className="col-xs-12  p-content">
                 <div className="text-14-r  align-middle mb-20 ">
-
-                <a href="/blog">
-                  <svg
-                    className="mr-20"
-                    width="13"
-                    height="15"
-                    viewBox="0 0 13 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7"
-                      stroke="#fb263b"
-                    ></path>
-                  </svg>
-
+                  <a href="/blog">
+                    <svg
+                      className="mr-20"
+                      width="13"
+                      height="15"
+                      viewBox="0 0 13 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7"
+                        stroke="#fb263b"
+                      ></path>
+                    </svg>
                   </a>
-                    <div className="text-14-l red">
-                      
-                      
-                    
+                  <div className="text-14-l red">
                     {props.data.markdownRemark.frontmatter.category}
-                    
-                      </div>
-               
+                  </div>
                 </div>
                 <div className="fluid-2-b mb-50  ">
                   {props.data.markdownRemark.frontmatter.blogtitle}
@@ -75,7 +83,6 @@ const BlogInternal = props => {
                 </div>
 
                 <div className="social-bar ">
-                  
                   <ul className="list-clear list-inline">
                     <li>
                       <a href="  ">
@@ -146,7 +153,6 @@ const BlogInternal = props => {
                 </div>
 
                 <div className="text-16-r pb-16   ">
-                  
                   <i>{props.data.markdownRemark.frontmatter.date} </i>
                 </div>
                 <div className="barx "></div>
@@ -184,7 +190,6 @@ const BlogInternal = props => {
             <div className="container">
               <div className="row pt-50 pb-50">
                 <div className="col-xs-6">
-                  
                   {props.pageContext.prev && (
                     <div>
                       <div className="arrowpost">
@@ -207,10 +212,9 @@ const BlogInternal = props => {
                         to={"/blog/" + props.pageContext.prev.frontmatter.path}
                       >
                         Anterior Post
-                     
-                      <p class="p1">
-                        {props.pageContext.prev.frontmatter.blogtitle}
-                      </p>
+                        <p class="p1">
+                          {props.pageContext.prev.frontmatter.blogtitle}
+                        </p>
                       </Link>
                     </div>
                   )}
@@ -235,13 +239,10 @@ const BlogInternal = props => {
                       <Link
                         to={"/blog/" + props.pageContext.next.frontmatter.path}
                       >
-                        
                         Next Post
-                 
-                      <p class="p1">
-                        
-                        {props.pageContext.next.frontmatter.blogtitle}
-                      </p>
+                        <p class="p1">
+                          {props.pageContext.next.frontmatter.blogtitle}
+                        </p>
                       </Link>
                     </div>
                   </div>

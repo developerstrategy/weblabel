@@ -10,11 +10,14 @@ import Partners from "../components/Partners"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
 import HeadingSection from "../components/HeadingSection"
+import Seo from "../components/seo"
 const About = () => {
   const data = useStaticQuery(graphql`
     query AboutQuery {
       markdownRemark(fileAbsolutePath: { regex: "/about.md/" }) {
         frontmatter {
+          seo_title
+          seo_description
           title
           subtitle
           thumbnail
@@ -47,6 +50,8 @@ const About = () => {
 
   return (
     <>
+      <Seo title={content.seo_title} description={content.seo_description} />
+
       <Hero
         heading={content.title}
         text={content.subtitle}

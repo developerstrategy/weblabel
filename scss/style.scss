@@ -468,6 +468,9 @@ hr {
     height: 70%;
     z-index: 12;
   }
+  .gatsby-image-wrapper {
+    width: 100% !important;
+  }
 }
 .fulltext {
   z-index: 100;
