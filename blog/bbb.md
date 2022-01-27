@@ -1,14 +1,16 @@
 ---
+social-youtube: http://www.instagram.es
+seo_title: dasdas
+seo_description: asdasdsa
 blogtitle: Título
 blogsubtitle: Subtitulo
 path: nuevo post
-social-twitter: "http://www.instagram.es"
-social-linkedin: "http://www.instagram.es"
-social-youtube: "http://www.instagram.es"
-category: Technology, Mobile
 date: 2022-01-22T15:23:09.685Z
+category: Technology, Mobile
 blogpage: true
 thumbnail: /assets/images/7-300x300.png
+social-twitter: http://www.instagram.es
+social-linkedin: http://www.instagram.es
 ---
 
 ```toc
