@@ -48,6 +48,8 @@ collections:
     folder: blog
     create: true
     fields:
+      - { label: Seo Title (máx 65), name: seo_title, widget: string }
+      - { label: Seo description (max 150), name: seo_description, widget: string }
       - { name: blogtitle, label: Página noticia titulo }
       - { name: blogsubtitle, label: Página noticia Subtitulo }
       - { name: path, label: Path (post url) }
@@ -79,6 +81,8 @@ collections:
         name: "About"
         file: "src/markdownPages/about.md"
         fields:
+          - { label: Seo Title (máx 65), name: seo_title, widget: string }
+          - { label: Seo description (max 150), name: seo_description, widget: string }
           - { label: Slider Titulo, name: title, widget: string }
           - { label: Slider SubTitulo, name: subtitle, widget: string }
           - {
@@ -167,6 +171,8 @@ collections:
         name: "Contacto"
         file: "src/markdownPages/contacto.md"
         fields:
+          - { label: Seo Title (máx 65), name: seo_title, widget: string }
+          - { label: Seo description (max 150), name: seo_description, widget: string }
           - { label: Contacto Titulo, name: contacto_titulo, widget: string }
           - { label: Contacto SubTitulo, name: contacto_subtitulo, widget: string }
           - { label: Direction , name: direction, widget: string }
@@ -185,6 +191,8 @@ collections:
         name: "Servicios"
         file: "src/markdownPages/servicios.md"
         fields:
+          - { label: Seo Title (máx 65), name: seo_title, widget: string }
+          - { label: Seo description (max 150), name: seo_description, widget: string }
           - { label: Servicios Titulo, name: servicios_titulo, widget: string }
           - { label: Servicios SubTitulo, name: servicios_subtitulo, widget: string }
           - { label: "Servicios Imagen", name: "servicios_imagen", widget: "image" }    
