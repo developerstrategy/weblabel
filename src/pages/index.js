@@ -38,7 +38,7 @@ const Index = () => {
           main_title
           main_subtitulo
           main_description
-          beneficos {
+          beneficios {
             proyecto_imagen
             beneficios_subtitulo
             beneficios_titulo
@@ -96,7 +96,7 @@ const Index = () => {
         heading={content.main_title}
         text={content.main_description}
       />
-      {content.beneficos.map((item, index) => (
+      {content.beneficios.map((item, index) => (
         <TextImage
           sub={item.beneficios_subtitulo}
           heading={item.beneficios_titulo}

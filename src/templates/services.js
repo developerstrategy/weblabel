@@ -18,7 +18,7 @@ export const query = graphql`
         listitems {
           proyecto_imagen
         }
-        beneficos {
+        beneficios {
           beneficios_imagen
           beneficios_subtitulo
           beneficios_titulo
@@ -37,7 +37,7 @@ const Service = props => {
   return (
     <>
       <Header offset="0" />
-      {props.data.markdownRemark.frontmatter.beneficos.map((item, index) => (
+      {props.data.markdownRemark.frontmatter.beneficios.map((item, index) => (
         <ServiceTextImage
           sub={item.beneficios_subtitulo}
           heading={item.beneficios_titulo}

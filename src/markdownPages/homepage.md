@@ -45,7 +45,7 @@ main_description: >-
   
 
   Crear el plan de beneficios perfecto es posible. Encuentra la flexibilidad que necesitas y da a tus empleados el poder que se merecen.
-beneficos:
+beneficios:
   - proyecto_imagen: /assets/images/benefit3.jpg
     beneficios_subtitulo: this white box is ok here
     beneficios_titulo: Últimas Noticias

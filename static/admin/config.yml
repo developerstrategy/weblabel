@@ -25,8 +25,8 @@ collections:
           widget: "hidden",
           default: true,
         }
-      - label: "Beneficos"
-        name: "beneficos"
+      - label: "Beneficios"
+        name: "beneficios"
         widget: "list"
         fields:
               - { label: "Beneficios Imagen", name: "beneficios_imagen", widget: "image", optional: true, required: false}
@@ -96,8 +96,8 @@ collections:
               widget: "image",
               default: "",
             }
-          - label: "Beneficos"
-            name: "beneficos"
+          - label: "Beneficios"
+            name: "beneficios"
             widget: "list"
             fields:
               - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image", optional: true, required: false}
@@ -148,8 +148,8 @@ collections:
           - { label: Main Subtitulo, name: main_subtitulo, widget: string }
           - { label: Main Description, name: main_description, widget: markdown }
 
-          - label: "Beneficos"
-            name: "beneficos"
+          - label: "Beneficios"
+            name: "beneficios"
             widget: "list"
             fields:
               - { label: "Proyecto Imagen", name: "proyecto_imagen", widget: "image", optional: true, required: false}

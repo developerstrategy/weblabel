@@ -17,12 +17,14 @@ inicio_description: >-
 
   Estamos especializados en el car Wrapping (forrado integral de vehículos) aunque contamos con una amplia experiencia en rotulación de vehículos comerciales además de ofrecer cualquier tipo de servicio relacionado con el vinilo.
 inicio_thumbnail: /assets/images/benefit3.jpg
-beneficos:
-  - beneficios_subtitulo: Ir a la cuenta
-    beneficios_titulo: Beneficios producto
-    beneficios_description:
-      Un aspecto muy importante en este sentido es que cuando
-      cambias de color un vehículo mediante vinilo, no es necesario
+
+beneficio_subtitulo: Ir a la cuenta
+beneficio_titulo: Beneficios producto
+beneficio_description:
+  Un aspecto muy importante en este sentido es que cuando
+  cambias de color un vehículo mediante vinilo, no es necesario
+
+beneficios:
   - proyecto_imagen: /assets/images/project3.jpg
     beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Últimas Noticias

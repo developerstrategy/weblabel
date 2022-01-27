@@ -9,6 +9,7 @@ import image2 from "../../static/assets/images/tema2/benefit3.jpg"
 import Partners from "../components/Partners"
 import ContactSection from "../components/ContactSection"
 import Footer from "../components/footer"
+import HeadingSection from "../components/HeadingSection"
 const About = () => {
   const data = useStaticQuery(graphql`
     query AboutQuery {
@@ -21,8 +22,11 @@ const About = () => {
           inicio_description_title
           inicio_description
           inicio_thumbnail
+          beneficio_subtitulo
+          beneficio_titulo
+          beneficio_description
 
-          beneficos {
+          beneficios {
             proyecto_imagen
             beneficios_subtitulo
             beneficios_titulo
@@ -56,7 +60,13 @@ const About = () => {
         firstText={content.inicio_description}
         image={content.inicio_thumbnail.replace("/assets/images/", "")}
       />
-      {content.beneficos.map((item, index) => (
+
+      <HeadingSection
+        sub={content.beneficio_titulo}
+        heading={content.beneficio_subtitulo}
+        text={content.beneficio_description}
+      />
+      {content.beneficios.map((item, index) => (
         <TextImage
           sub={item.beneficios_subtitulo}
           heading={item.beneficios_titulo}

@@ -3,7 +3,7 @@ title: First Service
 thumbnail: /assets/images/benefit1.jpg
 path: service-1
 servicepage: true
-beneficos:
+beneficios:
   - beneficios_imagen: /assets/images/project2.jpg
     beneficios_description: >-
       
