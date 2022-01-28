@@ -76,6 +76,7 @@
         "prop-types": "^15.8.1",
         "react": "^17.0.2",
         "react-bootstrap": "^2.1.0",
+        "react-cookie-consent": "^7.2.1",
         "react-dom": "^17.0.2",
         "react-helmet": "^6.1.0",
         "react-netlify-identity-widget": "^0.2.7",
