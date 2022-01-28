@@ -4,6 +4,7 @@ seo_description: seotitle
 seo_robots: all, noindex,nofollow
 title: CAR WRAPPING BARCELONA
 subtitle: TU COCHE DE ELEGANTE A ÉPICO
+manual_pdf: /assets/images/cover.mp4
 thumbnail: /assets/images/download.png
 inicio_title: Que és tu  MARCA CAR WRAPPING
 inicio_description_title: 10 AÑOS DE ROTULACIÓN INTEGRAL Y CAR WRAPPING
