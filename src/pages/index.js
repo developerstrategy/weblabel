@@ -27,6 +27,7 @@ const Index = () => {
           title
           subtitle
           thumbnail
+          video
           inicio_title
           inicio_description_title
           inicio_description
@@ -73,6 +74,7 @@ const Index = () => {
         text={content.subtitle}
         bgImage={content.thumbnail}
         button={true}
+        video={content.video}
       />
       <MainSection
         firstHeading={word.slice(0, -1).join(" ")}

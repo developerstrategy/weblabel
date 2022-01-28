@@ -4,7 +4,7 @@ seo_description: seotitle
 seo_robots: all, noindex,nofollow
 title: CAR WRAPPING BARCELONA
 subtitle: TU COCHE DE ELEGANTE A ÉPICO
-manual_pdf: /assets/images/cover.mp4
+video: /assets/images/cover.mp4
 thumbnail: /assets/images/download.png
 inicio_title: Que és tu  MARCA CAR WRAPPING
 inicio_description_title: 10 AÑOS DE ROTULACIÓN INTEGRAL Y CAR WRAPPING
@@ -43,7 +43,7 @@ bloque_description: >-
 main_title: Beneficios producto
 main_subtitulo: Los Beneficios
 main_description: >-
-  
+
 
   Crear el plan de beneficios perfecto es posible. Encuentra la flexibilidad que necesitas y da a tus empleados el poder que se merecen.
 beneficios:

@@ -157,6 +157,7 @@ const ContactSection = () => {
                       className="input"
                       placeholder="Email"
                       onChange={e => handleChange(e)}
+                      required
                     />
                   </div>
                 </div>
@@ -233,12 +234,7 @@ const ContactSection = () => {
                     )}
                   </div>
                 </div>
-                {message ?
-                
-                <div className="success-modal">
-                  
-                  {message}
-                </div>: ""}
+                {message ? <div className="success-modal">{message}</div> : ""}
 
                 <div className="row mb-50">
                   <div className="col-xs-12">

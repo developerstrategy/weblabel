@@ -3,7 +3,7 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import Header from "./header"
 import bg from "../assets/images/home.jpg"
 
-const Hero = ({ heading, text, button, bgImage }) => {
+const Hero = ({ heading, text, button, bgImage, video }) => {
   const image = getImage(bgImage)
 
   return (
@@ -13,12 +13,24 @@ const Hero = ({ heading, text, button, bgImage }) => {
         <div className="bg-dark">
           <div className="cover__bg-item">
             <div className="cover__video">
-              <img
-                src={bgImage}
-                sizes="
+              {video ? (
+                <video
+                  src={video}
+                  type="video/mp4"
+                  muted
+                  autoPlay={"autoplay"}
+                  preLoad="auto"
+                  loop
+                />
+              ) : (
+                <img
+                  src={bgImage}
+                  sizes="
                  (min-width: 40em) calc(66.6vw - 4em),
                  100vw"
-              />
+                />
+              )}
+              ) }
             </div>
           </div>
           <div className="row height-full ">
