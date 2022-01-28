@@ -78,7 +78,7 @@ const Footer = () => {
                           )
 
                           .map(({ node: post }) => (
-                            <li class="missing">
+                            <li className="missing">
                               <Link
                                 to={"/services/" + post.frontmatter.path}
                                 target="_blank"
@@ -101,7 +101,7 @@ const Footer = () => {
                           )
                           .slice(0, 4)
                           .map(({ node: post }) => (
-                            <li class="missing">
+                            <li className="missing">
                               <Link
                                 to={"/blog/" + post.frontmatter.path}
                                 target="_blank"

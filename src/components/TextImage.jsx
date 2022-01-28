@@ -30,7 +30,7 @@ const TextImage = ({ sub, heading, text, image, reverse, link }) => {
             <p className="p1">{text}</p>
             {link && (
               <div className="col-sm-6 mt-20" style={{ paddingLeft: "0px" }}>
-                <button class="btn btn-invert btn--mini btn-secondary  ">
+                <button className="btn btn-invert btn--mini btn-secondary  ">
                   LINK{" "}
                 </button>
               </div>

@@ -25,8 +25,8 @@ const Contact = () => {
 
       <Header offset="0" />
       <ContactSection />
-      <div class="container-fluid">
-        <div class="contact-map">
+      <div className="container-fluid">
+        <div className="contact-map">
           <iframe
             src={content.contacta_map}
             width="100%"

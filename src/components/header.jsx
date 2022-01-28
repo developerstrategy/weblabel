@@ -115,14 +115,15 @@ const Header = ({ offset }) => {
           </div>
         </div>
       </section>
-      <div class="CookieConsent ">
+
+      {/* <div class="CookieConsent ">
         <div>cookies consent</div>
         <div>
           <button id="rcc-confirm-button" class="btn">
             Accept cookies{" "}
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

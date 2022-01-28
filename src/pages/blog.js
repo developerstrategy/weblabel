@@ -66,7 +66,7 @@ const Blog = props => {
                     </div>
                     <div className="row fulltext">
                       <div className="col-xs-5 ">
-                        <p class="p1">
+                        <p className="p1">
                           {posts && posts[0].node.frontmatter.category
                             ? posts[0].node.frontmatter.category
                             : ""}

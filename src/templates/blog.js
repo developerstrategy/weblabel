@@ -212,7 +212,7 @@ const BlogInternal = props => {
                         to={"/blog/" + props.pageContext.prev.frontmatter.path}
                       >
                         Anterior Post
-                        <p class="p1">
+                        <p className="p1">
                           {props.pageContext.prev.frontmatter.blogtitle}
                         </p>
                       </Link>
@@ -240,7 +240,7 @@ const BlogInternal = props => {
                         to={"/blog/" + props.pageContext.next.frontmatter.path}
                       >
                         Next Post
-                        <p class="p1">
+                        <p className="p1">
                           {props.pageContext.next.frontmatter.blogtitle}
                         </p>
                       </Link>

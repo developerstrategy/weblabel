@@ -3,9 +3,9 @@ import Swiper from "swiper/bundle"
 import { Dialog } from "@reach/dialog"
 import "@reach/dialog/styles.css"
 import "swiper/css"
-import { SRLWrapper } from "simple-react-lightbox"
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
-const Portfolio = ({ title, images }) => {
+const Portfolio2 = ({ title, images }) => {
   useEffect(() => {
     const swiper = new Swiper(".swiper", {
       // Optional parameters
@@ -49,7 +49,6 @@ const Portfolio = ({ title, images }) => {
             <div className="col-xs-12">
               <div className="swiper">
                 <div className="swiper-button-prev1">
-                  
                   <svg
                     width="13"
                     height="15"
@@ -64,7 +63,6 @@ const Portfolio = ({ title, images }) => {
                   </svg>
                 </div>
                 <div className="swiper-button-next1">
-                  
                   <svg
                     width="13"
                     height="15"
@@ -83,26 +81,18 @@ const Portfolio = ({ title, images }) => {
                   {images.map(image => (
                     <>
                       <div className="swiper-slide">
-                        <img
-                          src={image.proyecto_imagen}
-                          alt=""
-                          onClick={() => {
-                            SetShowLightBox(!showLightBox)
-                            imageRef.current = image.proyecto_imagen
-                          }}
-                        />
+                        <SimpleReactLightbox>
+                          <SRLWrapper>
+                            <a href={image.proyecto_imagen}>
+                              <img
+                                src={image.proyecto_imagen}
+                                alt={image.proyecto_imagen}
+                              />
+                            </a>
+                          </SRLWrapper>
+                        </SimpleReactLightbox>
                       </div>
-                      {showLightBox && (
-                        <Dialog>
-                          <img src={imageRef.current} alt="" />
-                          <button
-                            type="button"
-                            onClick={() => SetShowLightBox(false)}
-                          >
-                            Clos
-                          </button>
-                        </Dialog>
-                      )}
+
                     </>
                   ))}
                 </div>
@@ -117,4 +107,4 @@ const Portfolio = ({ title, images }) => {
   )
 }
 
-export default Portfolio
+export default Portfolio2

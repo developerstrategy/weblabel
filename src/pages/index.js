@@ -7,6 +7,7 @@ import Footer from "../components/footer"
 import Hero from "../components/Hero"
 import MainSection from "../components/MainSection"
 import Portfolio from "../components/homepage/Portfolio"
+import Portfolio2 from "../components/homepage/Portfolio2"
 import TextSection from "../components/TextSection"
 import TextImage from "../components/TextImage"
 import Partners from "../components/Partners"
@@ -81,6 +82,7 @@ const Index = () => {
         image={content.inicio_thumbnail.replace("/assets/images/", "")}
       />
       <Portfolio title={content.proyecto_titulo} images={content.listitems} />
+      <Portfolio2 title={content.proyecto_titulo} images={content.listitems} />
       <TextSection
         firstHeading={content.bloque_titulo.split(" ").slice(0, -1).join(" ")}
         secondHeading={
