@@ -3,7 +3,7 @@ import Swiper from "swiper/bundle"
 import { Dialog } from "@reach/dialog"
 import "@reach/dialog/styles.css"
 import "swiper/css"
-import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 
 const Portfolio2 = ({ title, images }) => {
   useEffect(() => {
@@ -47,58 +47,57 @@ const Portfolio2 = ({ title, images }) => {
         <div className="container ">
           <div className="row">
             <div className="col-xs-12">
-              <div className="swiper">
-                <div className="swiper-button-prev1">
-                  <svg
-                    width="13"
-                    height="15"
-                    viewBox="0 0 13 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7"
-                      stroke="#ffffff"
-                    ></path>
-                  </svg>
-                </div>
-                <div className="swiper-button-next1">
-                  <svg
-                    width="13"
-                    height="15"
-                    viewBox="0 0 13 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7"
-                      stroke="#ffffff"
-                    ></path>
-                  </svg>
-                </div>
+              <SimpleReactLightbox>
+                <SRLWrapper>
+                  <div className="swiper">
+                    <div className="swiper-button-prev1">
+                      <svg
+                        width="13"
+                        height="15"
+                        viewBox="0 0 13 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7"
+                          stroke="#ffffff"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div className="swiper-button-next1">
+                      <svg
+                        width="13"
+                        height="15"
+                        viewBox="0 0 13 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7"
+                          stroke="#ffffff"
+                        ></path>
+                      </svg>
+                    </div>
 
-                <div className="swiper-wrapper">
-                  {images.map(image => (
-                    <>
-                      <div className="swiper-slide">
-                        <SimpleReactLightbox>
-                          <SRLWrapper>
+                    <div className="swiper-wrapper">
+                      {images.map(image => (
+                        <>
+                          <div className="swiper-slide">
                             <a href={image.proyecto_imagen}>
                               <img
                                 src={image.proyecto_imagen}
                                 alt={image.proyecto_imagen}
                               />
                             </a>
-                          </SRLWrapper>
-                        </SimpleReactLightbox>
-                      </div>
+                          </div>
+                        </>
+                      ))}{" "}
+                    </div>
 
-                    </>
-                  ))}
-                </div>
-
-                <div className="swiper-pagination"></div>
-              </div>
+                    <div className="swiper-pagination"></div>
+                  </div>
+                </SRLWrapper>
+              </SimpleReactLightbox>
             </div>
           </div>
         </div>
