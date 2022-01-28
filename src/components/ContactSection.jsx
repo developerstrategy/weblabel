@@ -233,7 +233,12 @@ const ContactSection = () => {
                     )}
                   </div>
                 </div>
-                {message ? <i style={{ color: "green" }}>{message}</i> : ""}
+                {message ?
+                
+                <div className="success-modal">
+                  
+                  {message}
+                </div>: ""}
 
                 <div className="row mb-50">
                   <div className="col-xs-12">
