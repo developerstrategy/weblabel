@@ -1,7 +1,7 @@
 ---
 thumbnail: /assets/images/kevin-grieve-6w3dxwoq9l8-unsplash.jpg
 inicio_description: >-
-  
+
 
   Nos dedicamos al diseño, personalización y rotulación de cualquier tipo de superficie utilizando el vinilo de más alta calidad.\
 
@@ -23,11 +23,9 @@ beneficios:
       modificación del color original.
 
 
-      \
 
-      \
 
-      **“Nombre del dueño”**
+      ***“Nombre del dueño”***
   - proyecto_imagen: /assets/images/project5.jpg
     beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Últimas Noticias

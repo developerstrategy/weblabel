@@ -1,7 +1,10 @@
 import React from "react"
 import Image from "../components/Image"
+import { Remarkable } from "remarkable"
 
 const ServiceTextImage = ({ sub, heading, text, image, reverse, link }) => {
+  var md = new Remarkable()
+
   return (
     <>
       <section className=" pt-md pb-md">
@@ -18,9 +21,15 @@ const ServiceTextImage = ({ sub, heading, text, image, reverse, link }) => {
                   <div className="barx mt-10"></div>
                 </div>
                 <div className="col-xs-10 col-sm-10 mb-20">
-                  
                   <p className="h3 mb-16">{sub}</p>
-                  <p className="p1">{text} </p>
+                  <p className="p1">
+                    <p
+                      className="p1"
+                      dangerouslySetInnerHTML={{
+                        __html: md.render(text),
+                      }}
+                    ></p>{" "}
+                  </p>
                   <br />
                 </div>
               </div>
