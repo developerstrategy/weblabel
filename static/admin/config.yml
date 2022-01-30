@@ -86,6 +86,12 @@ collections:
           - { label: Slider Titulo, name: title, widget: string }
           - { label: Slider SubTitulo, name: subtitle, widget: string }
           - {
+              label: "Page",
+              name: "page",
+              widget: "hidden",
+              default: true,
+            }
+          - {
               label: "Slider Imagen",
               name: "thumbnail",
               widget: "image",
@@ -124,7 +130,12 @@ collections:
           - { label: "Seo Robots (all, noindex, norobots) ", name: seo_robots, widget: string }
           - { label: Slider Titulo, name: title, widget: string }
           - { label: Slider SubTitulo, name: subtitle, widget: string }
-          
+          - {
+              label: "Page",
+              name: "page",
+              widget: "hidden",
+              default: true,
+            }          
           - { label: 'Video (MP4 only)', name: "video", widget: "file", multiple: false,  }
           - {
               label: "Slider Imagen",
@@ -174,6 +185,12 @@ collections:
         file: "src/markdownPages/contacto.md"
         fields:
           - { label: Seo Title (máx 65), name: seo_title, widget: string }
+          - {
+              label: "Page",
+              name: "page",
+              widget: "hidden",
+              default: true,
+            }
           - { label: Seo description (max 150), name: seo_description, widget: string }
           - { label: Contacto Titulo, name: contacto_titulo, widget: string }
           - { label: Contacto SubTitulo, name: contacto_subtitulo, widget: string }
@@ -193,6 +210,12 @@ collections:
         name: "Servicios"
         file: "src/markdownPages/servicios.md"
         fields:
+          - {
+              label: "Page",
+              name: "page",
+              widget: "hidden",
+              default: true,
+            }
           - { label: Seo Title (máx 65), name: seo_title, widget: string }
           - { label: Seo description (max 150), name: seo_description, widget: string }
           - { label: Servicios Titulo, name: servicios_titulo, widget: string }
