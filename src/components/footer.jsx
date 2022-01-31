@@ -51,7 +51,7 @@ const Footer = () => {
                 <div className="row pt-50 pb-50 text-14-r">
                   <div className="col-xs-12 col-sm-4 mb-50">
                     <span className="h2 ">
-                      Logotipo <em>.</em>{" "}
+                      Logotipo <em>.</em>
                     </span>
                   </div>
                   <div className="col-xs-12 col-sm-2 mb-20"></div>
@@ -80,7 +80,7 @@ const Footer = () => {
                           )
 
                           .map(({ node: post }) => (
-                            <li className="missing">
+                            <li className="">
                               <Link
                                 to={"/services/" + post.frontmatter.path}
                                 target="_blank"
@@ -103,7 +103,7 @@ const Footer = () => {
                           )
                           .slice(0, 4)
                           .map(({ node: post }) => (
-                            <li className="missing">
+                            <li className="">
                               <Link
                                 to={"/blog/" + post.frontmatter.path}
                                 target="_blank"
@@ -153,9 +153,15 @@ const Footer = () => {
         </div>
         <hr />
       </footer>
-      <CookieConsent>
-        This website uses cookies to enhance the user experience.
-      </CookieConsent>
+      <CookieConsent
+            location="bottom"
+            buttonText="Aceptar Cookies"
+            cookieName="myAwesomeCookieName2"
+            style={{ background: "#ffffff" ,color:"#000000", maxWidth: "320px",width: "100%" , fontSize: "13px",right:0, left:"auto" ,margin:"16px",  boxShadow: "0 8px 8px 8px rgba(138, 149, 158, 0.30)"}}
+            buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+            expires={150}
+          >
+Utilizamos cookies para optimizar nuestro sitio web y nuestro servicio.   <a href="/legal_cookies"> Leer más</a> </CookieConsent>
     </>
   )
 }

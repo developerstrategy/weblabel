@@ -57,7 +57,7 @@ const LegalPrivacy = () => {
             <div className="col-xs-12 align-center">
               <div className="fluid-1-b mb-50  "> Política de privacidad </div>
               <div className="text-16-r pb-16   ">
-                {" "}
+                
                 <i>
                   <div className="variable">Nombre empresa </div>
                 </i>
@@ -69,13 +69,13 @@ const LegalPrivacy = () => {
             <div className="col-xs-12">
               <div className="p1  p-content">
                 <span className="variable">{content.empresa_corto} </span> en
-                adelante,{" "}
+                adelante,
                 <span className="variable">{content.empresa_corto} </span> |,
                 con DNI <span className="variable">{content.empresa_dni}</span>,
                 dirección en {content.empresa_legal_direccion}| Valencia|| y
-                correo electrónico{" "}
+                correo electrónico
                 <span className="variable">{content.email} </span>, titular y
-                propietario del website{" "}
+                propietario del website
                 <span className="variable">{content.website} </span>| desde
                 ahora, “el website”||, garantiza la protección de todos los
                 datos de carácter personal que proporcione el usuario en el
@@ -95,10 +95,10 @@ const LegalPrivacy = () => {
                 y mantenido bajo la responsabilidad de
                 <span className="variable">{content.empresa_corto} </span>con
                 DNI <span className="variable">{content.empresa_dni}</span>,
-                cuyo domicilio se sitúa en{" "}
+                cuyo domicilio se sitúa en
                 <span className="variable">
                   {content.empresa_legal_direccion}
-                </span>{" "}
+                </span>
                 b|| Los datos que se recojan a través del website son los
                 suficientes y necesarios para las siguientes finalidades: Envío
                 por medios electrónicos de información de publicidad, noticias y

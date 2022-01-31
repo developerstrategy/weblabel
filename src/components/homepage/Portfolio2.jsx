@@ -91,7 +91,7 @@ const Portfolio2 = ({ title, images }) => {
                             </a>
                           </div>
                         </>
-                      ))}{" "}
+                      ))}
                     </div>
 
                     <div className="swiper-pagination"></div>

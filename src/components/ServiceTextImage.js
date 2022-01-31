@@ -28,7 +28,7 @@ const ServiceTextImage = ({ sub, heading, text, image, reverse, link }) => {
                       dangerouslySetInnerHTML={{
                         __html: md.render(text),
                       }}
-                    ></p>{" "}
+                    ></p>
                   </p>
                   <br />
                 </div>

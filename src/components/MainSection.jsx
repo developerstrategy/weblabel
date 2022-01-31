@@ -29,7 +29,7 @@ const MainSection = ({
                   <div className="barx mt-10"></div>
                 </div>
                 <div className="col-xs-10 col-sm-10">
-                  <p className="h3 mb-16">{subHeading} </p>{" "}
+                  <p className="h3 mb-16">{subHeading} </p>
                   <p className="p1">
                     <p
                       className="p1"

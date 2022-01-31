@@ -67,7 +67,7 @@ const LegalAviso = () => {
                 <span className="variable"> {content.empresa_dni} </span> (“el
                 titular”) con domicilio en
                 <span className="variable">
-                  {" "}
+                  
                   {content.empresa_legal_direccion}
                 </span>
                 Correo electrónico de contacto:
@@ -102,7 +102,7 @@ const LegalAviso = () => {
                 de datos, imágenes, expresiones e informaciones, así como
                 cualquier otra creación protegida por las leyes nacionales y los
                 tratados internacionales sobre propiedad intelectual e
-                industrial) en el dominio{" "}
+                industrial) en el dominio
                 <span className="variable"> {content.website}. </span>El
                 propietario se reserva el derecho de retirar todos aquellos
                 comentarios y aportaciones que vulneren el respeto a la dignidad
@@ -118,13 +118,13 @@ const LegalAviso = () => {
                 <h5 className="h3 mb-20">
                   Propiedad Intelectual y uso de los contenidos
                 </h5>
-                El sitio web de{" "}
+                El sitio web de
                 <span className="variable"> {content.empresa_corto} </span>,
                 incluyendo a título enunciativo, pero no limitativo su
                 programación, edición, compilación y demás elementos necesarios
                 para su funcionamiento, los diseños, logotipos, texto y/o
                 gráficos son propiedad del prestador o en su caso dispone de
-                licencia o autorización expresa por parte de los autores.{" "}
+                licencia o autorización expresa por parte de los autores.
                 <span className="variable"> {content.empresa_corto} </span>
                 otorga al usuario una licencia Creative Commons
                 Reconocimiento-NoComercial-CompartirIgual 3.0. Cualquier uso no
@@ -145,8 +145,8 @@ const LegalAviso = () => {
                 <br /> <br />
                 <h5 className="h3 mb-20">
                   Enlaces de terceros y afiliación
-                </h5>{" "}
-                En el caso de que en{" "}
+                </h5>
+                En el caso de que en
                 <span className="variable"> {content.website} </span>
                 se dispusiesen enlaces o hipervínculos hacía otros sitios de
                 internet, el titular no ejercerá control sobre el contenido
@@ -154,7 +154,7 @@ const LegalAviso = () => {
                 ellos al pertenecer a sitios web ajenos. Asimismo, la inclusión
                 de estas conexiones externas e hipervínculos no implicará ningún
                 tipo de asociación, fusión o participación con las entidades
-                conectadas.{" "}
+                conectadas.
                 <span className="variable"> {content.website} </span>
                 utiliza ocasionalmente enlaces de afiliación de productos y
                 servicios de marcas que hayan establecido un programa de

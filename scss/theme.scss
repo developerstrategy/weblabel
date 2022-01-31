@@ -413,20 +413,9 @@ h2:empty {
 }
 body {
   .CookieConsent {
-    align-items: baseline !important;
-    background: rgb(249 255 0 / 90%) !important;
-    color: #000 !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: space-around;
-    left: 0 !important;
-    position: fixed !important;
-    width: 100% !important;
-    z-index: 1001 !important;
-    bottom: 0 !important;
-    font-size: 14px;
-    padding: 10px;
-    flex-direction: row;
+
+
+
   }
   #rcc-confirm-button {
     color: white !important;

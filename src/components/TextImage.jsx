@@ -30,7 +30,7 @@ const TextImage = ({ sub, heading, text, image, reverse, link }) => {
                 </div>
                 <div className="fluid-1-b mb-16">{heading}</div>
                 <p className="p1">
-                  {" "}
+                  
                   <p
                     className="p1"
                     dangerouslySetInnerHTML={{
@@ -44,7 +44,7 @@ const TextImage = ({ sub, heading, text, image, reverse, link }) => {
                     style={{ paddingLeft: "0px" }}
                   >
                     <button className="btn btn-invert btn--mini btn-secondary  ">
-                      LINK{" "}
+                      LINK
                     </button>
                   </div>
                 )}

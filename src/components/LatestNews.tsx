@@ -12,7 +12,7 @@ const LatestNews = props => {
           <div className="row pb-50">
             <div className="col-xs-6 mb-20">
               <div className="barmini mb-16"></div>
-              <div className="text-16-r pb-40 missing">
+              <div className="text-16-r pb-40 ">
                 <em>featured news</em>
               </div>
               <div className="fluid-1-b">
