@@ -73,7 +73,7 @@ const ContactSection = () => {
     <>
       <section className="pt-md pb-md">
         <div className="container pt-md">
-          <div className="row pb-50">
+          <div className="row pb-48">
             <div className="col-xs-12 col-sm-5">
               <div className="barmini mb-16"></div>
               <div className="text-16-r pb-40">
@@ -82,41 +82,45 @@ const ContactSection = () => {
               <div className="fluid-1-b mb-16">{content.contacto_titulo}</div>
             </div>
           </div>
-          <div className="row mb-50">
+          <div className="row mb-48">
             <div className="col-xs-12 col-sm-4">
-              <div className="box mini-box p-20 mb-16 bg-cream">
-                <h5 className="h3 mb-20">Dirección</h5>
+              <div className="box mini-box p-16 mb-16 bg-box">
+                <h5 className="h3 mb-16">¿Dónde estamos?</h5>
                 <p className="p1">
                   <span className="variable">{content.direction}</span>
                 </p>
                 <a
-                  className="mt-20 link5"
+                  className="mt-16 link5"
                   href={content.direction_link}
                   target="_blank"
                 >
-                  See map
+                  Ver en google maps
                 </a>
               </div>
             </div>
             <div className="col-xs-12 col-sm-4">
-              <div className="box mini-box p-20 mb-16 bg-cream">
-                <h5 className="h3 mb-20">{content.email_titulo}</h5>
+              <div className="box mini-box p-16 mb-16 bg-box">
+                <h5 className="h3 mb-16">{content.email_titulo}</h5>
                 <p className="p1">
                   <span className="variable">{content.email}</span>
                 </p>
               </div>
             </div>
             <div className="col-xs-12 col-sm-4">
-              <div className="box mini-box p-20 mb-16 bg-cream">
+              <div className="box mini-box p-16 mb-16 bg-box">
                 <h5 className="h3">{content.telefono_titulo}</h5>
                 <p className="p1">
-                  <span className="variable">{content.telefono}</span>
+   
+     
+                  <a href= {`tel ${content.telefono}`}  >{content.telefono} </a>
+
+
                 </p>
-                <div className="mb-20"></div>
+                <div className="mb-16"></div>
                 <h5 className="h3">{content.whatsapp_titulo}</h5>
                 <p className="p1">
                   <span className="variable">
-                    <a href="whatsapp://send?text=Hello World!&phone=+9198********1">
+                    <a href="whatsapp://send?text=Hello World!&phone=+{content.whatsapp}">
                       {content.whatsapp}
                     </a>
                   </span>
@@ -135,7 +139,7 @@ const ContactSection = () => {
             <div className="row">
               <div className="col-xs-7 col-sm-4">
                 <h3 className="fluid-2-b mb-16">{content.contacta_pregunta}</h3>
-                <div className="barx mt-10 mb-20"></div>
+                <div className="barx mt-16 mb-16"></div>
               </div>
               <div className="col-xs-12 col-sm-8">
                 <div className="row mb-16">
@@ -172,7 +176,7 @@ const ContactSection = () => {
                     />
                   </div>
                 </div>
-                <div className="row mb-20">
+                <div className="row mb-16">
                   <div className="col-xs-12">
                     <textarea
                       className="input textarea"
@@ -181,12 +185,12 @@ const ContactSection = () => {
                       cols="45"
                       rows="8"
                       aria-required="true"
-                      placeholder="Write your comment here..."
+                      placeholder="Escribenos tus comentarios..."
                       onChange={e => handleChange(e)}
                     ></textarea>
                   </div>
                 </div>
-                <div className="row mb-50">
+                <div className="row mb-48">
                   <div className="col-xs-12">
                     <div className="checkbox-item-text">
                       <div className="checkbox-item">
@@ -200,12 +204,12 @@ const ContactSection = () => {
                             <svg width="16" height="16" viewBox="0 0 16 16">
                               <g
                                 strokeWidth="1"
-                                fill="#000000"
-                                stroke="#000000"
+                                fill=""
+                                stroke=""
                               >
                                 <polyline
                                   fill="none"
-                                  stroke="#000000"
+                                  stroke=""
                                   strokeLinecap="round"
                                   strokeLinejoin="round"
                                   strokeMiterlimit="10"
@@ -217,7 +221,7 @@ const ContactSection = () => {
                         </label>
                       </div>
                       <span className="text-14-r">
-                        Checkbox básico,
+                        Checkbox básico, &nbsp;
                         <Link
                           className="link4"
                           to={"/" + content.check_acepta_la_politica}
@@ -236,7 +240,7 @@ const ContactSection = () => {
                 </div>
                 {message ? <div className="success-modal">{message}</div> : ""}
 
-                <div className="row mb-50">
+                <div className="row mb-48">
                   <div className="col-xs-12">
                     <button
                       className="btn btn-primary btn--medium"

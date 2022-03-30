@@ -45,9 +45,9 @@ const LegalAviso = () => {
       <Header offset="0" />
       <section className=" pt-big ">
         <div className="container-3">
-          <div className="row pb-20">
+          <div className="row pb-16">
             <div className="col-xs-12 align-center">
-              <div className="fluid-1-b mb-50  ">Aviso legal</div>
+              <div className="fluid-1-b mb-48  ">Aviso legal</div>
               <div className="text-16-r pb-16  ">
                 <i>
                   <div className="variable"> {content.empresa_corto} </div>
@@ -59,21 +59,18 @@ const LegalAviso = () => {
           <div className="row">
             <div className="col-xs-12">
               <div className="p1  p-content">
-                <h5 className="h3 mb-20">Datos Identificativos</h5> Este sitio
+                <h5 className="h4 mb-16">Datos Identificativos</h5> Este sitio
                 web
                 <span className="variable"> {content.website} </span>
                 está gestionado por
                 <span className="variable"> {content.empresa_legal} </span>con
                 <span className="variable"> {content.empresa_dni} </span> (“el
-                titular”) con domicilio en
-                <span className="variable">
-                  
-                  {content.empresa_legal_direccion}
-                </span>
+                titular”) con domicilio en 
+                <span className="variable"> {content.empresa_legal_direccion} </span> <br />
                 Correo electrónico de contacto:
                 <span className="variable"> {content.email} </span>
                 <br /> <br />
-                <h5 className="h3 mb-20">Condiciones generales</h5> El presente
+                <h5 className="h4 mb-16">Condiciones generales</h5> El presente
                 AVISO LEGAL tiene por objeto regular el acceso, navegación y, en
                 general, la relación entre el website y los usuarios del mismo
                 (en adelante, los “usuarios”). Se entenderá que el acceso y
@@ -88,7 +85,7 @@ const LegalAviso = () => {
                 todas las acciones civiles y penales que le puedan corresponder
                 en derecho. <br />
                 <br />
-                <h5 className="h3 mb-20">Objeto y contenidos ofrecidos</h5> Este
+                <h5 className="h4 mb-16">Objeto y contenidos ofrecidos</h5> Este
                 sitio ofrece información sobre marketing digital y social media
                 y está destinado a promocionar la actividad profesional de su
                 titular. La adquisición de los servicios o productos realizadas
@@ -96,7 +93,7 @@ const LegalAviso = () => {
                 condiciones particulares de adquisición de dichos servicios o
                 productos, establecidos al efecto y sin perjuicio de lo
                 dispuesto en las presentes Condiciones Generales. <br /> <br />
-                <h5 className="h3 mb-20">Normas de uso de la web</h5> El website
+                <h5 className="h4 mb-16">Normas de uso de la web</h5> El website
                 distribuye contenidos (textos, gráficos, dibujos, diseños,
                 códigos, software, fotografías, música, vídeos, sonidos, bases
                 de datos, imágenes, expresiones e informaciones, así como
@@ -115,7 +112,7 @@ const LegalAviso = () => {
                 través de los foros, chats, u otras herramientas de
                 participación. <br />
                 <br />
-                <h5 className="h3 mb-20">
+                <h5 className="h4 mb-16">
                   Propiedad Intelectual y uso de los contenidos
                 </h5>
                 El sitio web de
@@ -143,7 +140,7 @@ const LegalAviso = () => {
                 de contacto que se mantiene en el sitio web o en el correo
                 <span className="variable"> {content.email} </span>
                 <br /> <br />
-                <h5 className="h3 mb-20">
+                <h5 className="h4 mb-16">
                   Enlaces de terceros y afiliación
                 </h5>
                 En el caso de que en
@@ -175,7 +172,7 @@ const LegalAviso = () => {
                 particulares que los regulen en la versión publicada por el
                 website en el momento en que se produzca dicha utilización y/o
                 contratación. <br /> <br />
-                <h5 className="h3 mb-20">
+                <h5 className="h4 mb-16">
                   Exclusión de garantías y responsabilidad
                 </h5>
                 El titular no se hace responsable, en ningún caso, de los daños
@@ -186,19 +183,19 @@ const LegalAviso = () => {
                 haber adoptado todas las medidas tecnológicas necesarias para
                 evitarlo. <br />
                 <br />
-                <h5 className="h3 mb-20">Modificaciones</h5> El titular se
+                <h5 className="h4 mb-16">Modificaciones</h5> El titular se
                 reserva el derecho de efectuar sin previo aviso las
                 modificaciones que considere oportunas en el portal y en el
                 aviso legal, pudiendo cambiar, suprimir o añadir tanto los
                 contenidos y servicios que se presten a través de la misma como
                 la forma en la que éstos aparezcan <br /> <br />
-                <h5 className="h3 mb-20">Derecho de exclusión</h5>
+                <h5 className="h4 mb-16">Derecho de exclusión</h5>
                 <span className="variable"> {content.empresa_corto} </span>se
                 reserva el derecho a denegar o retirar el acceso a portal y/o
                 los servicios ofrecidos sin necesidad de preaviso, a instancia
                 propia o de un tercero, a aquellos usuarios que incumplan las
                 presentes Condiciones Generales de Uso. <br /> <br />
-                <h5 className="h3 mb-20">Ley Aplicable y Jurisdicción</h5> Para
+                <h5 className="h4 mb-16">Ley Aplicable y Jurisdicción</h5> Para
                 la resolución de todas las controversias o cuestiones
                 relacionadas con el presente sitio web o de las actividades en
                 él desarrolladas, será de aplicación la legislación española, a
@@ -211,90 +208,6 @@ const LegalAviso = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-12 ">
-            <div className="p-content">
-              <hr className="mt-50" />
-              <ul className="list-clear list-inline text-12-r">
-                <li>
-                  <a href=""> keyword </a>
-                </li>
-                <li>
-                  <a href=""> keyword </a>
-                </li>
-                <li>
-                  <a href=""> keyword </a>
-                </li>
-                <li>
-                  <a href=""> keyword </a>
-                </li>
-                <li>
-                  <a href=""> keyword </a>
-                </li>
-                <li>
-                  <a href=""> keyword </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="container-fluid height-sm ">
-          <div className="row">
-            <div className="col-xs-12">
-              <hr />
-              <div className="container">
-                <div className="row pt-50 pb-50">
-                  <div className="col-xs-6">
-                    <div>
-                      <div className="arrowpost">
-                        <svg
-                          className="turn"
-                          width="26"
-                          height="26"
-                          viewBox="0 0 26 26"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                            fill="#fb263b"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div className="fluid-3-b">Anterior Post</div>
-                      <p className="p1">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-xs-6 text-right">
-                    <div className="arrowpost">
-                      <svg
-                        width="26"
-                        height="26"
-                        viewBox="0 0 26 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.854364 3.56131L18.6289 21.4424L2.26559 21.3935L2.25322 25.5332L25.6852 25.6032L25.7552 2.1712L21.6156 2.15883L21.5667 18.5222L3.79212 0.641061L0.854364 3.56131Z"
-                          fill="#fb263b"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div className="fluid-3-b"> Next Post </div>
-                    <p className="p1">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
         </div>
       </section>
       <ContactSection />

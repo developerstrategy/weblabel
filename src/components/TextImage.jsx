@@ -13,17 +13,17 @@ const TextImage = ({ sub, heading, text, image, reverse, link }) => {
             className="row pt-md pb-md small-bg-white"
             style={
               reverse
-                ? { flexDirection: "row-reverse " }
-                : { flexDirection: "row " }
+                ? { flexDirection: "row " }
+                : { flexDirection: "row-reverse " }
             }
           >
             <div
               className={
                 "col-xs-12 col-sm-6 is-flex flex-column content-center " +
-                (reverse ? "half-white-bg-r " : "half-white-bg ")
+                (reverse ? "half-white-bg " : "half-white-bg-r ")
               }
             >
-              <div className="pt-50 p-20">
+              <div className="pt-48 p-16">
                 <div className="barmini mb-16"></div>
                 <div className="h5 pb-16">
                   <em>{sub}</em>
@@ -40,7 +40,7 @@ const TextImage = ({ sub, heading, text, image, reverse, link }) => {
                 </p>
                 {link && (
                   <div
-                    className="col-sm-6 mt-20"
+                    className="col-sm-6 mt-16"
                     style={{ paddingLeft: "0px" }}
                   >
                     <button className="btn btn-invert btn--mini btn-secondary  ">
@@ -55,6 +55,7 @@ const TextImage = ({ sub, heading, text, image, reverse, link }) => {
                 <div className="rat-32-11">
                   <div className="rat-content">
                     <Image name={image} />
+              
                   </div>
                 </div>
               )}

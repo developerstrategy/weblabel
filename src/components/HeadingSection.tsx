@@ -9,7 +9,7 @@ const HeadingSection = ({ sub, heading, text }) => {
             <div
               className={"col-xs-12 col-sm-6 is-flex flex-column content-center "}
             >
-              <div className="pt-50 p-20">
+              <div className="pt-48 p-16">
                 <div className="barmini mb-16"></div>
                 <div className="h5 pb-16">
                   <em>{sub}</em>

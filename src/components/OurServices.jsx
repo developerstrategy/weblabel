@@ -9,22 +9,23 @@ const OurServices = props => {
     <>
       <section className="pt-md pb-md">
         <div className="container">
-          <div className="row mb-50">
-            <div className="col-xs-8 col-sm-6 mb-20">
+          <div className="row mb-48">
+            <div className="col-xs-8 col-sm-6 mb-16">
               <div className="barmini mb-16"></div>
               <div className="text-16-r pb-40">
-                <em>All our Services </em>
+                <em>Toldos Services</em>
               </div>
               <div className="fluid-1-b mb-16">
-                All Our <br />
-                Services
+                Nuestros <br />
+                Servicios
               </div>
-              <p className="p1">Description of all services</p>
+              <p className="p1">Nos encargamos de todo
+ </p>
             </div>
-            <div className="col-xs-4 col-sm-6 align-bottom text-right is-flex content-end mb-20">
+            <div className="col-xs-4 col-sm-6 align-bottom text-right is-flex content-end mb-16">
               <a href="/servicios">
                 <button className="btn btn-primary btn--small">
-                  See Services page
+                  Ver todos los servicios
                 </button>
               </a>
             </div>
@@ -40,11 +41,11 @@ const OurServices = props => {
                   >
                     <div className="boxservice">
                       <div className="rat-1-1">
-                        <div className="rat-content p-20">
+                        <div className="rat-content p-16">
                           <div className="boxservice-title">
-                            <div className="text-16-b">SERVICE</div>
+                            <div className="text-16-b">{post.frontmatter.title}   </div>
                             <div className="text-12-r">
-                              {post.frontmatter.title}
+                            Servicio
                             </div>
                             <svg
                               width="26"

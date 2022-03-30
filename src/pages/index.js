@@ -11,6 +11,7 @@ import Portfolio2 from "../components/homepage/Portfolio2"
 import TextSection from "../components/TextSection"
 import TextImage from "../components/TextImage"
 import Partners from "../components/Partners"
+import DoubleImage from "../components/DoubleImage"
 import LatestNews from "../components/LatestNews"
 import OurServices from "../components/OurServices"
 import ContactSection from "../components/ContactSection"
@@ -52,6 +53,11 @@ const Index = () => {
           Marcas {
             marcas_imagen
           }
+          DoubleImage_titulo
+          DoubleImage {
+            DoubleImage_imagen
+          }
+
         }
       }
     }
@@ -74,7 +80,7 @@ const Index = () => {
         text={content.subtitle}
         bgImage={content.thumbnail}
         button={true}
-        video={content.video}
+        video={content.video} 
       />
       <MainSection
         firstHeading={word.slice(0, -1).join(" ")}
@@ -83,17 +89,14 @@ const Index = () => {
         firstText={content.inicio_description}
         image={content.inicio_thumbnail.replace("/assets/images/", "")}
       />
-      <Portfolio title={content.proyecto_titulo} images={content.listitems} />
-      <Portfolio2 title={content.proyecto_titulo} images={content.listitems} />
-      <TextSection
-        firstHeading={content.bloque_titulo.split(" ").slice(0, -1).join(" ")}
-        secondHeading={
-          content.bloque_titulo.split(" ")[
-            content.bloque_titulo.split(" ").length - 1
-          ]
-        }
-        description={content.bloque_description}
+      {/* <Portfolio title={content.proyecto_titulo} images={content.listitems} /> */}
+      <DoubleImage
+        title={content.DoubleImage_titulo}
+        subTitle={content.marcas_subtitulo}
+        images={content.DoubleImage}
       />
+      <Portfolio2 title={content.proyecto_titulo} images={content.listitems} />
+
       <HeadingSection
         sub={content.main_subtitulo}
         heading={content.main_title}
@@ -108,7 +111,10 @@ const Index = () => {
           reverse={index % 2 === 0 ? false : true}
         />
       ))}
-
+      <TextSection
+        firstHeading={content.bloque_titulo}
+        description={content.bloque_description}
+      />
       <Partners
         title={content.marcas_titulo}
         subTitle={content.marcas_subtitulo}

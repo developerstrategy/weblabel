@@ -60,10 +60,10 @@ const About = () => {
       />
       <MainSection
         firstHeading={word.slice(0, -1).join(" ")}
-        secondHeading={word[word.length - 1]}
+        secondHeading={word[word.length - 4]}
         subHeading={content.inicio_description_title}
         firstText={content.inicio_description}
-        image={content.inicio_thumbnail.replace("/assets/images/", "")}
+        image={content.inicio_thumbnail.replace("/assets/images/tema2", "")}
       />
 
       <HeadingSection
@@ -78,7 +78,7 @@ const About = () => {
           text={item.beneficios_description}
           image={
             item.proyecto_imagen
-              ? item.proyecto_imagen.replace("/assets/images/", "")
+              ? item.proyecto_imagen.replace("/assets/images/tema2", "")
               : ""
           }
           reverse={index % 2 === 0 ? false : true}

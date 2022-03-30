@@ -9,7 +9,7 @@ const ServiceTextImage = ({ sub, heading, text, image, reverse, link }) => {
     <>
       <section className=" pt-md pb-md">
         <div className="container">
-          <div className="row pb-20">
+          <div className="row pb-16">
             <div className="col-xs-4"></div>
           </div>
           <div className="row sm:reverse">
@@ -18,9 +18,9 @@ const ServiceTextImage = ({ sub, heading, text, image, reverse, link }) => {
               <br />
               <div className="row">
                 <div className="col-xs-2 col-sm-2 ">
-                  <div className="barx mt-10"></div>
+                  <div className="barx mt-16"></div>
                 </div>
-                <div className="col-xs-10 col-sm-10 mb-20">
+                <div className="col-xs-10 col-sm-10 mb-16">
                   <p className="h3 mb-16">{sub}</p>
                   <p className="p1">
                     <p
@@ -34,13 +34,14 @@ const ServiceTextImage = ({ sub, heading, text, image, reverse, link }) => {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-sm-6 mb-20">
+            <div className="col-xs-12 col-sm-6 mb-16">
               <div className=" rat-1-1">
                 <div className="rat-content   img-container">
                   {image && (
                     <div className="rat-32-11">
                       <div className="rat-content">
                         <Image name={image} />
+                        <img src={image} alt="" />
                       </div>
                     </div>
                   )}

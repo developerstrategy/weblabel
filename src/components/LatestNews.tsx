@@ -9,21 +9,21 @@ const LatestNews = props => {
     <>
       <section className="bg-cream pt-md pb-md">
         <div className="container">
-          <div className="row pb-50">
-            <div className="col-xs-6 mb-20">
+          <div className="row pb-48">
+            <div className="col-xs-6 mb-16">
               <div className="barmini mb-16"></div>
               <div className="text-16-r pb-40 ">
-                <em>featured news</em>
+                <em>Blog </em>
               </div>
               <div className="fluid-1-b">
-                three <br />
-                Featured news
+                Toldos Marfil <br />
+                Informa
               </div>
             </div>
-            <div className="col-xs-6 align-bottom text-right is-flex content-end mb-20">
+            <div className="col-xs-6 align-bottom text-right is-flex content-end mb-16">
               <Link to="/blog">
                 <button className="btn btn-primary btn--small">
-                  See Latest News
+                 Ver nuestros últimos posts
                 </button>
               </Link>
             </div>
@@ -52,10 +52,10 @@ const LatestNews = props => {
                           : ""}
                       </em>
                     </div>
-                    <div className="fluid-4-b mb-20">
+                    <div className="fluid-4-b mb-16">
                       {post.frontmatter.blogtitle}
                     </div>
-                    <div className="text-14-r mb-20">{post.excerpt}</div>
+                    <div className="text-14-r mb-16">{post.excerpt}</div>
                     <div className="text-14-r">
                       <a className="text-date" href="">
                         {post.frontmatter.date}

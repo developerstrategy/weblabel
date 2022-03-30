@@ -1,7 +1,7 @@
 import React from "react"
 import { Remarkable } from "remarkable"
 
-const TextSection = ({ firstHeading, secondHeading, description }) => {
+const TextSection = ({ firstHeading, description }) => {
   var md = new Remarkable()
 
   return (
@@ -13,15 +13,14 @@ const TextSection = ({ firstHeading, secondHeading, description }) => {
               <div className="row ">
                 <div className=" col-xs-12 col-sm-6 is-flex flex-column content-center  ">
                   <div className="fluid-1-b  ">
-                    {firstHeading} <em>{secondHeading}</em>
+                    {firstHeading} 
                   </div>
                 </div>
                 <div className=" col-xs-12 col-sm-6 is-flex flex-column content-center ">
-                  <br />
                   <p
                     className="p1"
                     dangerouslySetInnerHTML={{
-                      __html: md.render(description),
+                      __html: md.render(description)
                     }}
                   ></p>
                 </div>

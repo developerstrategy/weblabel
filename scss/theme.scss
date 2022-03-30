@@ -65,7 +65,7 @@
 }
 
 .link1 {
-  color: $c-primary;
+  color: $primary;
   @include font-bold;
   font-size: 18px;
   letter-spacing: 0;
@@ -84,11 +84,11 @@ hr {
 .select select {
   border: none;
   background-color: $bg-claro;
-  color: $t-oscuro;
   max-width: 100%;
   width: 100%;
   font-size: 16px;
   line-height: 1;
+  color: $primary;
 }
 label span {
   font-size: 14px;
@@ -96,35 +96,25 @@ label span {
   float: left;
   @include font-medium;
 }
-.h1 span,
-.h2 span,
-.h3 span,
-.h4 span,
-.card .title span,
-.h5 span,
-.h6 span,
-.card .subtitle span,
-.p1 span {
-  color: $t-claro;
-}
+
 
 .bg-dark {
   background-color: $bg-dark;
 }
 .em {
-  color: $c-primary;
+  color: $primary;
 }
 a.link1 {
-  color: $c-primary;
+  color: $primary;
   &:hover {
-    color: $c-primary;
+    color: $primary;
   }
 }
 b {
-  color: $c-primary;
+  color: $primary;
 }
 .c-primary {
-  color: $c-primary;
+  color: $primary;
 }
 .c-green {
   color: #217431;
@@ -155,7 +145,7 @@ b {
   background-color: $bg-claro;
 }
 .bg-primary {
-  background-color: $c-primary;
+  background-color: $secondary;
   color: white;
   b {
     font-weight: bold;
@@ -236,7 +226,7 @@ h2:empty {
 .bar-mini {
   width: 100px;
   height: 10px;
-  background-color: $c-primary;
+  background-color: $secondary;
 }
 /****  BUTTONS   ***/
 .btn.disabled {
@@ -249,25 +239,25 @@ h2:empty {
   border-radius: $btn-radius;
 }
 .btn-primary {
-  background-color: $c-primary;
-  border: 1px solid $c-primary;
+  background-color: $primary;
+  border: 1px solid $primary;
   border-radius: $btn-radius;
 }
 .btn-secondary {
   background-color: white;
-  color: $c-primary;
-  border: 1px solid $c-primary;
+  color: $primary;
+  border: 1px solid $primary;
   border-radius: $btn-radius;
 }
 .btn-secondary.selected {
-  background-color: $c-primary;
+  background-color: $secondary;
   color: white;
   transition: all 0.15s ease;
 }
 .btn-tertiary {
   background-color: white;
-  color: $c-primary;
-  border: 1px solid $c-primary;
+  color: $primary;
+  border: 1px solid $primary;
   border-radius: $btn-radius;
 }
 .btn--mini {
@@ -280,11 +270,11 @@ h2:empty {
 }
 .link1,
 .link5 {
-  color: $c-primary;
+  color: $primary;
 }
 .link1:after,
 .link5:after {
-  background-color: $c-primary;
+  background-color: $secondary;
 }
 /****  PÁGINAS   ***/
 
@@ -296,7 +286,7 @@ h2:empty {
   z-index: 100;
 }
 .sticky .sticky__wrapper {
-  background-color: $c-primary;
+  background-color: $secondary;
 }
 .box-center {
   margin: 0 auto;
@@ -409,7 +399,7 @@ h2:empty {
   color: #fff;
 }
 .c-dark {
-  color: #2d2e38;
+  color: $primary;
 }
 body {
   .CookieConsent {
@@ -443,7 +433,7 @@ body {
   transition: all 0.4s cubic-bezier(0, 0, 0.25, 1);
   -webkit-font-smoothing: antialiased !important;
   color: #fff;
-  text-shadow: 0 2px 9px $c-primary;
+  text-shadow: 0 2px 9px $primary;
   -webkit-font-smoothing: antialiased !important;
 }
 @keyframes scroll {
@@ -599,7 +589,7 @@ body {
   }
 }
 .red {
-  color: $c-primary;
+  color: $primary;
 }
 .quantity input {
   font-family: "Eksell", sans-serif;
@@ -806,6 +796,7 @@ section {
 
 
 .blog-inner{
+  padding-top: 80px;
   p{
     width: 100%;
     max-width: 650px;
@@ -814,22 +805,33 @@ section {
     line-height: 1.5;
     padding: 0 8px;
   .gatsby-resp-image-wrapper{
+    margin-top: 32px;
+    margin-bottom: 32px;
     @media (min-width: 1280px) {
       width: 1000px;
       margin-left: calc((-1000px + 650px - 16px) / 2)!important;
 
   }
   }
-  blockquote {
+
+
+}
+blockquote {
+  display: flex;
+  justify-content: center;
+  p{
     font-style: italic;
     font-weight: bold;
     font-size: 36px !important;
     line-height: 1;
     margin: 25px 0px !important;
     text-align: center;
-    color: #000000;
+
+
   }
+
 }
+
 h1,h2,h3,h4,h5,h6{
   width: 100%;
   max-width: 650px;
@@ -837,9 +839,9 @@ h1,h2,h3,h4,h5,h6{
   padding: 0 8px;
 }
 h4{
-  padding-top: 70px;
+  padding-top: 40px;
   @media (min-width: 768px) {
-    padding-top: 100px;
+    padding-top: 50px;
   }
 
 }
@@ -917,3 +919,33 @@ h4{
   text-align: center;
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
+
+
+svg{
+  stroke: $secondary;
+  
+}
+
+
+.swiper{
+  svg{
+    fill: white;
+    stroke: white;
+  }
+
+}
+
+svg.svg-social{
+
+    fill: $secondary;
+    stroke: none;
+  }
+
+  .list-social{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    a{padding-right: 16px;
+
+    }  }

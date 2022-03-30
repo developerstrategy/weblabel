@@ -55,7 +55,7 @@ a {
 /*+------------------------------------------------------------+
 |       -FASE 3 : IMPORT  HOLYGRAIL
 +------------------------------------------------------------+*/
-@import "../node_modules/holygatsbycss/scss/partials";
+@import "../node_modules/holygrailcss/scss/partials";
 /*+------------------------------------------------------------+
 |       -FASE 4 : OVERRIDE YOUR HOLYGRAIL
 +------------------------------------------------------------+*/
@@ -64,32 +64,29 @@ a {
 
 body {
   overflow-x: hidden;
-  color: $font-primary;
+  color: $primary;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $t-oscuro;
-}
-p {
-  padding: 5px 0;
-}
+
 strong {
-  color: $c-primary;
+  color: $primary;
 }
 .bold {
   @include font-bold;
 }
 b {
-  color: $c-primary;
+  color: $primary;
 }
 
 .bg-cream {
   background-color: $bg-light;
+  .input {
+    background-color: #fff;
+  }
+}
+
+.bg-box {
+  background-color: $bg-box;
   .input {
     background-color: #fff;
   }
@@ -170,7 +167,7 @@ hr {
   background-position: center;
   background-repeat: no-repeat;
   float: left;
-  background-color: $c-primary;
+  background-color: $secondary;
   &:hover {
     cursor: pointer;
   }
@@ -187,7 +184,7 @@ hr {
   top: auto;
   width: 35px;
   height: 35px;
-  background-color: $c-primary;
+  background-color: $secondary;
   background-image: none;
   /* padding: 20px; */
   display: flex;
@@ -225,7 +222,7 @@ hr {
       content: "";
       width: 100%;
       height: 6px;
-      background-color: $c-primary;
+      background-color: $secondary;
       position: absolute;
       bottom: 0;
       z-index: -1;
@@ -248,7 +245,7 @@ hr {
   object-fit: cover;
 }
 .boxservice {
-  background-color: $c-primary;
+  background-color: $secondary;
   color: #fff;
   cursor: pointer;
   position: relative;
@@ -280,11 +277,11 @@ hr {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $c-primary;
+    background-color: $secondary;
     background-position: center;
     background-size: cover;
     &:after {
-      background-color: $c-primary;
+      background-color: $secondary;
       content: "";
       position: absolute;
       top: 0;
@@ -413,18 +410,18 @@ hr {
 
 .footer {
   a {
-    opacity: 0.6;
-    color: white;
+
     text-decoration: none;
   }
   ul {
+    opacity: 0.6;
     padding-left: 0px;
   }
   .social {
     display: flex !important;
     li {
       a {
-        color: #313131 !important;
+        color: $primary !important;
         opacity: 1;
       }
     }
@@ -501,7 +498,7 @@ nav[role="navigation"] {
   width: 100%;
   height: 3px;
   margin: 0 0 6px 0;
-  background-color: $c-primary;
+  background-color: $secondary;
   transition-duration: 0.3s;
   transition-delay: 0s, 0s, 0s, 0s;
   border-radius: 2px;
@@ -540,7 +537,7 @@ nav[role="navigation"] {
   color: #fff;
   overflow: hidden;
   opacity: 0;
-  background-color: #15181c;
+  background-color: $bg-dark;
   pointer-events: none;
   z-index: 1000;
   display: flex;
@@ -643,17 +640,17 @@ nav[role="navigation"] {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .barx {
   width: 100%;
   max-width: 100px;
   height: 4px;
-  background-color: $c-primary;
+  background-color: $secondary;
 }
 .barmini {
-  background-color: $c-primary;
+  background-color: $secondary;
   content: "";
   display: block;
   height: 2px;
@@ -678,8 +675,6 @@ textarea::-webkit-input-placeholder {
 .variable {
   position: relative;
   font-weight: bold;
-  color: #000;
-  // background: linear-gradient(#69d4ce, #76d6d0) bottom 2px center/100% 8px no-repeat;
 }
 
 .text-date {
@@ -700,4 +695,81 @@ textarea::-webkit-input-placeholder {
   -o-object-fit: cover;
   font-family: "object-fit:cover";
   object-fit: cover;
+}
+
+.arrowpost{
+  path{
+    fill:$secondary;
+  }
+}
+
+
+
+p {
+  @include font-regular();
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  padding-bottom: 20px;
+
+  &.b {
+    @include font-regular();
+    color: $primary;
+  }
+}
+
+.supertitle{
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  font-size: 10vw;
+  line-height: .8;
+  font-weight: 900;
+  color: white;
+  opacity: 0.5;
+  padding-bottom: 0;
+}
+
+h2{
+  font-size: 26px;
+}
+
+h3{
+  font-size: 24px;
+}
+
+h4{
+  font-size: 20px;
+}
+
+blockquote{
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 90px;
+    opacity: .2;
+    width: 4px;
+    height: 100%;
+    background-color: #adadad;
+  }
+}
+
+.brand-partner{
+  cursor: pointer;
+  filter: saturate(0);
+  transition: .2s ease all;
+  text-align: center;
+  opacity: .5;
+
+  &:hover{
+    filter: saturate(1);
+    opacity: 1;
+  }
 }

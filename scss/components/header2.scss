@@ -2,7 +2,6 @@
 .header-2 {
   width: 100%;
   height: 70px;
-  border-bottom: 1px solid #fff;
   position: fixed;
   z-index: 1000;
   @media (min-width: 768px) {
@@ -31,7 +30,7 @@
   }
 }
 .btn-phantom {
-  color: $font-primary;
+  color: $primary;
   background-color: transparent;
   border: 1px solid white !important;
   text-transform: none;
@@ -41,12 +40,12 @@
 .has-menu {
   .header-2 {
     .logo {
-      color: $font-primary;
+      color: $primary;
     }
     .btn-phantom {
-      color: $font-primary;
+      color: $primary;
       background-color: transparent;
-      border: 1px solid $font-primary !important;
+      border: 1px solid $primary !important;
     }
     &:after {
       transform: scaleY(1);
@@ -60,4 +59,23 @@
 .header2-inner {
   z-index: 1100;
   width: 100%;
+}
+.logoon {
+  opacity: 0;
+  transition: all 0.2s ease;
+  width: 200px;
+  position: absolute;
+  top: -50px;
+}
+.has-stick{
+  .logoon{
+    opacity: 1;
+    top: -15px;
+  }
+
+  .header-2{
+    box-shadow: -2px 8px 20px 0px  rgba(98 99 99 / 18%);
+    transition: all 0.2s ease;
+    transition-delay: .4s;
+  }
 }

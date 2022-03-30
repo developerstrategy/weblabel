@@ -48,26 +48,26 @@ const Footer = () => {
           <div className="row ">
             <div className="col-xs-12">
               <div className="container  ">
-                <div className="row pt-50 pb-50 text-14-r">
-                  <div className="col-xs-12 col-sm-4 mb-50">
+                <div className="row pt-48 pb-48 text-14-r">
+                  <div className="col-xs-12 col-sm-4 mb-48">
                     <span className="h2 ">
-                      Logotipo <em>.</em>
+                      ToldosMarfil <em>.</em>
                     </span>
                   </div>
-                  <div className="col-xs-12 col-sm-2 mb-20"></div>
-                  <div className="col-xs-12 col-sm-2 mb-20">
-                    <div className="p mb-16"> The company </div>
+                  <div className="col-xs-12 col-sm-2 mb-16"></div>
+                  <div className="col-xs-12 col-sm-2 mb-16">
+                    <div className="text-14-b mb-16"> Toldos Marfil</div>
                     <ul className="list-clear">
                       <li>
-                        <Link to="/about"> About us </Link>
+                        <Link to="/about"> Quienes somos </Link>
                       </li>
                       <li>
                         <Link to="/contacta"> Contacta</Link>
                       </li>
                     </ul>
                   </div>
-                  <div className="col-xs-12 col-sm-2 mb-20">
-                    <div className="p mb-16">
+                  <div className="col-xs-12 col-sm-2 mb-16">
+                    <div className="mb-16 text-14-b">
                       <Link to="/servicios"> Servicios </Link>
                     </div>
                     <ul className="list-clear">
@@ -91,8 +91,8 @@ const Footer = () => {
                           ))}
                     </ul>
                   </div>
-                  <div className="col-xs-12 col-sm-2 mb-20">
-                    <div className="p mb-16"> Blog </div>
+                  <div className="col-xs-12 col-sm-2 mb-16">
+                    <div className="mb-16 text-14-b"> Blog </div>
                     <ul className="list-clear">
                       {posts &&
                         posts
@@ -121,7 +121,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="container">
-          <div className="row pt-20 pb-20">
+          <div className="row pt-16 pb-16">
             <div className="col-xs-12 col-sm-6  mdmax:mb-16">
               <ul className="list-inline text-12-r  social">
                 <li>{content.empresa_copyright} </li>

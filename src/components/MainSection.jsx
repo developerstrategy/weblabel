@@ -18,15 +18,15 @@ const MainSection = ({
           <div className="row   ">
             <div className="col-xs-12 col-sm-7 pb-md">
               <div className="row">
-                <div className="col-xs-12 mb-50 ">
-                  <div data-scroll data-scroll-speed="3" className="fluid-1-b">
-                    {firstHeading} <br /> <em>{secondHeading}</em>
+                <div className="col-xs-12 col-sm-8 mb-48 ">
+                  <div data-scroll data-scroll-speed="3" className="fluid-2-b">
+                    {firstHeading}  <em>{secondHeading}</em>
                   </div>
                 </div>
               </div>
               <div className="row">
                 <div className="col-xs-2 col-sm-2">
-                  <div className="barx mt-10"></div>
+                  <div className="barx mt-16"></div>
                 </div>
                 <div className="col-xs-10 col-sm-10">
                   <p className="h3 mb-16">{subHeading} </p>

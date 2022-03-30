@@ -34,10 +34,13 @@ const Header = ({ offset }) => {
             <div className="row">
               <div className="col-xs-6  text-left align-middle">
                 <Link className="fluid-2-l" to="/">
-                  <h2 className="h2 logo">Logotipo</h2>
+                  <h2 className="h2 logoon">
+                  <img src="../assets/images/tema2/logo.png" alt="" />
+
+                  </h2>
                 </Link>
               </div>
-              <div className="col-xs-6 text-right  ">
+              <div className="col-xs-6 text-right">
                 <nav role="navigation">
                   <div className="menutext">MENU</div>
                   <div
@@ -63,7 +66,7 @@ const Header = ({ offset }) => {
             <div className="container ">
               <div className="row">
                 <div className="col-xs-12">
-                  <ul className="menu-list list-clear mb-20">
+                  <ul className="menu-list list-clear mb-16">
                     <li>
                       <Link className="fluid-2-l" to="/">
                         Home
@@ -94,7 +97,7 @@ const Header = ({ offset }) => {
                         blog interior
                       </a>
                     </li>
-                    <li className="pb-50">
+                    <li className="pb-48">
                       <Link className="fluid-2-l" to="/contacta">
                         Contacta
                       </Link>

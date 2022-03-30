@@ -12,13 +12,13 @@ const Partners = ({ title, subTitle, images }) => {
               <div className="h5 pb-16">
                 <em>{subTitle}</em>
               </div>
-              <p className="h1 mb-50">{title}</p>
+              <p className="h1 mb-48">{title}</p>
             </div>
           </div>
-          <div className="row scroll-nat text-center">
+          <div className="row scroll-nat text-center ">
             {images &&
               images.map(image => (
-                <div className="col-xs-3">
+                <div className="col-xs-2 brand-partner">
                   <Image
                     name={image.marcas_imagen.replace("/assets/images/", "")}
                   />

@@ -40,7 +40,7 @@ const Portfolio = ({ title, images }) => {
         <div className="container mb-16  ">
           <div className="row ">
             <div className=" col-xs-12 col-sm-6 is-flex flex-column content-center  ">
-              <div className="fluid-1-b mb-20  ">{title} </div>
+              <div className="fluid-1-b mb-16  ">{title} </div>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ const Portfolio = ({ title, images }) => {
                   >
                     <path
                       d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7"
-                      stroke="#ffffff"
+                      stroke=""
                     ></path>
                   </svg>
                 </div>
@@ -74,7 +74,7 @@ const Portfolio = ({ title, images }) => {
                   >
                     <path
                       d="M7 1L1 7M1 7L7 13.75M1 7L12.25 7"
-                      stroke="#ffffff"
+                      stroke=""
                     ></path>
                   </svg>
                 </div>
@@ -84,7 +84,7 @@ const Portfolio = ({ title, images }) => {
                     <>
                       <div className="swiper-slide">
                         <img
-                          src={image.proyecto_imagen}
+                          src={image.proyecto_imagen.proyecto_texto}
                           alt=""
                           onClick={() => {
                             SetShowLightBox(!showLightBox)

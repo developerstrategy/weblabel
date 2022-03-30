@@ -22,25 +22,7 @@ $font-weight-secondary-regular:400;
 $font-weight-secondary-medium: 700;
 $font-weight-secondary-bold: 900;
 
-$primary-guide: #121f2a;
-$secondary-guide: #c93535;
 
-$error-primary: #fd675e;
-$link: rgb(207, 236, 240);
-$linkHover: #999;
-$black: #111111;
-
-$green-ultralight: #94cca8;
-$blue: #70b7d9;
-$c-gris: #878686;
-
-$t-primary: #3e3f51;
-$text-color: #3e3f51;
-
-$img-bg: #d8dfe7;
-
-$primary-text: #8e8e98;
-$green: #368a3f;
 
 $green-ultralight: #94cca8;
 $blue: #70b7d9;
@@ -58,7 +40,12 @@ $hr-light: #eaeaea;
 $btn-radius: 0px;
 
 
-$c-primary: #fb263b;  //C93F4F FB263B  ;
-$font-primary: #2c2c2c;
-$bg-light: #f7f7f7;
-$bg-dark: #131313;
+$primary: #2C2D2F;  //color de los detalles
+
+$secondary: #79CBE8;
+$font-primary: blue;  //color de la fuente 
+$bg-light: #FBFBFF; //fondo claro
+$bg-dark: #233851; //fondo oscuro
+
+
+$bg-box: #FBFBFF; //fondo de las cajas

@@ -5,10 +5,10 @@ const ServiciosMain = ({ title, sub, image }) => {
     <>
       <section className="pt-big">
         <div className="container">
-          <div className="row pb-50">
-            <div className="col-xs-10 col-sm-7 mb-20">
-              <div className="fluid-1-b mb-50">{title}</div>
-              <div className="fluid-3-b mb-20">{sub}</div>
+          <div className="row pb-48">
+            <div className="col-xs-10 col-sm-7 mb-16">
+              <div className="fluid-1-b mb-48">{title}</div>
+              <div className="fluid-3-b mb-16">{sub}</div>
               <div className="barx"></div>
             </div>
             <div className="col-xs-6 col-sm-5">

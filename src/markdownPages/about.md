@@ -1,19 +1,34 @@
 ---
-thumbnail: /assets/images/kevin-grieve-6w3dxwoq9l8-unsplash.jpg
+thumbnail: /assets/images/tema2/kevin-grieve-6w3dxwoq9l8-unsplash.jpg
 inicio_description: >-
+  Toldos Marfil es una empresa con amplia experiencia en el campo de la fabricación, venta e intalación de toldos .
+  Más de 20 años de experiencia .
+    
+  Una empresa que mantiene un servicio de calidad, consolidada en
+  el sector, en constante renovación y adaptándonos a los tiempos actuales, incorporando los últimos avances tecnológicos en el campo de la motorizacion de sistemas de proteccion solar.
+  Le dedicamos trabajo y espero en la calidad de la instalacion. La instalación solo se puede realizar por profesionales cualificados, ya que de otra forma el material adquirido no cubrirá las funciones deseadas .
+    
+  Una buena instalación es una garantia de un buen funcionamiento.
+  Toldos marfil les ofrece la mas amplia gama de xx :
+  >-
 
+  Lonas acrilicas
+  >-
+  Lonas plastificadas
+  >-
+  Fibra de vidrio
+  >-
+  Perfiles de alumnio lacado
+  >-
+  Accesorios para toldos de 1ª Calidad
+    
+  Asesoramiento técnico profesional
+    
+  En nuestra tienda podrá ver de primera mano los modelos,
+  diseños y los distintos dispositivos de motorización para los mismos.
 
-  Nos dedicamos al diseño, personalización y rotulación de cualquier tipo de superficie utilizando el vinilo de más alta calidad.\
-
-  Cada proyecto es único para nosotros, por lo que ofrecemos un asesoramiento personalizado adaptado a las necesidades de cada cliente.\
-
-  Nos gusta formar parte de los proyectos desde el principio. Nuestros servicios van desde el asesoramiento y el diseño, hasta la impresión y rotulación.\
-
-  Nuestro equipo se encuentra en continua formación para poder seguir ofreciendo el mejor servicio y resultado.\
-
-  Estamos especializados en el car Wrapping (forrado integral de vehículos) aunque contamos con una amplia experiencia en rotulación de vehículos comerciales además de ofrecer cualquier tipo de servicio relacionado con el vinilo.
 beneficios:
-  - proyecto_imagen: /assets/images/project3.jpg
+  - proyecto_imagen: /assets/images/tema2/project3.jpg
     beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Últimas Noticias
     beneficios_description: >-
@@ -25,8 +40,7 @@ beneficios:
 
 
 
-      ***“Nombre del dueño”***
-  - proyecto_imagen: /assets/images/project5.jpg
+  - proyecto_imagen: /assets/images/tema2/project5.jpg
     beneficios_subtitulo: Ir a la cuenta
     beneficios_titulo: Últimas Noticias
     beneficios_description: >-
@@ -38,25 +52,25 @@ beneficios:
       \
 
       **“Nombre del dueño”**
-marcas_titulo: Marcas que han confiado en nosotros
+marcas_titulo: Trabajamos con primeras marcas del mercado de la protección sola
 beneficio_subtitulo: Ir a la cuenta
 beneficio_description: Un aspecto muy importante en este sentido es que cuando
   cambias de color un vehículo mediante vinilo, no es necesario
 beneficio_titulo: Beneficios producto
 page: true
-seo_title: About
+seo_title: Sobre Toldos marfil
 seo_description: Hello
 title: About us
 subtitle: TU COCHE DE ELEGANTE A ÉPICO
-inicio_title: About US
+inicio_title: Sobre      Toldos Marfil
 inicio_description_title: 10 AÑOS DE ROTULACIÓN INTEGRAL Y CAR WRAPPING
-inicio_thumbnail: /assets/images/benefit3.jpg
+inicio_thumbnail: /assets/images/tema2/benefit3.jpg
 marcas_subtitulo: Ir a la cuenta
 Marcas:
-  - marcas_imagen: /assets/images/brand3.jpg
-  - marcas_imagen: /assets/images/brand1.jpg
-  - marcas_imagen: /assets/images/brand8.jpg
-  - marcas_imagen: /assets/images/brand7.jpg
-  - marcas_imagen: /assets/images/brand8.jpg
-  - marcas_imagen: /assets/images/brand6.jpg
+  - marcas_imagen: /assets/images/tema2/brands/mitjavila.jpg
+  - marcas_imagen: /assets/images/tema2/brands/sauleda.jpg
+  - marcas_imagen: /assets/images/tema2/brands/llaza.jpg
+  - marcas_imagen: /assets/images/tema2/brands/gaviota.jpg
+  - marcas_imagen: /assets/images/tema2/brands/somfy.jpg
+  - marcas_imagen: /assets/images/tema2/brands/siplan.jpg
 ---

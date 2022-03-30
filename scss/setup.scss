@@ -1,7 +1,7 @@
 @font-face {
   font-family: "realm";
   src: url(../src/assets/fonts/real-medium.woff2) format("woff2"),
-    url(../src/assets/fonts/real-medium.woff2) format("woff");
+       url(../src/assets/fonts/real-medium.woff2) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -11,7 +11,7 @@
   font-family: "realm";
 
   src: url(../src/assets/fonts/real-demi.woff2) format("woff2"),
-    url(../src/assets/fonts/real-demi.woff2) format("woff");
+       url(../src/assets/fonts/real-demi.woff2) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -21,7 +21,7 @@
   font-family: "realb";
 
   src: url(../src/assets/fonts/real-bold.woff2) format("woff2"),
-    url(../src/assets/fonts/real-bold.woff2) format("woff");
+       url(../src/assets/fonts/real-bold.woff2) format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -29,7 +29,6 @@
 
 @font-face {
   font-family: "neu-light";
-
   src: url(../src/assets/fonts/neu-light.woff) format("woff");
   font-style: normal;
   font-weight: normal;
@@ -38,7 +37,6 @@
 
 @font-face {
   font-family: "neu-regular";
-
   src: url(../src/assets/fonts/neu-regular.woff) format("woff");
   font-style: normal;
   font-weight: normal;
@@ -47,7 +45,6 @@
 
 @font-face {
   font-family: "suise-regular";
-
   src: url(../src/assets/fonts/suise-regular.woff) format("woff");
   font-style: normal;
   font-weight: normal;
@@ -86,7 +83,7 @@ $colorsGuide: (
   ternary-guide: #6759bb,
 );
 
-$font-primary: #2c2c2c;
+
 $font-family-primary: "neu-regular", sans-serif;
 
 $font-family-light: "neu-light", sans-serif;
@@ -128,210 +125,28 @@ $container-3: 1100px;
   box-sizing: border-box;
 }
 
-$headers: /* name:mobile,768,992,1280,line-height,font */ (
-  h1: (
-    32px,
-    32px,
-    32px,
-    40px,
-    1.2,
-    "bold",
-  ),
-  h2: (
-    24px,
-    24px,
-    24px,
-    32px,
-    1.2,
-    "bold",
-  ),
-  h3: (
-    18px,
-    18px,
-    18px,
-    24px,
-    1.4,
-    "bold",
-  ),
-  h4: (
-    16px,
-    16px,
-    16px,
-    18px,
-    1.2,
-    "bold",
-  ),
-  h5: (
-    14px,
-    14px,
-    14px,
-    16px,
-    1.2,
-    "light",
-  ),
-  h6: (
-    48px,
-    48px,
-    48px,
-    48px,
-    1.2,
-    "bold",
-  ),
-  h26: (
-    48px,
-    48px,
-    58px,
-    64px,
-    1,
-    "bold",
-  ),
-  h7: (
-    10px,
-    10px,
-    10px,
-    12px,
-    1.2,
-    "light",
-  ),
-  h8: (
-    8px,
-    8px,
-    8px,
-    8px,
-    1.2,
-    "light",
-  ),
-  second-h1: (
-    32px,
-    32px,
-    32px,
-    40px,
-    1.2,
-    "2-regular",
-  ),
-  second-h2: (
-    24px,
-    24px,
-    24px,
-    32px,
-    1.2,
-    "2-regular",
-  ),
-  second-h3: (
-    18px,
-    18px,
-    18px,
-    24px,
-    1.2,
-    "2-regular",
-  ),
-  second-h4: (
-    16px,
-    16px,
-    16px,
-    18px,
-    1.2,
-    "2-regular",
-  ),
-  second-h5: (
-    14px,
-    14px,
-    14px,
-    16px,
-    1.2,
-    "2-regular",
-  ),
-  second-h6: (
-    12px,
-    12px,
-    12px,
-    14px,
-    1.2,
-    "2-regular",
-  ),
-  second-h7: (
-    10px,
-    10px,
-    10px,
-    12px,
-    1.2,
-    "2-regular",
-  ),
-  second-h8: (
-    8px,
-    8px,
-    8px,
-    10px,
-    1.2,
-    "2-regular",
-  ),
-  p1: (
-    14px,
-    14px,
-    16px,
-    16px,
-    1.5,
-    "regular",
-  ),
-  p2: (
-    18px,
-    16px,
-    16px,
-    18px,
-    1.3,
-    "regular",
-  ),
-  p3: (
-    18px,
-    18px,
-    20px,
-    24px,
-    1.3,
-    "regular",
-  ),
-  p4: (
-    14px,
-    14px,
-    16px,
-    18px,
-    1.4,
-    "medium",
-  ),
-);
-
-$py: "padding";
-$padding-y: /* name : padding  arriba y abajo*/ (
-  py-16: (
-    10px 0,
-    16px 0,
-    16px 0,
-    16px 0,
-  ),
-  py-20: (
-    10px 0,
-    20px 0,
-    20px 0,
-    20px 0,
-  ),
-  py-30: (
-    10px 0,
-    30px 0,
-    30px 0,
-    30px 0,
-  ),
-  py-50: (
-    20px 0,
-    30px 0,
-    40px 0,
-    50px 0,
-  ),
-  py-60: (
-    24px 16px,
-    24px 16px,
-    24px 16px,
-    60px 60px,
-  ),
-) !default;
+$headers: /* name:mobile,768,992,1280,line-height,font */ 
+( h1: ( 32px, 32px, 32px, 40px, 1.2, "bold", ),
+  h2: ( 24px, 24px, 24px, 32px, 1.2, "bold", ),
+  h3: ( 18px, 18px, 18px, 24px, 1.4, "bold", ), 
+  h4: ( 16px, 16px, 16px, 18px, 1.2, "bold", ), 
+  h5: ( 14px, 14px, 14px, 16px, 1.2, "bold", ), 
+  h6: ( 48px, 48px, 48px, 48px, 1.2, "bold", ),
+  h26: ( 48px, 48px, 58px, 64px, 1, "bold", ), 
+  h7: ( 10px, 10px, 10px, 12px, 1.2, "light", ), 
+  h8: ( 8px, 8px, 8px, 8px, 1.2, "light", ), 
+  second-h1: ( 32px, 32px, 32px, 40px, 1.2, "2-regular", ), 
+  second-h2: ( 24px, 24px, 24px, 32px, 1.2, "2-regular", ), 
+  second-h3: ( 18px, 18px, 18px, 24px, 1.2, "2-regular", ), 
+  second-h4: ( 16px, 16px, 16px, 18px, 1.2, "2-regular", ), 
+  second-h5: ( 14px, 14px, 14px, 16px, 1.2, "2-regular", ), 
+  second-h6: ( 12px, 12px, 12px, 14px, 1.2, "2-regular", ), 
+  second-h7: ( 10px, 10px, 10px, 12px, 1.2, "2-regular", ), 
+  second-h8: ( 8px, 8px, 8px, 10px, 1.2, "2-regular", ),
+  p1: ( 16px, 16px, 18px, 18px, 1.5, "regular", ), 
+  p2: ( 18px, 16px, 16px, 18px, 1.3, "regular", ), 
+  p3: ( 18px, 18px, 20px, 24px, 1.3, "regular", ), 
+  p4: ( 14px, 14px, 16px, 18px, 1.4, "medium", ));
 
 /* TYPES FIJOS */
 $headersFixers: (
@@ -354,224 +169,158 @@ $headersFluids: (
   0: (30px, 64px, 1)
 );
 
-$pt: "padding-top";
-$padding-top: /* name : padding  top*/ (
-  pt-8: (
-    8px,
-    8px,
-    8px,
-    8px,
-  ),
-  pt-10: (
-    10px,
-    10px,
-    10px,
-    10px,
-  ),
-  pt-16: (
-    16px,
-    16px,
-    16px,
-    16px,
-  ),
-  pt-20: (
-    10px,
-    20px,
-    20px,
-    20px,
-  ),
-  pt-30: (
-    30px,
-    30px,
-    30px,
-    30px,
-  ),
-  pt-40: (
-    40px,
-    40px,
-    40px,
-    40px,
-  ),
-  pt-50: (
-    50px,
-    50px,
-    50px,
-    50px,
-  ),
-  pt-64: (
-    64px,
-    64px,
-    64px,
-    64px,
-  ),
-  pt-md: (
-    64px,
-    80px,
-    128px,
-    128px,
-  ),
-  pt-lg: (
-    100px,
-    120px,
-    150px,
-    150px,
-  ),
+$mg: "margin";
+$margin: /* name : margen total mobile, tablet, desktop, longdesktop*/
+(
+m-8: (8px, 8px, 8px, 8px),
+m-16: (16px, 16px, 16px, 16px),
+m-24: (24px, 24px, 24px, 24px),
+m-32: (32px, 32px, 32px, 32px),
+m-40: (40px, 40px, 40px, 40px),
+m-48: (48px, 48px, 48px, 48px)
 );
-
-$pt: "padding-bottom";
-$padding-bottom: /* name : padding  top*/ (
-  pb-8: (
-    8px,
-    8px,
-    8px,
-    8px,
-  ),
-  pb-10: (
-    10px,
-    10px,
-    10px,
-    10px,
-  ),
-  pb-16: (
-    16px,
-    16px,
-    16px,
-    16px,
-  ),
-  pb-20: (
-    20px,
-    20px,
-    20px,
-    20px,
-  ),
-  pb-30: (
-    30px,
-    30px,
-    30px,
-    30px,
-  ),
-  pb-40: (
-    40px,
-    40px,
-    40px,
-    40px,
-  ),
-  pb-50: (
-    50px,
-    50px,
-    50px,
-    50px,
-  ),
-  pb-big: (
-    64px,
-    64px,
-    64px,
-    64px,
-  ),
-  pb-md: (
-    40px,
-    80px,
-    128px,
-    128px,
-  ),
-  pb-lg: (
-    100px,
-    120px,
-    150px,
-    150px,
-  ),
+$mx: "margin"; 
+$margin-x: /* name : margen bottom   */
+(
+mx-8:  (0 8px, 0 8px, 0 8px, 0 8px),
+mx-16: (0 16px, 0 16px, 0 16px, 0 16px),
+mx-24: (0 24px, 0 24px, 0 24px, 0 24px),
+mx-32: (0 10px, 0 32px, 0 32px, 0 32px),
+mx-40: (0 10px, 0 40px, 0 40px, 0 40px),
+mx-48: (0 48px, 0 48px, 0 48px, 0 48px)
 );
-
-$mb: "margin-bottom";
-$margin-bottom: /* name : margen bottom*/ (
-  mb-4: (
-    4px,
-    4px,
-    4px,
-    4px,
-  ),
-  mb-10: (
-    10px,
-    10px,
-    10px,
-    10px,
-  ),
-  mb-16: (
-    10px,
-    10px,
-    16px,
-    16px,
-  ),
-  mb-20: (
-    20px,
-    20px,
-    20px,
-    20px,
-  ),
-  mb-24: (
-    20px,
-    20px,
-    24px,
-    24px,
-  ),
-  mb-30: (
-    30px,
-    30px,
-    30px,
-    30px,
-  ),
-  mb-40: (
-    20px,
-    40px,
-    40px,
-    40px,
-  ),
-  mb-50: (
-    50px,
-    50px,
-    50px,
-    50px,
-  ),
-  mb-big: (
-    30px,
-    50px,
-    50px,
-    50px,
-  ),
-  mb-mini: (
-    30px,
-    0px,
-    0px,
-    0px,
-  ),
+$my: "margin"; 
+$margin-y: /* name : margen bottom*/
+(
+my-8: (8px 0, 8px 0, 8px 0, 8px 0),
+my-16: (16px 0, 16px 0, 16px 0, 16px 0),
+my-24: (24px 0, 24px 0, 24px 0, 24px 0),
+my-32: (32px 0, 32px 0, 32px 0, 32px 0),
+my-48: (20px 0, 48px 0, 48px 0, 48px 0)
 );
 $mt: "margin-top";
-$margin-top: /* name : margen bottom*/ (
-  mt-10: (
-    10px,
-    10px,
-    10px,
-    10px,
-  ),
-  mt-20: (
-    20px,
-    20px,
-    20px,
-    20px,
-  ),
-  mt-50: (
-    20px,
-    50px,
-    50px,
-    50px,
-  ),
-  mt-big: (
-    100px,
-    100px,
-    100px,
-    100px,
-  ),
+$margin-top: /* name : margen bottom*/
+(
+mt-8:  (8px, 8px, 8px, 8px),
+mt-16: (16px, 16px, 16px, 16px),
+mt-24: (24px, 24px, 24px, 24px),
+mt-32: (32px, 32px, 32px, 32px),
+mt-40: (42px, 42px, 42px, 42px),
+mt-48: (48px, 48px, 48px, 48px)
 );
+$mr: "margin-right";
+$margin-right: /* name : margen bottom*/
+(
+mr-8:  (8px, 8px, 8px, 8px),
+mr-16: (16px, 16px, 16px, 16px),
+mr-24: (24px, 24px, 24px, 24px),
+mr-32: (32px, 32px, 32px, 32px),
+mr-40: (42px, 42px, 42px, 42px),
+mr-48: (48px, 48px, 48px, 48px)
+);
+$mb: "margin-bottom";
+$margin-bottom: /* name : margen bottom*/
+(
+mb-8: (8px, 8px, 8px, 8px),
+mb-16: (16px, 16px, 16px, 16px),
+mb-24: (24px, 24px, 24px, 24px),
+mb-32: (32px, 32px, 32px, 32px),
+mb-40: (40px, 40px, 40px, 40px),
+mb-48: (48px, 48px, 48px, 48px) ,
+mb-100: (100px, 100px, 100px, 100px) 
+);
+$ml: "margin-left";
+$margin-left: /* name : margen bottom*/
+(
+ml-8: (8px, 8px, 8px, 8px),
+ml-16: (16px, 16px, 16px, 16px),
+ml-24: (24px, 24px, 24px, 24px),
+ml-32: (32px, 32px, 32px, 32px),
+ml-40: (42px, 42px, 42px, 42px),
+ml-48: (48px, 48px, 48px, 48px)
+);
+$p: "padding"; 
+$padding: /* name : padding  top*/
+(
+p-body: (16px, 16px, 40px, 40px),
+p-4: (4px, 4px, 4px, 4px),
+p-8: (8px, 8px, 8px, 8px), 
+p-16: (16px, 16px, 16px, 16px),
+p-20: (20px, 20px, 20px, 20px),
+p-30: (10px, 30px, 30px, 30px),
+p-40: (40px, 40px, 40px, 40px),
+p-48: (20px, 50px, 50px, 50px)
+);
+$py: "padding";
+$padding-y: /* name : padding  arriba y abajo*/
+(
+py-8: (8px 0, 8px 0, 8px 0, 8px 0),  
+py-12: (12px 0, 12px 0, 12px 0, 12px 0),  
+py-16: (16px 0, 16px 0, 16px 0, 16px 0),  
+py-24: (10px 0, 24px 0, 24px 0, 24px 0),
+py-32: (32px 0, 32px 0, 32px 0, 32px 0),
+py-48: (20px 0, 30px 0, 40px 0, 48px 0),
+py-60: (24px 16px,24px 16px, 24px 16px, 60px 60px)
+);
+$px: "padding";
+$padding-x: /* name : padding  arriba y abajo*/
+(
+px-8: (0 8px, 0 8px, 0 8px, 0 8px),
+px-16: (0 16px, 0 16px, 0 16px, 0 16px),
+px-24: (0 24px, 0 24px, 0 24px, 0 24px),
+px-32: (0 32px, 0 32px, 0 32px, 0 32px),
+px-40: (0 40px, 0 40px, 0 40px, 0 40px),
+px-48: (0 48px, 0 48px, 0 48px, 0 48px)
+);
+$pt: "padding-top";
+$padding-top: /* name : padding  top*/
+(
+pt-8:  (8px, 8px, 8px, 8px),
+pt-16: (16px, 16px, 16px, 16px),
+pt-24: (24px, 24px, 24px, 24px),
+pt-32: (32px, 32px, 32px, 32px),
+pt-40: (40px, 40px, 40px, 40px),
+pt-48: (20px, 48px, 48px, 48px),
+pt-64: (64px, 64px, 64px, 64px),
+pt-md: (64px, 64px, 128px, 128px),
+pt-big: (64px, 80px, 100px, 100px)
+);
+$pb: "padding-bottom";
+$padding-bottom: /* name : padding  bottom*/
+(
+pb-8: (8px, 8px, 8px, 8px),
+pb-16: (20px, 20px, 20px, 20px),
+pb-24: (24px, 24px, 24px, 24px),
+pb-32: (32px, 32px, 32px, 32px),
+pb-40: (40px, 40px, 40px, 40px),
+pb-48: (48px, 48px, 48px, 48px),
+pb-64: (64px, 64px, 64px, 64px),
+pb-md: (64px, 64px, 128px, 128px),
+pb-big: (64px, 80px, 100px, 100px)
+);
+$pl: "padding-left";
+$padding-left: /* name : padding  bottom*/
+(
+pl-body: (16px, 16px, 40px, 40px),
+pl-8: (8px, 8px, 8px, 8px),
+pl-16: (16px, 16px, 16px, 16px),
+pl-24: (24px, 24px, 24px, 24px),
+pl-32: (32px, 32px, 32px, 32px),
+pl-40: (16px, 42px, 42px, 42px),
+pl-48: (48px, 48px, 48px, 48px)
+);
+$pr: "padding-right";
+$padding-right: /* name : padding  bottom*/
+(
+pr-body: (16px, 16px, 40px, 40px),
+pr-8: (8px, 8px, 8px, 8px),
+pr-16: (16px, 16px, 16px, 16px),
+pr-24: (24px, 24px, 24px, 24px),
+pr-32: (32px, 32px, 32px, 32px),
+pr-40: (16px, 42px, 42px, 42px),
+pr-48: (48px, 48px, 48px, 48px)
+);
+
 .bar-left {
   position: relative;
 }
@@ -582,7 +331,7 @@ $margin-top: /* name : margen bottom*/ (
   bottom: -20px;
   height: 2px;
   width: 100px;
-  background-color: $c-primary;
+  background-color: $secondary;
 }
 
 .bar-right {
@@ -597,7 +346,7 @@ $margin-top: /* name : margen bottom*/ (
   top: 8px;
   height: calc(100% - 16px);
   width: 10px;
-  background-color: $c-primary;
+  background-color: $secondary;
 }
 
 .bg-img {
@@ -612,7 +361,7 @@ $margin-top: /* name : margen bottom*/ (
   font-weight: 100 !important;
 }
 em {
-  color: $c-primary;
+  color: $secondary;
   font-style: normal;
 }
 

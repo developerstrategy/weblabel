@@ -32,9 +32,9 @@ const Blog = props => {
       </section>
       <section className=" pt-big pb-md">
         <div className="container">
-          <div className="row pb-50">
+          <div className="row pb-48">
             <div className="col-xs-6">
-              <div className="fluid-1-b mb-20  ">
+              <div className="fluid-1-b mb-16  ">
                 Our <br />
                 News
               </div>
@@ -49,7 +49,7 @@ const Blog = props => {
             <div className="col-xs-12">
               <Link to={"/blob/" + posts && posts[0].node.frontmatter.path}>
                 <div className="rat-11-21 bg-cream has-light">
-                  <div className="rat-content is-flex rat-content is-flex p-20 align-bottom p-20">
+                  <div className="rat-content is-flex rat-content is-flex p-16 align-bottom p-16">
                     <div className="fullimg">
                       <Image
                         width="100%"
@@ -61,7 +61,6 @@ const Blog = props => {
                             ""
                           )
                         }
-                        alt=""
                       />
                     </div>
                     <div className="row fulltext">
@@ -78,7 +77,7 @@ const Blog = props => {
                         </div>
                       </div>
                       <div className="col-xs-12">
-                        <div className="text-16-r mb-20">
+                        <div className="text-16-r mb-16">
                           {posts && posts[0].node.excerpt}
                         </div>
                         <div className="text-date">
@@ -96,14 +95,14 @@ const Blog = props => {
           <div className="row pt-md">
             <div className="col-xs-12 col-sm-4">
               <h3 className="fluid-2-b mb-16"> Latest News </h3>
-              <div className="barx mt-10 mb-20"></div>
+              <div className="barx mt-16 mb-16"></div>
             </div>
           </div>
 
           <div className="row ">
             {posts &&
               posts.slice(0, visible).map(({ node: post }) => (
-                <div className="col-xs-12 col-sm-4 mb-50">
+                <div className="col-xs-12 col-sm-4 mb-48">
                   <Link to={"/blog/" + post.frontmatter.path} target="_blank">
                     <div className="mb-16 ">
                       <div className=" rat-2-1">
@@ -122,10 +121,10 @@ const Blog = props => {
                         ? post.frontmatter.category
                         : ""}
                     </div>
-                    <div className="fluid-4-b mb-20">
+                    <div className="fluid-4-b mb-16">
                       {post.frontmatter.blogtitle}
                     </div>
-                    <div className="text-14-r mb-20">{post.excerpt}</div>
+                    <div className="text-14-r mb-16">{post.excerpt}</div>
                     <div className="text-14-r">
                       <a className="text-date" href="">
                         {post.frontmatter.date}

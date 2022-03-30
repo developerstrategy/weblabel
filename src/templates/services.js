@@ -45,14 +45,14 @@ const Service = props => {
           reverse={index % 2 === 0 ? false : true}
         />
       ))}
-      <Portfolio
+{/*       <Portfolio
         title="Our Work"
         images={props.data.markdownRemark.frontmatter.listitems}
-      />
-      <div className="container mb-50">
+      /> */}
+      <div className="container mb-48">
         <div className="row">
           <div className="col-xs-12 ">
-            <hr className="mt-50" />
+            <hr className="mt-48" />
             <ul className="list-clear list-inline text-12-r">
               {props.data.markdownRemark.frontmatter.keyword
                 ? props.data.markdownRemark.frontmatter.keyword.map(keyword => (

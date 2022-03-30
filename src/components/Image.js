@@ -14,6 +14,7 @@ const Image = props => (
               relativePath
               name
               childImageSharp {
+
                 gatsbyImageData(
                   placeholder: BLURRED
                   formats: [AUTO, WEBP, AVIF]
