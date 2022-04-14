@@ -27,7 +27,7 @@ inicio_description: >-
 
   **LLámanos al 93 6656502**
 inicio_thumbnail: /assets/images/tema2/start.jpg
-proyecto_subtitulo: Work Porfolio
+proyecto_subtitulo: Work Porfoli
 proyecto_titulo: Nuestros últimos trabajos
 listitems:
   - proyecto_imagen: /assets/images/gal-1.jpg
@@ -135,6 +135,7 @@ bloque_description: >-
    - Asesoramiento técnico profesional.
 
    En nuestra tienda podrá ver de primera mano los modelos, diseños y los distintos dispositivos de motorización para los mismos.
+
 
    
   ***“Toldos marfil”***
